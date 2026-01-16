@@ -1,0 +1,36 @@
+{
+  "message_id": "db_or_gmail_id",
+  "thread_id": "db_or_gmail_thread_id",
+  "major_category": "schedule_and_time",
+  "sub_action_key": "SCHEDULE_CONFIRM_TIME",
+  "reply_required": true,
+  "explicit_task": false,
+  "task_type": null,
+  "confidence": 0.87,
+  "reason": "Sender asks you to confirm the meeting time.",
+  "evidence": [
+    "Can you confirm Friday at 2pm PT works?"
+  ],
+  "entities": {
+    "people": [
+      {
+        "email": "sarah@acme.com",
+        "role": "sender"
+      }
+    ],
+    "dates": [
+      {
+        "text": "Friday 2pm PT",
+        "iso": "2025-12-26T14:00:00-08:00",
+        "type": "meeting_time"
+      }
+    ],
+    "money": [],
+    "docs": [],
+    "meeting": {
+      "topic": "Contract approval timeline",
+      "start_at": "2025-12-26T14:00:00-08:00",
+      "tz": "America/Los_Angeles"
+    }
+  }
+}

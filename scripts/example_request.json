@@ -1,0 +1,68 @@
+{
+  "id": "18c8a3f1b2d0a9a1",
+  "threadId": "18c89f3d1a2b4c55",
+  "labelIds": [
+    "INBOX",
+    "UNREAD"
+  ],
+  "snippet": "Hey Omar \u2014 quick question about the contract timeline...",
+  "historyId": "2459812",
+  "internalDate": "1734905599000",
+  "payload": {
+    "partId": "",
+    "mimeType": "multipart/alternative",
+    "headers": [
+      {
+        "name": "From",
+        "value": "Sarah Kim <sarah@acme.com>"
+      },
+      {
+        "name": "To",
+        "value": "Omar Jandali <omar@drakko.ai>"
+      },
+      {
+        "name": "Subject",
+        "value": "Re: Contract approval timeline"
+      },
+      {
+        "name": "Date",
+        "value": "Mon, 22 Dec 2025 10:13:19 -0800"
+      },
+      {
+        "name": "Message-ID",
+        "value": "<CAKp9pQxAcme12345@mail.gmail.com>"
+      }
+    ],
+    "parts": [
+      {
+        "partId": "0",
+        "mimeType": "text/plain",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/plain; charset=UTF-8"
+          }
+        ],
+        "body": {
+          "size": 287,
+          "data": "SGV5IE9tYXIgLS0gY2FuIHlvdSBjb25maXJtIGlmIEZyaWRheSB3b3Jrcy4uLg"
+        }
+      },
+      {
+        "partId": "1",
+        "mimeType": "text/html",
+        "headers": [
+          {
+            "name": "Content-Type",
+            "value": "text/html; charset=UTF-8"
+          }
+        ],
+        "body": {
+          "size": 534,
+          "data": "PGRpdj5IZXkgT21hciDigJQgY2FuIHlvdSBjb25maXJtIGlmIEZyaWRheSB3b3Jrcy4uLjwvZGl2Pg"
+        }
+      }
+    ]
+  },
+  "sizeEstimate": 6832
+}

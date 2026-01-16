@@ -1,0 +1,7230 @@
+[
+  {
+    "id": "9db54e70ad8e7b5f",
+    "threadId": "3c24570489e45fef",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Need your approval on this: the NDA needs your signature before we can proceed. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "5274625",
+    "internalDate": "1766864331000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Next steps after vendor sync"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 27 Dec 2025 19:38:51 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<bf54123f4af8329@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 165,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 188,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 17724
+  },
+  {
+    "id": "cc64696e6dff36af",
+    "threadId": "754af985d78965b8",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "Could you take a look? finance needs a green light to process the payment today. All details are below.",
+    "historyId": "5638066",
+    "internalDate": "1761162356000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Security Team <security@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Final copy before legal review"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 22 Oct 2025 19:45:56 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<ec8817ac1d81235@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 179,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 140,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 7045,
+    "raw": ""
+  },
+  {
+    "id": "07c9c308ed51cc86",
+    "threadId": "a28261d848ddd7f0",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "Could you take a look? the deadline moved to next Wednesday due to vendor availability. Not urgent, but it affects next week\u2019s plan. \u2014",
+    "historyId": "7542810",
+    "internalDate": "1767863401000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Heads-up: vendor maintenance window"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 08 Jan 2026 09:10:01 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<8a4b2703287f716@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 110,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 14672,
+    "raw": ""
+  },
+  {
+    "id": "48eec51023fe23ce",
+    "threadId": "ece52be57cda161d",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Flagging this for visibility \u2014 I pulled together action items with owners and due dates. All details are below.",
+    "historyId": "8719476",
+    "internalDate": "1765173748000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Engineering <eng@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Draft agenda \u2014 please annotate"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 08 Dec 2025 06:02:28 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<8043d6c19a05740@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 105,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 9621,
+    "raw": ""
+  },
+  {
+    "id": "d7a3b9b74184a11c",
+    "threadId": "7740dd4f0723b59a",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "Looping you in since there\u2019s a new comment on the doc (section 2.1) that needs your input. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "8427024",
+    "internalDate": "1766367641000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Next steps after vendor sync"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 22 Dec 2025 01:40:41 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<3bd9f6c4a1af113@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Sarah Kim <sarah@acme.com>"
+        }
+      ],
+      "body": {
+        "size": 115,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 14943
+  },
+  {
+    "id": "4ad5c4fc34c1cb53",
+    "threadId": "06384626cd8f1b3f",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT"
+    ],
+    "snippet": "No rush, but usage is up 18% week-over-week; details are in the dashboard. Not urgent, but it affects next week\u2019s plan. Thanks.",
+    "historyId": "6132670",
+    "internalDate": "1761965542000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Draft agenda \u2014 please annotate"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 01 Nov 2025 02:52:22 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<5828e961ca6f555@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 146,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 170,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 10934
+  },
+  {
+    "id": "47f624b8ec9c3fa6",
+    "threadId": "984bd53badbf61e1",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Adding details below: design review notes are captured; biggest risk is scope creep. I highlighted the key line items so it\u2019s faster to scan. All details are below.",
+    "historyId": "9579178",
+    "internalDate": "1763945392000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Invoice Dept <billing@vendorco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "New comment on the doc you shared"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 24 Nov 2025 00:49:52 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<b577645f774e804@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Invoice Dept <billing@vendorco.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 179,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 209,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 11632
+  },
+  {
+    "id": "06482877cae0d6f1",
+    "threadId": "320ee6c5b7f51ed5",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Adding details below: the invoice total doesn\u2019t match the PO\u2014can you confirm which is correct? Happy to jump on a quick call if helpful.",
+    "historyId": "3658213",
+    "internalDate": "1764604943000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "AWS <no-reply@amazonaws.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Calendar update: time changed"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 01 Dec 2025 16:02:23 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<6274b5aebc2d704@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 174,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 251,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "agenda.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"contract.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "8650c0b394e7e6dea69d50d67daa",
+            "size": 52
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 10639
+  },
+  {
+    "id": "f66d758099e8931d",
+    "threadId": "6606ef36286e8548",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Need your approval on this: your onboarding checklist is ready\u2014start with steps 1\u20133. We should be good once you confirm. Happy to jump on a quick call if helpful.",
+    "historyId": "4062975",
+    "internalDate": "1763774161000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "AWS <no-reply@amazonaws.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your account settings were updated"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 22 Nov 2025 01:16:01 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<04549d907e21924@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 119,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 13013
+  },
+  {
+    "id": "4df7c9510b3bd0db",
+    "threadId": "88f9bacba6424891",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "IMPORTANT"
+    ],
+    "snippet": "For your review: proposal v3 is attached; main change is the payment schedule. Let me know if you want me to revise anything.",
+    "historyId": "6289201",
+    "internalDate": "1763398946000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Support <support@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Blocking issue with staging deploy"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 17 Nov 2025 17:02:26 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<1f75cd7cb2ed153@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 145,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 189,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 7946,
+    "raw": ""
+  },
+  {
+    "id": "3b732efc2a97c663",
+    "threadId": "fccac503d062c350",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "IMPORTANT"
+    ],
+    "snippet": "Adding details below: the invoice total doesn\u2019t match the PO\u2014can you confirm which is correct? Please confirm when you can.",
+    "historyId": "6588529",
+    "internalDate": "1762999549000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Access request: add you to shared drive"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 13 Nov 2025 02:05:49 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<c2f5509ec890628@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 95,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 180,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 6479,
+    "raw": ""
+  },
+  {
+    "id": "9107e0c4a1308fae",
+    "threadId": "4852d8fbad39e4c7",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "Adding details below: I summarized next steps and owners so we can keep momentum. Reply here if you have questions.",
+    "historyId": "9642456",
+    "internalDate": "1760546563000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Customer Success <success@vendorco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Weekly status snapshot"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 15 Oct 2025 16:42:43 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<8002f6a31a30842@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Customer Success <success@vendorco.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 109,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 193,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 16756
+  },
+  {
+    "id": "9d9d775f841976d6",
+    "threadId": "6b330fd0bd7d5bbe",
+    "labelIds": [
+      "INBOX",
+      "STARRED",
+      "UNREAD"
+    ],
+    "snippet": "For your review: the meeting time changed; new invite attached. This is blocking a downstream dependency. Happy to jump on a quick call if helpful.",
+    "historyId": "4866273",
+    "internalDate": "1762349495000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Blocking issue with staging deploy"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 05 Nov 2025 13:31:35 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<d28d73d0518f228@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 107,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 182,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 14704
+  },
+  {
+    "id": "ef5c0d3e88472503",
+    "threadId": "52827712f5b2069e",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "Just a nudge: maintenance is scheduled; there may be brief downtime. Let me know if you want me to revise anything.",
+    "historyId": "2852861",
+    "internalDate": "1764291263000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Recruiter <talent@startup.jobs>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Approval needed to release funds"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 28 Nov 2025 00:54:23 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<a9ff2e41b428611@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Recruiter <talent@startup.jobs>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 106,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 245,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 11494,
+    "raw": ""
+  },
+  {
+    "id": "1ead7297e2169c17",
+    "threadId": "740b3bbf5fdb1e78",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Flagging this for visibility \u2014 proposal v3 is attached; main change is the payment schedule. I can resend the attachment in a different format if needed. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "2371932",
+    "internalDate": "1763701020000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Design review feedback"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 21 Nov 2025 04:57:00 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<93377f27704a938@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 116,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 10211
+  },
+  {
+    "id": "2364c25820ba639b",
+    "threadId": "06365eb8694a78ca",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Time-sensitive: I pulled together action items with owners and due dates. Not urgent, but it affects next week\u2019s plan. Reply here if you have questions.",
+    "historyId": "8053010",
+    "internalDate": "1761633738000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Apple Developer <developer@apple.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Updated contract PDF attached"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 28 Oct 2025 06:42:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<99f0cc430eb5236@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 119,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 8619
+  },
+  {
+    "id": "d8e5982d0cb6aaca",
+    "threadId": "09e5eabd6f445c97",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "UNREAD"
+    ],
+    "snippet": "FYI only: please approve the vendor invoice so we don\u2019t miss the cutoff. All details are below.",
+    "historyId": "8897389",
+    "internalDate": "1767323897000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Linda Chen <linda@notion.team>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "New user feedback: urgent"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 02 Jan 2026 03:18:17 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<ee5af55e82ea254@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 177,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 140,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 6252
+  },
+  {
+    "id": "03770c8db21a5037",
+    "threadId": "f4f695c46ded7de1",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Flagging this for visibility \u2014 your onboarding checklist is ready\u2014start with steps 1\u20133. I highlighted the key line items so it\u2019s faster to scan. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "9904884",
+    "internalDate": "1762066236000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Finance Ops <finance@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Action required: sign the NDA"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 02 Nov 2025 06:50:36 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<d2a635b535f2921@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Finance Ops <finance@bigco.com>"
+        }
+      ],
+      "body": {
+        "size": 99,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 17165
+  },
+  {
+    "id": "6fb9a3e8c8390e14",
+    "threadId": "41f65513fff3d6d8",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL",
+      "STARRED",
+      "UNREAD"
+    ],
+    "snippet": "Quick heads-up \u2014 please approve the vendor invoice so we don\u2019t miss the cutoff. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "4556253",
+    "internalDate": "1766380539000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "AWS <no-reply@amazonaws.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Incident update: mitigation in place"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 22 Dec 2025 05:15:39 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<670f9583cee4271@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 112,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 174,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 13281
+  },
+  {
+    "id": "d743395bddf999a7",
+    "threadId": "d87a96a93bdf45d8",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Could you take a look? urgent feedback came in from a pilot user\u2014summary below. Let me know if you want me to revise anything.",
+    "historyId": "6201026",
+    "internalDate": "1764282140000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "GitHub <noreply@github.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Invoice discrepancy (needs review)"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 27 Nov 2025 22:22:20 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<d824821cbcb7335@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 176,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 164,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 15159
+  },
+  {
+    "id": "de242bbdac326b48",
+    "threadId": "090d3ee00e88dddc",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT",
+      "UNREAD"
+    ],
+    "snippet": "Circling back because the NDA needs your signature before we can proceed. I highlighted the key line items so it\u2019s faster to scan. Happy to jump on a quick call if helpful.",
+    "historyId": "3559052",
+    "internalDate": "1761653807000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Finance Ops <finance@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Meeting notes + recording link"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 28 Oct 2025 12:16:47 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<8a09cb71ee68465@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 111,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 4818
+  },
+  {
+    "id": "3fe8c058b3789f62",
+    "threadId": "e4fcc62ba194a8fa",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Flagging this for visibility \u2014 please submit your expense report by end of day Friday. Happy to jump on a quick call if helpful.",
+    "historyId": "8168994",
+    "internalDate": "1761090380000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Quick check: are we still on for Thursday?"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 21 Oct 2025 23:46:20 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<f0c442d31ed2539@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 150,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 135,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 9475
+  },
+  {
+    "id": "02d4dc1e9c6f0b60",
+    "threadId": "1ac64f5c1c6568b7",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Circling back because urgent feedback came in from a pilot user\u2014summary below. I highlighted the key line items so it\u2019s faster to scan. Reply here if you have questions.",
+    "historyId": "3542107",
+    "internalDate": "1762445814000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "GitHub <noreply@github.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Design review feedback"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 06 Nov 2025 16:16:54 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<0fc51f75a52a306@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "GitHub <noreply@github.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 155,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 229,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "invoice.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"agenda.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "b6304ef28582f6ad66137e844628",
+            "size": 46
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 11368
+  },
+  {
+    "id": "f13a4cd2524ec4d6",
+    "threadId": "01e4a581adf9290c",
+    "labelIds": [
+      "INBOX",
+      "UNREAD"
+    ],
+    "snippet": "Quick heads-up \u2014 proposal v3 is attached; main change is the payment schedule. Please confirm when you can.",
+    "historyId": "7738095",
+    "internalDate": "1767632947000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Linda Chen <linda@notion.team>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Request: approve vendor invoice"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 05 Jan 2026 17:09:07 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<09c2860a81a8944@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 100,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 216,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "contract.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "34f8e24f48716653510fd461c7a9",
+            "size": 62
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 6274
+  },
+  {
+    "id": "198fd7a77be75e21",
+    "threadId": "f174ed6070ae9559",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "One more thing \u2014 here\u2019s the API key rotation plan and the proposed window. Let me know if you want me to revise anything.",
+    "historyId": "5216556",
+    "internalDate": "1761033071000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Quick check: are we still on for Thursday?"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 21 Oct 2025 07:51:11 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<00ad297a38ca494@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 116,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 12132,
+    "raw": ""
+  },
+  {
+    "id": "487f2a311d6ac440",
+    "threadId": "4d6d1c3b8087c240",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Sharing context from the call \u2014 the meeting time changed; new invite attached. Thanks.",
+    "historyId": "5211477",
+    "internalDate": "1762646307000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Partnerships <partners@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "New comment on the doc you shared"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 08 Nov 2025 23:58:27 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<2cfcf3cd510f861@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 166,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 186,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 17693
+  },
+  {
+    "id": "4ca8c85e8f14d926",
+    "threadId": "c0a18414fcac7e10",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "FYI only: maintenance is scheduled; there may be brief downtime. I can resend the attachment in a different format if needed. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "6596302",
+    "internalDate": "1763552113000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "New comment on the doc you shared"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 19 Nov 2025 11:35:13 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<f93ac2ec24a6673@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 106,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 10902,
+    "raw": ""
+  },
+  {
+    "id": "d916d52bacd1ff5b",
+    "threadId": "c617fd1d72d4ce05",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Flagging this for visibility \u2014 your payment went through successfully; receipt is included. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "9745608",
+    "internalDate": "1764267180000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Partnerships <partners@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your monthly usage summary is ready"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 27 Nov 2025 18:13:00 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<c237f14bc998143@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Partnerships <partners@stripepartners.io>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 138,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 125,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "contract.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"contract.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "9c1a98df7459ea5d7245a15394b3",
+            "size": 45
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 16127,
+    "raw": ""
+  },
+  {
+    "id": "cf03c5b4392c1b31",
+    "threadId": "f5f1c2749097a801",
+    "labelIds": [
+      "INBOX",
+      "UNREAD"
+    ],
+    "snippet": "One more thing \u2014 finance needs a green light to process the payment today. Let me know if you want me to revise anything.",
+    "historyId": "3718068",
+    "internalDate": "1766074178000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Security Team <security@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Please confirm receipt"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 18 Dec 2025 16:09:38 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<21da29175748556@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Security Team <security@bigco.com>"
+        }
+      ],
+      "body": {
+        "size": 126,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 4928
+  },
+  {
+    "id": "4b7f60cfc594ff38",
+    "threadId": "86135b47acbaafd2",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "UNREAD"
+    ],
+    "snippet": "FYI only: I pulled together action items with owners and due dates. All details are below.",
+    "historyId": "5815245",
+    "internalDate": "1767701213000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Weekly status snapshot"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 06 Jan 2026 12:06:53 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<9b7bb4540caf844@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 96,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 132,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"agenda.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "8d50fc870f0176df71c2b1103e22",
+            "size": 73
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 17741
+  },
+  {
+    "id": "233ccdb9a7194407",
+    "threadId": "ce38c483ea901d8c",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Looping you in since please submit your expense report by end of day Friday. Not urgent, but it affects next week\u2019s plan. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "5819932",
+    "internalDate": "1763681434000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Support <support@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Calendar update: time changed"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 20 Nov 2025 23:30:34 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<decb3e0da12b659@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Support <support@saasapp.com>"
+        }
+      ],
+      "body": {
+        "size": 103,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 12625
+  },
+  {
+    "id": "b68248099386ccfd",
+    "threadId": "bdddad92417f94dd",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_SOCIAL",
+      "UNREAD"
+    ],
+    "snippet": "For your review: mitigation is in place; next update will be after monitoring completes. We should be good once you confirm. Let me know if you want me to revise anything.",
+    "historyId": "5599183",
+    "internalDate": "1765436067000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Product Updates <updates@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Weekly status snapshot"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 11 Dec 2025 06:54:27 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<bc98d60df62d307@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 119,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 8013
+  },
+  {
+    "id": "9a39ecb685a6e064",
+    "threadId": "738c7f69ac45828a",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Could you take a look? here\u2019s the API key rotation plan and the proposed window. Thanks.",
+    "historyId": "7721283",
+    "internalDate": "1765387458000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Security Team <security@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Please confirm receipt"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 10 Dec 2025 17:24:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<b506bbca848b888@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Security Team <security@bigco.com>"
+        }
+      ],
+      "body": {
+        "size": 136,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 10237
+  },
+  {
+    "id": "b5d9bc4c9e1c5e2f",
+    "threadId": "e74a606690029332",
+    "labelIds": [
+      "INBOX",
+      "UNREAD"
+    ],
+    "snippet": "One more thing \u2014 are we still aligned for Thursday at 2pm PT? Please confirm when you can.",
+    "historyId": "7144545",
+    "internalDate": "1764016047000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Calendly <no-reply@calendly.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Updated contract PDF attached"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 24 Nov 2025 20:27:27 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<fd6cb0553140617@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 159,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 166,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "contract.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"agenda.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "9a8cfb0081bd9a731467243772fa",
+            "size": 43
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 7080
+  },
+  {
+    "id": "d8fef7e355c7bb7a",
+    "threadId": "5e59dd1442f84e10",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "Looping you in since the meeting time changed; new invite attached. Happy to jump on a quick call if helpful.",
+    "historyId": "3265974",
+    "internalDate": "1767124434000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Jason Patel <jason@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Incident update: mitigation in place"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 30 Dec 2025 19:53:54 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<93e9ac7b6479905@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Jason Patel <jason@stripepartners.io>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 147,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 216,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 14810
+  },
+  {
+    "id": "cdd5ac2f3ceb70f8",
+    "threadId": "e9cddfd6ea1a648f",
+    "labelIds": [
+      "INBOX",
+      "IMPORTANT",
+      "STARRED",
+      "UNREAD"
+    ],
+    "snippet": "FYI only: I attached an agenda; please add any topics you want covered. This is blocking a downstream dependency. Reply here if you have questions.",
+    "historyId": "2543635",
+    "internalDate": "1761823470000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: API key rotation plan"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 30 Oct 2025 11:24:30 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<021660ce51da122@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 139,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 170,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 14649
+  },
+  {
+    "id": "429ff3821aa3adbc",
+    "threadId": "401af187ea898743",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL",
+      "UNREAD"
+    ],
+    "snippet": "No rush, but finance needs a green light to process the payment today. Reply here if you have questions.",
+    "historyId": "4123034",
+    "internalDate": "1764336353000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Partnerships <partners@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Payment received \u2014 receipt enclosed"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 28 Nov 2025 13:25:53 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<abf14ecc6dc3770@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 109,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 121,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "0575b46f69f0d9b674db7b54de61",
+            "size": 54
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 4390
+  },
+  {
+    "id": "aad52cced6b1c393",
+    "threadId": "7635b652d0432024",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Time-sensitive: urgent feedback came in from a pilot user\u2014summary below. I highlighted the key line items so it\u2019s faster to scan. Please confirm when you can.",
+    "historyId": "3969359",
+    "internalDate": "1767389474000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Security Team <security@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your account settings were updated"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 02 Jan 2026 21:31:14 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<3c7114fb8fb9365@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 117,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 17729,
+    "raw": ""
+  },
+  {
+    "id": "c89c46632f4d8068",
+    "threadId": "d3ce4e634d8f6bfd",
+    "labelIds": [
+      "INBOX",
+      "IMPORTANT"
+    ],
+    "snippet": "Just a nudge: the contract PDF is attached; please confirm the redlines are acceptable. \u2014",
+    "historyId": "5722368",
+    "internalDate": "1761843118000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Recruiter <talent@startup.jobs>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Weekly status snapshot"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 30 Oct 2025 16:51:58 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<44ca0040d616568@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Recruiter <talent@startup.jobs>"
+        }
+      ],
+      "body": {
+        "size": 97,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 10672
+  },
+  {
+    "id": "34820ad605a893dd",
+    "threadId": "cfcd8c31e1277c0f",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "IMPORTANT"
+    ],
+    "snippet": "FYI only: are we still aligned for Thursday at 2pm PT? Please confirm when you can.",
+    "historyId": "3590204",
+    "internalDate": "1762413888000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Payment received \u2014 receipt enclosed"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 06 Nov 2025 07:24:48 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<a91f7f67d20e182@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 132,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 6470,
+    "raw": ""
+  },
+  {
+    "id": "5e38310de5215e42",
+    "threadId": "1e1fefb8bd43347c",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "UNREAD"
+    ],
+    "snippet": "Could you take a look? the invoice total doesn\u2019t match the PO\u2014can you confirm which is correct? If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "6598943",
+    "internalDate": "1763759450000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Jason Patel <jason@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Design review feedback"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 21 Nov 2025 21:10:50 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<4463c1b290e3370@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 126,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 234,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 15498
+  },
+  {
+    "id": "bec3649c133553aa",
+    "threadId": "34a479a7b6e6c5ec",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "Time-sensitive: please submit your expense report by end of day Friday. Not urgent, but it affects next week\u2019s plan. All details are below.",
+    "historyId": "8801433",
+    "internalDate": "1765323169000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Support <support@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Quick check: are we still on for Thursday?"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 09 Dec 2025 23:32:49 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<749fd5b1d288178@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 120,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 161,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 5916
+  },
+  {
+    "id": "5cdcb13e5f28229f",
+    "threadId": "dfadafb2815b7a12",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "Quick heads-up \u2014 there\u2019s a new comment on the doc (section 2.1) that needs your input. Happy to jump on a quick call if helpful.",
+    "historyId": "3195214",
+    "internalDate": "1760958434000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Product Updates <updates@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Updated contract PDF attached"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 20 Oct 2025 11:07:14 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<bd0620955616424@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 172,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 252,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 16597
+  },
+  {
+    "id": "cd2d1ccceca4f43d",
+    "threadId": "1625867e5ccbda4b",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_SOCIAL",
+      "UNREAD"
+    ],
+    "snippet": "Flagging this for visibility \u2014 the meeting time changed; new invite attached. Please confirm when you can.",
+    "historyId": "8790282",
+    "internalDate": "1765418457000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Apple Developer <developer@apple.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "New user feedback: urgent"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 11 Dec 2025 02:00:57 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<47190edc066e976@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 106,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 6753
+  },
+  {
+    "id": "c620b8eb55e2c657",
+    "threadId": "1b84ab7546c9e09b",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "Time-sensitive: the NDA needs your signature before we can proceed. Not urgent, but it affects next week\u2019s plan. Reply here if you have questions.",
+    "historyId": "7594830",
+    "internalDate": "1764469035000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Recruiter <talent@startup.jobs>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "FYI: timeline shifted by one week"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 30 Nov 2025 02:17:15 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<34b5603de8c4214@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 158,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 165,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 4124
+  },
+  {
+    "id": "1d1a7bfe68384f96",
+    "threadId": "5d3e9fdae62f9fd4",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_SOCIAL",
+      "UNREAD"
+    ],
+    "snippet": "No rush, but the contract PDF is attached; please confirm the redlines are acceptable. This is blocking a downstream dependency. Thanks.",
+    "historyId": "8955657",
+    "internalDate": "1765907777000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Support <support@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Heads-up: vendor maintenance window"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 16 Dec 2025 17:56:17 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<7307186a6ae1277@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 95,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 17346
+  },
+  {
+    "id": "4598650dc1349a78",
+    "threadId": "018faa75c08c6759",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL",
+      "IMPORTANT",
+      "STARRED",
+      "UNREAD"
+    ],
+    "snippet": "Looping you in since staging is failing on the new build; the error appears tied to env vars. This is blocking a downstream dependency. Please confirm when you can.",
+    "historyId": "9521575",
+    "internalDate": "1767444713000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Calendly <no-reply@calendly.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: API key rotation plan"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 03 Jan 2026 12:51:53 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<c5ba36a50be4661@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 177,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 163,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 11915,
+    "raw": ""
+  },
+  {
+    "id": "392bab8fd8e1fa7e",
+    "threadId": "afb19d5933555d55",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "Just a nudge: usage is up 18% week-over-week; details are in the dashboard. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "5635643",
+    "internalDate": "1766793002000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Apple Developer <developer@apple.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your account settings were updated"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 26 Dec 2025 23:50:02 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<51962dde37f6107@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 92,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 208,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "agenda.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "8261e0ec54e7592a3e0585531ae9",
+            "size": 39
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 9664
+  },
+  {
+    "id": "8cd80e73b8dea20b",
+    "threadId": "9875073bf6d7b4a7",
+    "labelIds": [
+      "INBOX",
+      "STARRED"
+    ],
+    "snippet": "One more thing \u2014 the invoice total doesn\u2019t match the PO\u2014can you confirm which is correct? Thanks.",
+    "historyId": "6942810",
+    "internalDate": "1768004753000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "AWS <no-reply@amazonaws.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Payment received \u2014 receipt enclosed"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 10 Jan 2026 00:25:53 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<00cd8bbbe83f465@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 126,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 220,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 11677
+  },
+  {
+    "id": "d5a83d81f5c55e06",
+    "threadId": "3ababc128efbbf1e",
+    "labelIds": [
+      "INBOX",
+      "UNREAD"
+    ],
+    "snippet": "Could you take a look? I summarized next steps and owners so we can keep momentum. Thanks.",
+    "historyId": "7379623",
+    "internalDate": "1761449024000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Security Team <security@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Follow-up: action items from yesterday"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 26 Oct 2025 03:23:44 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<c93a5112dc1d617@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 103,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 229,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "agenda.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"contract.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "02cef50827b387cfa94abc6be4ea",
+            "size": 45
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 15154
+  },
+  {
+    "id": "393fda230b32a0f5",
+    "threadId": "ac0adebcda260143",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "No rush, but the deadline moved to next Wednesday due to vendor availability. I can resend the attachment in a different format if needed. All details are below.",
+    "historyId": "9787699",
+    "internalDate": "1764782612000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Calendly <no-reply@calendly.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Draft agenda \u2014 please annotate"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 03 Dec 2025 17:23:32 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<593ff723b27e401@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 135,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 11850
+  },
+  {
+    "id": "432ae97f84f0af60",
+    "threadId": "2e014e3b4d0386cf",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "UNREAD"
+    ],
+    "snippet": "Time-sensitive: there\u2019s an access request pending; approving it will unblock the team. Let me know if you want me to revise anything.",
+    "historyId": "7312408",
+    "internalDate": "1764268963000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Security Team <security@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Pricing proposal v3"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 27 Nov 2025 18:42:43 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<640884070b8c305@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 153,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 180,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 13428
+  },
+  {
+    "id": "f0d29a00cd4e73a4",
+    "threadId": "36775f6b20d11919",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Flagging this for visibility \u2014 the NDA needs your signature before we can proceed. I highlighted the key line items so it\u2019s faster to scan. Reply here if you have questions.",
+    "historyId": "7063386",
+    "internalDate": "1766673606000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Apple Developer <developer@apple.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: API key rotation plan"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 25 Dec 2025 14:40:06 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<054e2626aa46774@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 93,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 11502
+  },
+  {
+    "id": "ef092ada3331eef3",
+    "threadId": "4c8ef41f5036fde2",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Wanted to confirm: notes and the recording link are included for reference. Happy to jump on a quick call if helpful.",
+    "historyId": "7625202",
+    "internalDate": "1762146920000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Calendly <no-reply@calendly.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Final copy before legal review"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 03 Nov 2025 05:15:20 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<63100eaf589c351@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 105,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 123,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "contract.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"agenda.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "c25db90d0c0373e128191203aa59",
+            "size": 69
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 10256
+  },
+  {
+    "id": "ddef1873bf38b925",
+    "threadId": "c327cf9b66890c2e",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL",
+      "IMPORTANT",
+      "UNREAD"
+    ],
+    "snippet": "Looping you in since urgent feedback came in from a pilot user\u2014summary below. \u2014",
+    "historyId": "6369111",
+    "internalDate": "1762796944000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Jason Patel <jason@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Draft agenda \u2014 please annotate"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 10 Nov 2025 17:49:04 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<4ef0ebe43946806@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 155,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 176,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 8911
+  },
+  {
+    "id": "c56757cbb2cf5dfc",
+    "threadId": "86017e80963d7956",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_SOCIAL",
+      "UNREAD"
+    ],
+    "snippet": "Time-sensitive: confirming you received the files and can open them. I highlighted the key line items so it\u2019s faster to scan. Appreciate it.",
+    "historyId": "5592546",
+    "internalDate": "1762677514000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Customer Success <success@vendorco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Request: approve vendor invoice"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 09 Nov 2025 08:38:34 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<7bca9903c425884@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 154,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 145,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 13788
+  },
+  {
+    "id": "8d0ceda4b4fa80b7",
+    "threadId": "a3d7445d59b847db",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "UNREAD"
+    ],
+    "snippet": "Could you take a look? staging is failing on the new build; the error appears tied to env vars. Happy to jump on a quick call if helpful.",
+    "historyId": "9132848",
+    "internalDate": "1766291842000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Apple Developer <developer@apple.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "New user feedback: urgent"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 21 Dec 2025 04:37:22 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<295e7e93ffd2186@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 100,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 166,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 16273
+  },
+  {
+    "id": "36a08151a66dd1f3",
+    "threadId": "ac1014ea4ee54958",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "Circling back because your account settings were changed; if this wasn\u2019t you, reply ASAP. I can resend the attachment in a different format if needed. Reply here if you have questions.",
+    "historyId": "7843842",
+    "internalDate": "1765342774000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Incident update: mitigation in place"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 10 Dec 2025 04:59:34 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<48a1cc5d670e234@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 163,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 251,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "agenda.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "9003db9014b72ef45c853d93057c",
+            "size": 51
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 12014
+  },
+  {
+    "id": "a45d861c5bc1814e",
+    "threadId": "a6ec00988c921302",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "Circling back because maintenance is scheduled; there may be brief downtime. Not urgent, but it affects next week\u2019s plan. Appreciate it.",
+    "historyId": "2945057",
+    "internalDate": "1765824841000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Engineering <eng@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Quick check: are we still on for Thursday?"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 15 Dec 2025 18:54:01 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<5802d364adfa427@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 128,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 14716
+  },
+  {
+    "id": "f23f66f676c071d3",
+    "threadId": "ea27208982a7378d",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "One more thing \u2014 I summarized next steps and owners so we can keep momentum. Let me know if you want me to revise anything.",
+    "historyId": "7221934",
+    "internalDate": "1760769090000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Security Team <security@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Onboarding: first-week checklist"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 18 Oct 2025 06:31:30 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<b95ec98645f4930@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 90,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 8217
+  },
+  {
+    "id": "c645e231bcd3c59c",
+    "threadId": "94400f831d268796",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "Circling back because here\u2019s the weekly snapshot: goals, risks, and blockers. \u2014",
+    "historyId": "6866723",
+    "internalDate": "1762828643000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Finance Ops <finance@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Security notice: unusual API usage"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 11 Nov 2025 02:37:23 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<2f5a2de47a0d875@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 175,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 203,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 11462
+  },
+  {
+    "id": "d8458742c234c685",
+    "threadId": "a6c60037e86b7e80",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "For your review: I summarized next steps and owners so we can keep momentum. \u2014",
+    "historyId": "5224650",
+    "internalDate": "1763466836000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Engineering <eng@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Blocking issue with staging deploy"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 18 Nov 2025 11:53:56 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<374792ec7273407@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 137,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 257,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 12512,
+    "raw": ""
+  },
+  {
+    "id": "3e723d44122e13d0",
+    "threadId": "4a17935ad757f26c",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "No rush, but I attached an agenda; please add any topics you want covered. Please confirm when you can.",
+    "historyId": "6492412",
+    "internalDate": "1767085082000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "AWS <no-reply@amazonaws.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Reminder: submit expense report"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 30 Dec 2025 08:58:02 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<6bf03a82030b337@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 133,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 174,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "contract.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"agenda.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "8b5c93fc01e4e4f0e8f7bb423353",
+            "size": 52
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 7728
+  },
+  {
+    "id": "542cacd903eaec20",
+    "threadId": "85ff8c4f781d985f",
+    "labelIds": [
+      "INBOX",
+      "STARRED"
+    ],
+    "snippet": "Just a nudge: we detected an unusual login and recommend rotating credentials. Appreciate it.",
+    "historyId": "2575046",
+    "internalDate": "1762395050000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Product Updates <updates@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Payment received \u2014 receipt enclosed"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 06 Nov 2025 02:10:50 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<26eedb03de86139@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 163,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 259,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 17825
+  },
+  {
+    "id": "7b9d81caaeb81287",
+    "threadId": "a6ef2b7dbb0f2cee",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Quick heads-up \u2014 the latest draft reflects the changes we discussed and is ready for sign-off. Appreciate it.",
+    "historyId": "9446754",
+    "internalDate": "1766258636000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Notion <team@notion.team>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Action required: sign the NDA"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 20 Dec 2025 19:23:56 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<939d5727121d419@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 165,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 175,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 10241
+  },
+  {
+    "id": "4aa19f9ebac74ea0",
+    "threadId": "9178fa86af4594be",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "UNREAD"
+    ],
+    "snippet": "Just a nudge: here\u2019s the API key rotation plan and the proposed window. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "6647304",
+    "internalDate": "1764296929000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Notion <team@notion.team>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Access request: add you to shared drive"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 28 Nov 2025 02:28:49 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<cfb845f63b16534@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Notion <team@notion.team>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 165,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 229,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 15806
+  },
+  {
+    "id": "b60bcf5f4397e959",
+    "threadId": "82f8f08da2b5f62f",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Time-sensitive: the latest draft reflects the changes we discussed and is ready for sign-off. All details are below.",
+    "historyId": "8646627",
+    "internalDate": "1763908201000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Product Updates <updates@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Quick check: are we still on for Thursday?"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 23 Nov 2025 14:30:01 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<97fd58d5a298146@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Product Updates <updates@saasapp.com>"
+        }
+      ],
+      "body": {
+        "size": 122,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 12038
+  },
+  {
+    "id": "d5e695853fb3c3eb",
+    "threadId": "83f6aa2276406b41",
+    "labelIds": [
+      "INBOX",
+      "IMPORTANT"
+    ],
+    "snippet": "Could you take a look? there\u2019s a new comment on the doc (section 2.1) that needs your input. This is blocking a downstream dependency. \u2014",
+    "historyId": "8204171",
+    "internalDate": "1765171144000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: API key rotation plan"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 08 Dec 2025 05:19:04 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<216848edb9a1596@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 159,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 159,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 7217
+  },
+  {
+    "id": "31aed38b4bd6b410",
+    "threadId": "67faea313e7811cf",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Could you take a look? the latest draft reflects the changes we discussed and is ready for sign-off. This is blocking a downstream dependency. Reply here if you have questions.",
+    "historyId": "2367915",
+    "internalDate": "1767520276000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: API key rotation plan"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 04 Jan 2026 09:51:16 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<9eda8c4396da329@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 103,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 231,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 4635
+  },
+  {
+    "id": "89938d1327c396d6",
+    "threadId": "b2b8707588c0c257",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Need your approval on this: the contract PDF is attached; please confirm the redlines are acceptable. Appreciate it.",
+    "historyId": "5084667",
+    "internalDate": "1762284812000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Support <support@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Invoice discrepancy (needs review)"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 04 Nov 2025 19:33:32 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<7b0676e58518147@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 130,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 7655,
+    "raw": ""
+  },
+  {
+    "id": "33c565509b8aa0b4",
+    "threadId": "2edea2841857cd7d",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Time-sensitive: the contract PDF is attached; please confirm the redlines are acceptable. Not urgent, but it affects next week\u2019s plan. Appreciate it.",
+    "historyId": "5053066",
+    "internalDate": "1765549211000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Engineering <eng@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your account settings were updated"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 12 Dec 2025 14:20:11 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<8e0a81fc0956327@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 127,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 12464
+  },
+  {
+    "id": "e887def7c834ec08",
+    "threadId": "28ce1619c44cc6a3",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Quick heads-up \u2014 please approve the vendor invoice so we don\u2019t miss the cutoff. Reply here if you have questions.",
+    "historyId": "6349472",
+    "internalDate": "1765896331000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Product Updates <updates@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Updated contract PDF attached"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 16 Dec 2025 14:45:31 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<4163f55a73db464@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 107,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 230,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 10567,
+    "raw": ""
+  },
+  {
+    "id": "9272d59aa2875a65",
+    "threadId": "d168d911d2cc8f9f",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "IMPORTANT",
+      "UNREAD"
+    ],
+    "snippet": "Wanted to confirm: the deadline moved to next Wednesday due to vendor availability. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "8853478",
+    "internalDate": "1761799740000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Meeting notes + recording link"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 30 Oct 2025 04:49:00 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<e8ed06336179755@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 92,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 8116
+  },
+  {
+    "id": "f6e0e1b160276109",
+    "threadId": "f00942df87b16fce",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Time-sensitive: please submit your expense report by end of day Friday. I can resend the attachment in a different format if needed. All details are below.",
+    "historyId": "5707122",
+    "internalDate": "1763322711000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "New user feedback: urgent"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 16 Nov 2025 19:51:51 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<04057f9c4b1f207@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "HR Team <hr@bigco.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 99,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 215,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 13859,
+    "raw": ""
+  },
+  {
+    "id": "31153a6be31cc5f2",
+    "threadId": "d2176bbbbe106fc9",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT",
+      "UNREAD"
+    ],
+    "snippet": "Could you take a look? the meeting time changed; new invite attached. Happy to jump on a quick call if helpful.",
+    "historyId": "6239520",
+    "internalDate": "1764049049000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: API key rotation plan"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 25 Nov 2025 05:37:29 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<dd500d8a73e8762@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 113,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 14147
+  },
+  {
+    "id": "1c33b002237c5de5",
+    "threadId": "8566e9d7e266136f",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "For your review: the latest draft reflects the changes we discussed and is ready for sign-off. Let me know if you want me to revise anything.",
+    "historyId": "5844581",
+    "internalDate": "1761887409000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Payment received \u2014 receipt enclosed"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 31 Oct 2025 05:10:09 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<8cdc9176e624961@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 170,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 184,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 9255
+  },
+  {
+    "id": "ea5e66ffee858c86",
+    "threadId": "52e4c85fc12773b5",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "STARRED"
+    ],
+    "snippet": "For your review: I summarized next steps and owners so we can keep momentum. Happy to jump on a quick call if helpful.",
+    "historyId": "4494489",
+    "internalDate": "1761266099000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Jason Patel <jason@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Final copy before legal review"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 24 Oct 2025 00:34:59 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<b8e65b714e92478@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 137,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 152,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 17110
+  },
+  {
+    "id": "8b3a54a42b024f83",
+    "threadId": "c7f3b4d44c687688",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Looping you in since the invoice total doesn\u2019t match the PO\u2014can you confirm which is correct? I highlighted the key line items so it\u2019s faster to scan. \u2014",
+    "historyId": "8003864",
+    "internalDate": "1767341373000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "GitHub <noreply@github.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "FYI: timeline shifted by one week"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 02 Jan 2026 08:09:33 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<6996b7243f36541@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "GitHub <noreply@github.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 157,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 182,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 16834
+  },
+  {
+    "id": "c9448a8e9e119252",
+    "threadId": "977e6d3eb10d988f",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "No rush, but your account settings were changed; if this wasn\u2019t you, reply ASAP. This is blocking a downstream dependency. All details are below.",
+    "historyId": "9018260",
+    "internalDate": "1762935212000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Apple Developer <developer@apple.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Calendar update: time changed"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 12 Nov 2025 08:13:32 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<74d4b0055fc7418@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 137,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 10525
+  },
+  {
+    "id": "cfb105290dbd0380",
+    "threadId": "3613a387d239ca5d",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "FYI only: please approve the vendor invoice so we don\u2019t miss the cutoff. Reply here if you have questions.",
+    "historyId": "4538040",
+    "internalDate": "1761143964000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Updated contract PDF attached"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 22 Oct 2025 14:39:24 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<9e49f6cb9613420@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 173,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 260,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 4278,
+    "raw": ""
+  },
+  {
+    "id": "314fdb0f14212263",
+    "threadId": "0313ef582695cb40",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "FYI only: your account settings were changed; if this wasn\u2019t you, reply ASAP. Reply here if you have questions.",
+    "historyId": "5842264",
+    "internalDate": "1768005721000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Legal <legal@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Next steps after vendor sync"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 10 Jan 2026 00:42:01 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<195d08bd68ac176@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 168,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 258,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 16649
+  },
+  {
+    "id": "bd93af505f9fa0d4",
+    "threadId": "fc9861a54898c8aa",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Flagging this for visibility \u2014 maintenance is scheduled; there may be brief downtime. Thanks.",
+    "historyId": "3299432",
+    "internalDate": "1763934869000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Product Updates <updates@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Blocking issue with staging deploy"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 23 Nov 2025 21:54:29 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<6e7a6956d743236@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 167,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 211,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 15301
+  },
+  {
+    "id": "1f2d462791c5f2a2",
+    "threadId": "01962519c8c5da0f",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Time-sensitive: usage is up 18% week-over-week; details are in the dashboard. If you\u2019re okay with it, I\u2019ll proceed.",
+    "historyId": "3249167",
+    "internalDate": "1761734439000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Notion <team@notion.team>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your monthly usage summary is ready"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 29 Oct 2025 10:40:39 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<84a3bce422ed757@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 115,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 135,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 12612
+  },
+  {
+    "id": "6abeecb960c4d151",
+    "threadId": "d93991a5990a2e16",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Time-sensitive: design review notes are captured; biggest risk is scope creep. I highlighted the key line items so it\u2019s faster to scan. Appreciate it.",
+    "historyId": "2924478",
+    "internalDate": "1768041060000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Customer Success <success@vendorco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Action required: sign the NDA"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 10 Jan 2026 10:31:00 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<38ffb9e51e83750@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 127,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 139,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 9561
+  },
+  {
+    "id": "e06f18f005b34b9c",
+    "threadId": "b2febdb3cb718de1",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "Sharing context from the call \u2014 please approve the vendor invoice so we don\u2019t miss the cutoff. This is blocking a downstream dependency. Please confirm when you can.",
+    "historyId": "4459062",
+    "internalDate": "1763393279000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Apple Developer <developer@apple.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Follow-up: action items from yesterday"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 17 Nov 2025 15:27:59 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<36f7edb2b4f3958@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 93,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 8626
+  },
+  {
+    "id": "f1ef718c62ca3fd8",
+    "threadId": "0cbfa07084eb1d63",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "One more thing \u2014 the deadline moved to next Wednesday due to vendor availability. Happy to jump on a quick call if helpful.",
+    "historyId": "4909972",
+    "internalDate": "1763510425000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Finance Ops <finance@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Payment received \u2014 receipt enclosed"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 19 Nov 2025 00:00:25 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<54a8e6e0ed38703@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 147,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 252,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "d96b9b499f7c67ae9f24e81c0968",
+            "size": 71
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 9427
+  },
+  {
+    "id": "c4f64f53726c18cd",
+    "threadId": "9c94f438ddf246bd",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "UNREAD"
+    ],
+    "snippet": "Just a nudge: notes and the recording link are included for reference. \u2014",
+    "historyId": "6489883",
+    "internalDate": "1767755050000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "GitHub <noreply@github.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: API key rotation plan"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 07 Jan 2026 03:04:10 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<fa5c2ba3f57e696@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "GitHub <noreply@github.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 149,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 192,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "invoice.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"agenda.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "8707d200fc0a00f263eed6c28b4b",
+            "size": 65
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 13543
+  },
+  {
+    "id": "67fcf87704bb682d",
+    "threadId": "f321b5f5313749ee",
+    "labelIds": [
+      "INBOX"
+    ],
+    "snippet": "Could you take a look? urgent feedback came in from a pilot user\u2014summary below. Not urgent, but it affects next week\u2019s plan. \u2014",
+    "historyId": "3468484",
+    "internalDate": "1762481844000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your monthly usage summary is ready"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 07 Nov 2025 02:17:24 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<f35e8a390e4e125@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "HR Team <hr@bigco.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 108,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 194,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 16543,
+    "raw": ""
+  },
+  {
+    "id": "0f6a1cac82e07d09",
+    "threadId": "2b21d1a4f093d067",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "FYI only: the invoice total doesn\u2019t match the PO\u2014can you confirm which is correct? Let me know if you want me to revise anything.",
+    "historyId": "6021622",
+    "internalDate": "1761433562000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Partnerships <partners@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Incident update: mitigation in place"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 25 Oct 2025 23:06:02 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<6e5167101489361@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Partnerships <partners@stripepartners.io>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 105,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 205,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "contract.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "92e6bfedfb3a477e1497afe65195",
+            "size": 76
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 5247
+  },
+  {
+    "id": "63eddfdbd4f3e04f",
+    "threadId": "528ebcffe4332464",
+    "labelIds": [
+      "INBOX",
+      "IMPORTANT",
+      "UNREAD"
+    ],
+    "snippet": "Time-sensitive: here\u2019s the API key rotation plan and the proposed window. I highlighted the key line items so it\u2019s faster to scan. Let me know if you want me to revise anything.",
+    "historyId": "8692622",
+    "internalDate": "1766115319000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Engineering <eng@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Blocking issue with staging deploy"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 19 Dec 2025 03:35:19 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<c98d84c192b8381@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 138,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 176,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"contract.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "7695ad14df467a4ea0eb85638c78",
+            "size": 35
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 7436
+  },
+  {
+    "id": "95f7053dc00096cc",
+    "threadId": "5b425291e7200454",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "Circling back because the contract PDF is attached; please confirm the redlines are acceptable. I highlighted the key line items so it\u2019s faster to scan. Happy to jump on a quick call if helpful.",
+    "historyId": "9164822",
+    "internalDate": "1766765133000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Onboarding: first-week checklist"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 26 Dec 2025 16:05:33 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<91a9a7415473662@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 122,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 7394,
+    "raw": ""
+  },
+  {
+    "id": "f5d8d6fc2529bba9",
+    "threadId": "0279e89ef51c36d1",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "IMPORTANT"
+    ],
+    "snippet": "Sharing context from the call \u2014 the latest draft reflects the changes we discussed and is ready for sign-off. This is blocking a downstream dependency. \u2014",
+    "historyId": "7536918",
+    "internalDate": "1766948781000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "AWS <no-reply@amazonaws.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Heads-up: vendor maintenance window"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 28 Dec 2025 19:06:21 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<592fa807a622516@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 107,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 15225
+  },
+  {
+    "id": "d0a16c923dc48434",
+    "threadId": "027e8c15c4a30199",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "STARRED"
+    ],
+    "snippet": "Just a nudge: please submit your expense report by end of day Friday. I can resend the attachment in a different format if needed. All details are below.",
+    "historyId": "7094448",
+    "internalDate": "1762452703000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "AWS <no-reply@amazonaws.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Pricing proposal v3"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 06 Nov 2025 18:11:43 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<c536a8cffbcf524@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 125,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 169,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "agenda.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "b09e1ccb4b9790ea78a3610931a9",
+            "size": 39
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 11248
+  },
+  {
+    "id": "46b57bbe29308bbf",
+    "threadId": "bd1c9de021fe32b3",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "For your review: I pulled together action items with owners and due dates. Happy to jump on a quick call if helpful.",
+    "historyId": "8704351",
+    "internalDate": "1765185463000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Recruiter <talent@startup.jobs>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Draft agenda \u2014 please annotate"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 08 Dec 2025 09:17:43 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<d2a5d7a5b4a9286@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 104,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 6054
+  },
+  {
+    "id": "569e6a70d5328b7a",
+    "threadId": "f0ba9584555b2ea7",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "One more thing \u2014 here\u2019s the weekly snapshot: goals, risks, and blockers. Reply here if you have questions.",
+    "historyId": "9963634",
+    "internalDate": "1767639025000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Engineering <eng@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Invoice discrepancy (needs review)"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 05 Jan 2026 18:50:25 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<a534149847a5233@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Engineering <eng@acme.com>"
+        }
+      ],
+      "body": {
+        "size": 119,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 6913
+  },
+  {
+    "id": "e97ed4baef7679d0",
+    "threadId": "279dc022510b6ab6",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "UNREAD"
+    ],
+    "snippet": "FYI only: maintenance is scheduled; there may be brief downtime. Not urgent, but it affects next week\u2019s plan. Appreciate it.",
+    "historyId": "2307373",
+    "internalDate": "1765426224000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Meeting notes + recording link"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 11 Dec 2025 04:10:24 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<2edd460e4938177@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 156,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 206,
+            "data": ""
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"agenda.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "6e02b005e09b8b601ef02e42a736",
+            "size": 73
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 13044,
+    "raw": ""
+  },
+  {
+    "id": "5ff46d680ac7240a",
+    "threadId": "965bc5231c5f4ff0",
+    "labelIds": [
+      "INBOX",
+      "STARRED"
+    ],
+    "snippet": "Circling back because the contract PDF is attached; please confirm the redlines are acceptable. I highlighted the key line items so it\u2019s faster to scan. Thanks.",
+    "historyId": "9726409",
+    "internalDate": "1765773436000",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "GitHub <noreply@github.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Onboarding: first-week checklist"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 15 Dec 2025 04:37:16 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<3f0e31e13144147@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 108,
+        "data": ""
+      }
+    },
+    "sizeEstimate": 17187
+  },
+  {
+    "id": "59f37c509b642b5f",
+    "threadId": "850e2fb855163568",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "Need your approval on this: here\u2019s the weekly snapshot: goals, risks, and blockers. All details are below.",
+    "historyId": "7284999",
+    "internalDate": "1768047044000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Calendar update: time changed"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 10 Jan 2026 12:10:44 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<a312e68ead75811@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 117,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 168,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 16531
+  },
+  {
+    "id": "39b662036c03f622",
+    "threadId": "c1302598ecaf0c8e",
+    "labelIds": [
+      "INBOX",
+      "UNREAD"
+    ],
+    "snippet": "Quick heads-up \u2014 mitigation is in place; next update will be after monitoring completes. Reply here if you have questions.",
+    "historyId": "7623743",
+    "internalDate": "1767564996000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Security Team <security@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Security notice: unusual API usage"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 04 Jan 2026 22:16:36 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<cd4e26acacb0401@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 131,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 151,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 14806
+  },
+  {
+    "id": "941dc0635b1b5c1e",
+    "threadId": "99158da834a487ba",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Flagging this for visibility \u2014 here\u2019s the API key rotation plan and the proposed window. I can resend the attachment in a different format if needed. Let me know if you want me to revise anything.",
+    "historyId": "7727432",
+    "internalDate": "1762145138000",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "GitHub <noreply@github.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Invoice discrepancy (needs review)"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 03 Nov 2025 04:45:38 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<6c65dd062bcf138@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 170,
+            "data": ""
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 159,
+            "data": ""
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 16029
+  }
+]

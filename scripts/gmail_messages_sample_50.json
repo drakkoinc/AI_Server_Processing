@@ -1,0 +1,3986 @@
+[
+  {
+    "id": "fcd0ec2004e9fd8d",
+    "threadId": "f84524be43676396",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Re: Contract approval timeline. Let me know what works for you. Best, Sarah",
+    "historyId": "8539320",
+    "internalDate": "1764632718324",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Contract approval timeline"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 01 Dec 2025 15:45:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx07cb987b140@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQxf5c0e605c0a9@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 114,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlOiBDb250cmFjdCBhcHByb3ZhbCB0aW1lbGluZS4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKU2FyYWggS2lt"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 159,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5SZTogQ29udHJhY3QgYXBwcm92YWwgdGltZWxpbmU8L2I-LjwvcD48cD5MZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuPC9wPjxwPkJlc3QsPGJyLz5TYXJhaCBLaW08L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "136cb0b4fa63833b6639d72acd40",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 5254,
+    "raw": "RnJvbTogU2FyYWggS2ltIDxzYXJhaEBhY21lLmNvbT4KVG86IE9tYXIgSmFuZGFsaSA8b21hckBleGFtcGxlLmNvbT4KU3ViamVjdDogUmU6IENvbnRyYWN0IGFwcHJvdmFsIHRpbWVsaW5lCgpIaSBPbWFyLAoKRm9sbG93aW5nIHVwIHJlZ2FyZGluZzogUmU6IENvbnRyYWN0IGFwcHJvdmFsIHRpbWVsaW5lLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApTYXJhaCBLaW0"
+  },
+  {
+    "id": "679ed912b427a60f",
+    "threadId": "a770611eb79d1e89",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Can you confirm the time?. Let me know what works for you. Best,",
+    "historyId": "5321727",
+    "internalDate": "1765256598324",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Can you confirm the time?"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 08 Dec 2025 21:03:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxd3f5f9e3e21@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQx688b762415b1@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 109,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IENhbiB5b3UgY29uZmlybSB0aGUgdGltZT8uCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsClNhcmFoIEtpbQ"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 154,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5DYW4geW91IGNvbmZpcm0gdGhlIHRpbWU_PC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-U2FyYWggS2ltPC9wPjwvZGl2Pg"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "1b27601bf2397e1e0af72369be56",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 16159
+  },
+  {
+    "id": "801cece7e2978f16",
+    "threadId": "b279debee874460f",
+    "labelIds": [
+      "UNREAD",
+      "INBOX"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Re: Contract approval timeline. Let me know what works for you. Best, Apple",
+    "historyId": "7950095",
+    "internalDate": "1766176878324",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Apple Developer <developer@apple.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Contract approval timeline"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 19 Dec 2025 12:41:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx31b645c96b2@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 120,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlOiBDb250cmFjdCBhcHByb3ZhbCB0aW1lbGluZS4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKQXBwbGUgRGV2ZWxvcGVy"
+      }
+    },
+    "sizeEstimate": 4902,
+    "raw": "RnJvbTogQXBwbGUgRGV2ZWxvcGVyIDxkZXZlbG9wZXJAYXBwbGUuY29tPgpUbzogT21hciBKYW5kYWxpIDxvbWFyQGV4YW1wbGUuY29tPgpTdWJqZWN0OiBSZTogQ29udHJhY3QgYXBwcm92YWwgdGltZWxpbmUKCkhpIE9tYXIsCgpGb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiBSZTogQ29udHJhY3QgYXBwcm92YWwgdGltZWxpbmUuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkFwcGxlIERldmVsb3Blcg"
+  },
+  {
+    "id": "0a086bacf5886209",
+    "threadId": "e269c0547ee15c95",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Payment confirmation. Let me know what works for you. Best, Sarah Kim",
+    "historyId": "5477196",
+    "internalDate": "1765310478324",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Payment confirmation"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 09 Dec 2025 12:01:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxf0b2e9ab253@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQxfd8f68045b21@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 104,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFBheW1lbnQgY29uZmlybWF0aW9uLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApTYXJhaCBLaW0"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 149,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5QYXltZW50IGNvbmZpcm1hdGlvbjwvYj4uPC9wPjxwPkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS48L3A-PHA-QmVzdCw8YnIvPlNhcmFoIEtpbTwvcD48L2Rpdj4"
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 14276,
+    "raw": "RnJvbTogU2FyYWggS2ltIDxzYXJhaEBhY21lLmNvbT4KVG86IE9tYXIgSmFuZGFsaSA8b21hckBkcmFra28uYWk-ClN1YmplY3Q6IFBheW1lbnQgY29uZmlybWF0aW9uCgpIaSBPbWFyLAoKRm9sbG93aW5nIHVwIHJlZ2FyZGluZzogUGF5bWVudCBjb25maXJtYXRpb24uCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsClNhcmFoIEtpbQ"
+  },
+  {
+    "id": "0ec676b2ec0f63f2",
+    "threadId": "e86a23f38ea1a181",
+    "labelIds": [
+      "INBOX",
+      "IMPORTANT"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Meeting rescheduled. Let me know what works for you. Best, HR Team",
+    "historyId": "4503367",
+    "internalDate": "1765704738324",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Meeting rescheduled"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 14 Dec 2025 01:32:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx81e449a2e94@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 101,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IE1lZXRpbmcgcmVzY2hlZHVsZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkhSIFRlYW0"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 146,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5NZWV0aW5nIHJlc2NoZWR1bGVkPC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-SFIgVGVhbTwvcD48L2Rpdj4"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "05a3e8aef708048459c1bde916fd",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 17334,
+    "raw": "RnJvbTogSFIgVGVhbSA8aHJAYmlnY28uY29tPgpUbzogT21hciBKYW5kYWxpIDxvbWFyQGRyYWtrby5haT4KU3ViamVjdDogTWVldGluZyByZXNjaGVkdWxlZAoKSGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IE1lZXRpbmcgcmVzY2hlZHVsZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkhSIFRlYW0"
+  },
+  {
+    "id": "f82fd84a7d4a2c82",
+    "threadId": "08b225f83e748688",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Doc link access needed. Let me know what works for you. Best, Omar's",
+    "historyId": "8628040",
+    "internalDate": "1764155778324",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Doc link access needed"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 26 Nov 2025 03:16:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx0a462070125@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 114,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IERvYyBsaW5rIGFjY2VzcyBuZWVkZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCk9tYXIncyBDby1mb3VuZGVy"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 159,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5Eb2MgbGluayBhY2Nlc3MgbmVlZGVkPC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-T21hcidzIENvLWZvdW5kZXI8L3A-PC9kaXY-"
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 12455
+  },
+  {
+    "id": "63ed9d55ba440060",
+    "threadId": "a11d35804899387d",
+    "labelIds": [
+      "IMPORTANT",
+      "CATEGORY_UPDATES",
+      "INBOX"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Quick question about the proposal. Let me know what works for you. Best,",
+    "historyId": "2762087",
+    "internalDate": "1765524558324",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "GitHub <noreply@github.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Quick question about the proposal"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 11 Dec 2025 23:29:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx71ae54ac4c6@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQx28874aa01a2f@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 114,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFF1aWNrIHF1ZXN0aW9uIGFib3V0IHRoZSBwcm9wb3NhbC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKR2l0SHVi"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 159,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5RdWljayBxdWVzdGlvbiBhYm91dCB0aGUgcHJvcG9zYWw8L2I-LjwvcD48cD5MZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuPC9wPjxwPkJlc3QsPGJyLz5HaXRIdWI8L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "f5793c4fcb6c03ee2a945e3cd404",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 7832
+  },
+  {
+    "id": "af37f7713e91137f",
+    "threadId": "01ebfe61f064daae",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Action required: approve access request. Let me know what works for you. Best,",
+    "historyId": "3098041",
+    "internalDate": "1765232958324",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Action required: approve access request"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 08 Dec 2025 14:29:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxd092dd90747@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 121,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IEFjdGlvbiByZXF1aXJlZDogYXBwcm92ZSBhY2Nlc3MgcmVxdWVzdC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKSFIgVGVhbQ"
+      }
+    },
+    "sizeEstimate": 7739
+  },
+  {
+    "id": "5192efe3486d1724",
+    "threadId": "66124ddf4bc410c0",
+    "labelIds": [
+      "UNREAD",
+      "CATEGORY_PERSONAL",
+      "INBOX"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Fwd: System incident report. Let me know what works for you. Best, Calendly",
+    "historyId": "9560176",
+    "internalDate": "1766259978324",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Calendly <no-reply@calendly.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Fwd: System incident report"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 20 Dec 2025 11:46:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxf25210d6b38@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 110,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IEZ3ZDogU3lzdGVtIGluY2lkZW50IHJlcG9ydC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKQ2FsZW5kbHk"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 155,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5Gd2Q6IFN5c3RlbSBpbmNpZGVudCByZXBvcnQ8L2I-LjwvcD48cD5MZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuPC9wPjxwPkJlc3QsPGJyLz5DYWxlbmRseTwvcD48L2Rpdj4"
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 5835
+  },
+  {
+    "id": "3f8042c56073ec32",
+    "threadId": "6d953bbe966ddf8f",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "UNREAD"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Your subscription renewal notice. Let me know what works for you. Best, Support",
+    "historyId": "6695005",
+    "internalDate": "1764255378324",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Support <support@saasapp.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your subscription renewal notice"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 27 Nov 2025 06:56:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxb4bea8e8739@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 114,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFlvdXIgc3Vic2NyaXB0aW9uIHJlbmV3YWwgbm90aWNlLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApTdXBwb3J0"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 159,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5Zb3VyIHN1YnNjcmlwdGlvbiByZW5ld2FsIG5vdGljZTwvYj4uPC9wPjxwPkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS48L3A-PHA-QmVzdCw8YnIvPlN1cHBvcnQ8L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "ec7ec235679a2accc30f46bf3471",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 5834
+  },
+  {
+    "id": "5b22f18e3fb85a6d",
+    "threadId": "219a71971c91a44b",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "STARRED",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Reminder: upcoming interview. Let me know what works for you. Best, Linda Chen",
+    "historyId": "5912645",
+    "internalDate": "1765269258325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Linda Chen <linda@notion.team>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Reminder: upcoming interview"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 09 Dec 2025 00:34:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx700ae391e910@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQxaa002becdd3e@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 113,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlbWluZGVyOiB1cGNvbWluZyBpbnRlcnZpZXcuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkxpbmRhIENoZW4"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 158,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5SZW1pbmRlcjogdXBjb21pbmcgaW50ZXJ2aWV3PC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-TGluZGEgQ2hlbjwvcD48L2Rpdj4"
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 5490,
+    "raw": "RnJvbTogTGluZGEgQ2hlbiA8bGluZGFAbm90aW9uLnRlYW0-ClRvOiBPbWFyIEphbmRhbGkgPG9tYXJAZHJha2tvLmFpPgpTdWJqZWN0OiBSZW1pbmRlcjogdXBjb21pbmcgaW50ZXJ2aWV3CgpIaSBPbWFyLAoKRm9sbG93aW5nIHVwIHJlZ2FyZGluZzogUmVtaW5kZXI6IHVwY29taW5nIGludGVydmlldy4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKTGluZGEgQ2hlbg"
+  },
+  {
+    "id": "b05c4d66d542cd16",
+    "threadId": "c94e0a85ff883410",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Your subscription renewal notice. Let me know what works for you. Best, Calendly",
+    "historyId": "8799935",
+    "internalDate": "1764682278325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Calendly <no-reply@calendly.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your subscription renewal notice"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 02 Dec 2025 05:31:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx8d47a281d511@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 115,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFlvdXIgc3Vic2NyaXB0aW9uIHJlbmV3YWwgbm90aWNlLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApDYWxlbmRseQ"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 160,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5Zb3VyIHN1YnNjcmlwdGlvbiByZW5ld2FsIG5vdGljZTwvYj4uPC9wPjxwPkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS48L3A-PHA-QmVzdCw8YnIvPkNhbGVuZGx5PC9wPjwvZGl2Pg"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "36d6d6117931f0962d9a9106ad7c",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 5901
+  },
+  {
+    "id": "8e4c39f1872349b5",
+    "threadId": "14eaab1dc62f5ce6",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_UPDATES",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Re: Next steps. Let me know what works for you. Best, Apple Developer",
+    "historyId": "2760522",
+    "internalDate": "1765630218325",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Apple Developer <developer@apple.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Next steps"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 13 Dec 2025 04:50:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx6044c4210712@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 104,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlOiBOZXh0IHN0ZXBzLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApBcHBsZSBEZXZlbG9wZXI"
+      }
+    },
+    "sizeEstimate": 17633,
+    "raw": "RnJvbTogQXBwbGUgRGV2ZWxvcGVyIDxkZXZlbG9wZXJAYXBwbGUuY29tPgpUbzogT21hciBKYW5kYWxpIDxvbWFyQGV4YW1wbGUuY29tPgpTdWJqZWN0OiBSZTogTmV4dCBzdGVwcwoKSGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlOiBOZXh0IHN0ZXBzLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApBcHBsZSBEZXZlbG9wZXI"
+  },
+  {
+    "id": "463a6f940180ceb6",
+    "threadId": "418f2940b02bf67f",
+    "labelIds": [
+      "IMPORTANT",
+      "INBOX",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Doc link access needed. Let me know what works for you. Best, Jason",
+    "historyId": "3498855",
+    "internalDate": "1765281378325",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Jason Patel <jason@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Doc link access needed"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 09 Dec 2025 03:56:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx664fbfbe7613@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Jason Patel <jason@stripepartners.io>"
+        }
+      ],
+      "body": {
+        "size": 108,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IERvYyBsaW5rIGFjY2VzcyBuZWVkZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkphc29uIFBhdGVs"
+      }
+    },
+    "sizeEstimate": 16544,
+    "raw": "RnJvbTogSmFzb24gUGF0ZWwgPGphc29uQHN0cmlwZXBhcnRuZXJzLmlvPgpUbzogT21hciBKYW5kYWxpIDxvbWFyQGRyYWtrby5haT4KU3ViamVjdDogRG9jIGxpbmsgYWNjZXNzIG5lZWRlZAoKSGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IERvYyBsaW5rIGFjY2VzcyBuZWVkZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkphc29uIFBhdGVs"
+  },
+  {
+    "id": "6baac1331d864b7c",
+    "threadId": "d795c69ce962c324",
+    "labelIds": [
+      "INBOX",
+      "UNREAD",
+      "IMPORTANT",
+      "STARRED"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Security alert: New sign-in. Let me know what works for you. Best, GitHub",
+    "historyId": "6151438",
+    "internalDate": "1764785238325",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "GitHub <noreply@github.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Security alert: New sign-in"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 03 Dec 2025 10:07:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx0592787c9214@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 108,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFNlY3VyaXR5IGFsZXJ0OiBOZXcgc2lnbi1pbi4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKR2l0SHVi"
+      }
+    },
+    "sizeEstimate": 8519
+  },
+  {
+    "id": "f073ba93dc0cdd19",
+    "threadId": "be1a1d7c9ce411b8",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "STARRED"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Welcome to Drakko beta. Let me know what works for you. Best, AWS",
+    "historyId": "4299551",
+    "internalDate": "1765687278325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "AWS <no-reply@amazonaws.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Welcome to Drakko beta"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 13 Dec 2025 20:41:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx37b95d972215@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 100,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFdlbGNvbWUgdG8gRHJha2tvIGJldGEuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkFXUw"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 145,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5XZWxjb21lIHRvIERyYWtrbyBiZXRhPC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-QVdTPC9wPjwvZGl2Pg"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "1b3fbcf87857e3620507bcb1f482",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 6646
+  },
+  {
+    "id": "c3a0a52b1711e8e4",
+    "threadId": "e6a0a01b97487b6e",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "UNREAD",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Quick question about the proposal. Let me know what works for you. Best,",
+    "historyId": "9923499",
+    "internalDate": "1765172538325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Invoice Dept <billing@vendorco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Quick question about the proposal"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 07 Dec 2025 21:42:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxea99dca06a16@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 120,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFF1aWNrIHF1ZXN0aW9uIGFib3V0IHRoZSBwcm9wb3NhbC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKSW52b2ljZSBEZXB0"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 165,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5RdWljayBxdWVzdGlvbiBhYm91dCB0aGUgcHJvcG9zYWw8L2I-LjwvcD48cD5MZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuPC9wPjxwPkJlc3QsPGJyLz5JbnZvaWNlIERlcHQ8L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "a94a6ff1235c317e43ebd0bd380e",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 16706
+  },
+  {
+    "id": "d75ffa769a7050ef",
+    "threadId": "9caa55b728aef5c7",
+    "labelIds": [
+      "INBOX",
+      "STARRED",
+      "UNREAD"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Action required: approve access request. Let me know what works for you. Best,",
+    "historyId": "5678789",
+    "internalDate": "1763806818325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Action required: approve access request"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 22 Nov 2025 02:20:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxa17e20970417@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQx8fa771c0e94d@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 123,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IEFjdGlvbiByZXF1aXJlZDogYXBwcm92ZSBhY2Nlc3MgcmVxdWVzdC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKU2FyYWggS2lt"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 168,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5BY3Rpb24gcmVxdWlyZWQ6IGFwcHJvdmUgYWNjZXNzIHJlcXVlc3Q8L2I-LjwvcD48cD5MZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuPC9wPjxwPkJlc3QsPGJyLz5TYXJhaCBLaW08L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "0898b972a1ba2ff2d4a4f2aa3bab",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 17202
+  },
+  {
+    "id": "0255d3fb73d8a3f6",
+    "threadId": "45d946b36ffb0d15",
+    "labelIds": [
+      "INBOX",
+      "UNREAD",
+      "STARRED"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Doc link access needed. Let me know what works for you. Best, Apple",
+    "historyId": "4658317",
+    "internalDate": "1764839298325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Apple Developer <developer@apple.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Doc link access needed"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 04 Dec 2025 01:08:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx1cb1b4cfc418@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQx2a11b4ce7f0f@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 112,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IERvYyBsaW5rIGFjY2VzcyBuZWVkZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkFwcGxlIERldmVsb3Blcg"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 157,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5Eb2MgbGluayBhY2Nlc3MgbmVlZGVkPC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-QXBwbGUgRGV2ZWxvcGVyPC9wPjwvZGl2Pg"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "6110d0909d3f7afa1015b1a1d30a",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 8858
+  },
+  {
+    "id": "8383edbe2e34f711",
+    "threadId": "adcc4e048e624957",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL",
+      "UNREAD"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Your AWS monthly bill is ready. Let me know what works for you.",
+    "historyId": "8692388",
+    "internalDate": "1764139278325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Calendly <no-reply@calendly.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your AWS monthly bill is ready"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 25 Nov 2025 22:41:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx52788bb69619@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQx6e4fa6e31749@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 113,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFlvdXIgQVdTIG1vbnRobHkgYmlsbCBpcyByZWFkeS4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKQ2FsZW5kbHk"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 158,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5Zb3VyIEFXUyBtb250aGx5IGJpbGwgaXMgcmVhZHk8L2I-LjwvcD48cD5MZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuPC9wPjxwPkJlc3QsPGJyLz5DYWxlbmRseTwvcD48L2Rpdj4"
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 4839
+  },
+  {
+    "id": "f5e26a8a55767502",
+    "threadId": "bd7f48b758123b1e",
+    "labelIds": [
+      "INBOX",
+      "UNREAD",
+      "CATEGORY_UPDATES",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Quick question about the proposal. Let me know what works for you. Best,",
+    "historyId": "9876094",
+    "internalDate": "1764080358325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "GitHub <noreply@github.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Quick question about the proposal"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 25 Nov 2025 06:19:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx284ff6187920@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 114,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFF1aWNrIHF1ZXN0aW9uIGFib3V0IHRoZSBwcm9wb3NhbC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKR2l0SHVi"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 159,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5RdWljayBxdWVzdGlvbiBhYm91dCB0aGUgcHJvcG9zYWw8L2I-LjwvcD48cD5MZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuPC9wPjxwPkJlc3QsPGJyLz5HaXRIdWI8L3A-PC9kaXY-"
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 17427
+  },
+  {
+    "id": "8ec066f27b0b02e5",
+    "threadId": "880d623baf116606",
+    "labelIds": [
+      "INBOX",
+      "IMPORTANT"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Invoice #3646 due Friday. Let me know what works for you. Best, HR",
+    "historyId": "4838777",
+    "internalDate": "1765338498325",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Invoice #3646 due Friday"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 09 Dec 2025 19:48:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx40c83cc9ce21@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 106,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IEludm9pY2UgIzM2NDYgZHVlIEZyaWRheS4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKSFIgVGVhbQ"
+      }
+    },
+    "sizeEstimate": 9885
+  },
+  {
+    "id": "cebdc9424029494e",
+    "threadId": "f008b9f7b9b9f33a",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_SOCIAL",
+      "CATEGORY_UPDATES"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Re: Next steps. Let me know what works for you. Best, Sarah Kim",
+    "historyId": "3310420",
+    "internalDate": "1763858418325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Next steps"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 22 Nov 2025 16:40:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxccac27645622@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 98,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlOiBOZXh0IHN0ZXBzLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApTYXJhaCBLaW0"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 143,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5SZTogTmV4dCBzdGVwczwvYj4uPC9wPjxwPkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS48L3A-PHA-QmVzdCw8YnIvPlNhcmFoIEtpbTwvcD48L2Rpdj4"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "df381a44850c20a68df9ebeb3f9f",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 11407
+  },
+  {
+    "id": "7a377088995c6ef2",
+    "threadId": "8edf588af2c259dc",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Payment confirmation. Let me know what works for you. Best, GitHub",
+    "historyId": "4082611",
+    "internalDate": "1764671838325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "GitHub <noreply@github.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Payment confirmation"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 02 Dec 2025 02:37:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxca83e1d63323@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 101,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFBheW1lbnQgY29uZmlybWF0aW9uLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApHaXRIdWI"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 146,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5QYXltZW50IGNvbmZpcm1hdGlvbjwvYj4uPC9wPjxwPkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS48L3A-PHA-QmVzdCw8YnIvPkdpdEh1YjwvcD48L2Rpdj4"
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 5784
+  },
+  {
+    "id": "05d98fa86d8905ea",
+    "threadId": "641fa9f9cc3db1a7",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Payment confirmation. Let me know what works for you. Best, AWS",
+    "historyId": "8988054",
+    "internalDate": "1764222318325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "AWS <no-reply@amazonaws.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Payment confirmation"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 26 Nov 2025 21:45:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxf299734f7324@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 98,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFBheW1lbnQgY29uZmlybWF0aW9uLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApBV1M"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 143,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5QYXltZW50IGNvbmZpcm1hdGlvbjwvYj4uPC9wPjxwPkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS48L3A-PHA-QmVzdCw8YnIvPkFXUzwvcD48L2Rpdj4"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "83cb09c9dcbf762f4c3b2ad14447",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 12035
+  },
+  {
+    "id": "dbb9308381ca1f2a",
+    "threadId": "78a41505b7a5ad54",
+    "labelIds": [
+      "INBOX",
+      "UNREAD"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Invoice #3646 due Friday. Let me know what works for you. Best, Jason",
+    "historyId": "7261040",
+    "internalDate": "1765883898325",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Jason Patel <jason@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Invoice #3646 due Friday"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 16 Dec 2025 03:18:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx789eaaa2b625@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Jason Patel <jason@stripepartners.io>"
+        }
+      ],
+      "body": {
+        "size": 110,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IEludm9pY2UgIzM2NDYgZHVlIEZyaWRheS4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKSmFzb24gUGF0ZWw"
+      }
+    },
+    "sizeEstimate": 15765
+  },
+  {
+    "id": "39b56c72ab10bde3",
+    "threadId": "ca791e7184b38d6f",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Re: Contract approval timeline. Let me know what works for you. Best, Omar's",
+    "historyId": "4948266",
+    "internalDate": "1766478558325",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Contract approval timeline"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 23 Dec 2025 00:29:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx7e16265fef26@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        }
+      ],
+      "body": {
+        "size": 122,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlOiBDb250cmFjdCBhcHByb3ZhbCB0aW1lbGluZS4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKT21hcidzIENvLWZvdW5kZXI"
+      }
+    },
+    "sizeEstimate": 8361,
+    "raw": "RnJvbTogT21hcidzIENvLWZvdW5kZXIgPGVubmlzQGRyYWtrby5haT4KVG86IE9tYXIgSmFuZGFsaSA8b21hckBkcmFra28uYWk-ClN1YmplY3Q6IFJlOiBDb250cmFjdCBhcHByb3ZhbCB0aW1lbGluZQoKSGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlOiBDb250cmFjdCBhcHByb3ZhbCB0aW1lbGluZS4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKT21hcidzIENvLWZvdW5kZXI"
+  },
+  {
+    "id": "adbe8917048a7e05",
+    "threadId": "54d5d6de4c1f69bf",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Doc link access needed. Let me know what works for you. Best, Jason",
+    "historyId": "7988867",
+    "internalDate": "1764445098325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Jason Patel <jason@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Doc link access needed"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 29 Nov 2025 11:38:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx33fc2d95b227@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQx9478df2cec8e@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 108,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IERvYyBsaW5rIGFjY2VzcyBuZWVkZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkphc29uIFBhdGVs"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 153,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5Eb2MgbGluayBhY2Nlc3MgbmVlZGVkPC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-SmFzb24gUGF0ZWw8L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "37dbb9da70214b48835f678d0c30",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 13629,
+    "raw": "RnJvbTogSmFzb24gUGF0ZWwgPGphc29uQHN0cmlwZXBhcnRuZXJzLmlvPgpUbzogT21hciBKYW5kYWxpIDxvbWFyQGV4YW1wbGUuY29tPgpTdWJqZWN0OiBEb2MgbGluayBhY2Nlc3MgbmVlZGVkCgpIaSBPbWFyLAoKRm9sbG93aW5nIHVwIHJlZ2FyZGluZzogRG9jIGxpbmsgYWNjZXNzIG5lZWRlZC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKSmFzb24gUGF0ZWw"
+  },
+  {
+    "id": "905e36867ffde0b0",
+    "threadId": "525a4fac1034ba96",
+    "labelIds": [
+      "IMPORTANT",
+      "CATEGORY_PERSONAL",
+      "INBOX"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Quick question about the proposal. Let me know what works for you. Best,",
+    "historyId": "3369824",
+    "internalDate": "1763599698325",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Quick question about the proposal"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 19 Nov 2025 16:48:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx4b18a35fb728@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 115,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFF1aWNrIHF1ZXN0aW9uIGFib3V0IHRoZSBwcm9wb3NhbC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKSFIgVGVhbQ"
+      }
+    },
+    "sizeEstimate": 16943
+  },
+  {
+    "id": "f7de8df6778615c2",
+    "threadId": "dc37bbec5fae617c",
+    "labelIds": [
+      "INBOX",
+      "STARRED"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Re: Next steps. Let me know what works for you. Best, Linda Chen",
+    "historyId": "5481432",
+    "internalDate": "1764785478325",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Linda Chen <linda@notion.team>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Next steps"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 03 Dec 2025 10:11:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxb3f579610629@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Linda Chen <linda@notion.team>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 99,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlOiBOZXh0IHN0ZXBzLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApMaW5kYSBDaGVu"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 144,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5SZTogTmV4dCBzdGVwczwvYj4uPC9wPjxwPkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS48L3A-PHA-QmVzdCw8YnIvPkxpbmRhIENoZW48L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "1afd235c04bc78807c5d97e12de7",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 9493,
+    "raw": "RnJvbTogTGluZGEgQ2hlbiA8bGluZGFAbm90aW9uLnRlYW0-ClRvOiBPbWFyIEphbmRhbGkgPG9tYXJAZXhhbXBsZS5jb20-ClN1YmplY3Q6IFJlOiBOZXh0IHN0ZXBzCgpIaSBPbWFyLAoKRm9sbG93aW5nIHVwIHJlZ2FyZGluZzogUmU6IE5leHQgc3RlcHMuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkxpbmRhIENoZW4"
+  },
+  {
+    "id": "7f06b1e22a9e0dde",
+    "threadId": "68f7f808b1e60ad6",
+    "labelIds": [
+      "CATEGORY_PERSONAL",
+      "IMPORTANT",
+      "INBOX"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Meeting rescheduled. Let me know what works for you. Best, Invoice Dept",
+    "historyId": "9952538",
+    "internalDate": "1764334038325",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Invoice Dept <billing@vendorco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Meeting rescheduled"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 28 Nov 2025 04:47:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxdc4e460b8e30@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQxe8535319504d@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 106,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IE1lZXRpbmcgcmVzY2hlZHVsZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkludm9pY2UgRGVwdA"
+      }
+    },
+    "sizeEstimate": 15517,
+    "raw": "RnJvbTogSW52b2ljZSBEZXB0IDxiaWxsaW5nQHZlbmRvcmNvLmNvbT4KVG86IE9tYXIgSmFuZGFsaSA8b21hckBkcmFra28uYWk-ClN1YmplY3Q6IE1lZXRpbmcgcmVzY2hlZHVsZWQKCkhpIE9tYXIsCgpGb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiBNZWV0aW5nIHJlc2NoZWR1bGVkLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApJbnZvaWNlIERlcHQ"
+  },
+  {
+    "id": "f0ab1139b5a104c9",
+    "threadId": "bbe9ed5befe0fa98",
+    "labelIds": [
+      "INBOX",
+      "STARRED",
+      "IMPORTANT",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Welcome to Drakko beta. Let me know what works for you. Best, HR",
+    "historyId": "2956255",
+    "internalDate": "1765279338325",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Welcome to Drakko beta"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 09 Dec 2025 03:22:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx977ba2872e31@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQx2e6b89ff0245@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 104,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFdlbGNvbWUgdG8gRHJha2tvIGJldGEuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkhSIFRlYW0"
+      }
+    },
+    "sizeEstimate": 15455,
+    "raw": "RnJvbTogSFIgVGVhbSA8aHJAYmlnY28uY29tPgpUbzogT21hciBKYW5kYWxpIDxvbWFyQGRyYWtrby5haT4KU3ViamVjdDogV2VsY29tZSB0byBEcmFra28gYmV0YQoKSGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFdlbGNvbWUgdG8gRHJha2tvIGJldGEuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkhSIFRlYW0"
+  },
+  {
+    "id": "f17f4921ffc05bd9",
+    "threadId": "d525ff89696ed1c2",
+    "labelIds": [
+      "INBOX",
+      "IMPORTANT",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Action required: approve access request. Let me know what works for you. Best,",
+    "historyId": "3856832",
+    "internalDate": "1764916818326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Recruiter <talent@startup.jobs>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Action required: approve access request"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 04 Dec 2025 22:40:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx875229983c32@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQxe235da38b4f9@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 123,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IEFjdGlvbiByZXF1aXJlZDogYXBwcm92ZSBhY2Nlc3MgcmVxdWVzdC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKUmVjcnVpdGVy"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 168,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5BY3Rpb24gcmVxdWlyZWQ6IGFwcHJvdmUgYWNjZXNzIHJlcXVlc3Q8L2I-LjwvcD48cD5MZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuPC9wPjxwPkJlc3QsPGJyLz5SZWNydWl0ZXI8L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "b6e275a7c45aa88d65090f807a73",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 13386,
+    "raw": "RnJvbTogUmVjcnVpdGVyIDx0YWxlbnRAc3RhcnR1cC5qb2JzPgpUbzogT21hciBKYW5kYWxpIDxvbWFyQGV4YW1wbGUuY29tPgpTdWJqZWN0OiBBY3Rpb24gcmVxdWlyZWQ6IGFwcHJvdmUgYWNjZXNzIHJlcXVlc3QKCkhpIE9tYXIsCgpGb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiBBY3Rpb24gcmVxdWlyZWQ6IGFwcHJvdmUgYWNjZXNzIHJlcXVlc3QuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsClJlY3J1aXRlcg"
+  },
+  {
+    "id": "336c427d872b838d",
+    "threadId": "1c857dc338454c5d",
+    "labelIds": [
+      "INBOX",
+      "IMPORTANT",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Invoice #3646 due Friday. Let me know what works for you. Best, Recruiter",
+    "historyId": "4288510",
+    "internalDate": "1764153918326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Recruiter <talent@startup.jobs>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Invoice #3646 due Friday"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 26 Nov 2025 02:45:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxa95bcb730933@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 108,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IEludm9pY2UgIzM2NDYgZHVlIEZyaWRheS4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKUmVjcnVpdGVy"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 153,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5JbnZvaWNlICMzNjQ2IGR1ZSBGcmlkYXk8L2I-LjwvcD48cD5MZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuPC9wPjxwPkJlc3QsPGJyLz5SZWNydWl0ZXI8L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "fc11af47e408dbf8a3a36bd0221a",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 10694
+  },
+  {
+    "id": "a4520348c0e32e13",
+    "threadId": "2edf09ce75839c2b",
+    "labelIds": [
+      "INBOX",
+      "UNREAD"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Doc link access needed. Let me know what works for you. Best, Recruiter",
+    "historyId": "8709029",
+    "internalDate": "1765050498326",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Recruiter <talent@startup.jobs>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Doc link access needed"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 06 Dec 2025 11:48:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxc683ca33de34@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQx4b3dfe1dc7d3@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 106,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IERvYyBsaW5rIGFjY2VzcyBuZWVkZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsClJlY3J1aXRlcg"
+      }
+    },
+    "sizeEstimate": 9540
+  },
+  {
+    "id": "6487a0d0b6f6da37",
+    "threadId": "9748e868aac2a3d9",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "IMPORTANT",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Meeting rescheduled. Let me know what works for you. Best, Recruiter",
+    "historyId": "5100772",
+    "internalDate": "1764753138326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Recruiter <talent@startup.jobs>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Meeting rescheduled"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 03 Dec 2025 01:12:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx9789e5051c35@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQx64f3f7a56fdf@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 103,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IE1lZXRpbmcgcmVzY2hlZHVsZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsClJlY3J1aXRlcg"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 148,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5NZWV0aW5nIHJlc2NoZWR1bGVkPC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-UmVjcnVpdGVyPC9wPjwvZGl2Pg"
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 11841,
+    "raw": "RnJvbTogUmVjcnVpdGVyIDx0YWxlbnRAc3RhcnR1cC5qb2JzPgpUbzogT21hciBKYW5kYWxpIDxvbWFyQGV4YW1wbGUuY29tPgpTdWJqZWN0OiBNZWV0aW5nIHJlc2NoZWR1bGVkCgpIaSBPbWFyLAoKRm9sbG93aW5nIHVwIHJlZ2FyZGluZzogTWVldGluZyByZXNjaGVkdWxlZC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKUmVjcnVpdGVy"
+  },
+  {
+    "id": "e717e0f2b08102a3",
+    "threadId": "a8bb1614d8bc4980",
+    "labelIds": [
+      "INBOX",
+      "STARRED"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Please review the attached document. Let me know what works for you. Best,",
+    "historyId": "5825535",
+    "internalDate": "1764738318326",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Jason Patel <jason@stripepartners.io>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Please review the attached document"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 02 Dec 2025 21:05:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx5913d571ae36@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQxf2132ec55708@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 121,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFBsZWFzZSByZXZpZXcgdGhlIGF0dGFjaGVkIGRvY3VtZW50LgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApKYXNvbiBQYXRlbA"
+      }
+    },
+    "sizeEstimate": 15645
+  },
+  {
+    "id": "56a7ce1953551703",
+    "threadId": "74a0356cfc258e4e",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_SOCIAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Meeting rescheduled. Let me know what works for you. Best, Omar's Co-founder",
+    "historyId": "2937095",
+    "internalDate": "1764959478326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Meeting rescheduled"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 05 Dec 2025 10:31:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxef69169f8637@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQxc2adadd4aad1@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 111,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IE1lZXRpbmcgcmVzY2hlZHVsZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCk9tYXIncyBDby1mb3VuZGVy"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 156,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5NZWV0aW5nIHJlc2NoZWR1bGVkPC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-T21hcidzIENvLWZvdW5kZXI8L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "b671be1128bdac605d105a91b7cd",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 11008
+  },
+  {
+    "id": "35a44ad0f5810626",
+    "threadId": "9ef521aeb0a8db87",
+    "labelIds": [
+      "INBOX",
+      "STARRED"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Fwd: System incident report. Let me know what works for you. Best, HR",
+    "historyId": "8277903",
+    "internalDate": "1764766518326",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "HR Team <hr@bigco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Fwd: System incident report"
+        },
+        {
+          "name": "Date",
+          "value": "Wed, 03 Dec 2025 04:55:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxe4ae084ca438@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 109,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IEZ3ZDogU3lzdGVtIGluY2lkZW50IHJlcG9ydC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKSFIgVGVhbQ"
+      }
+    },
+    "sizeEstimate": 16524
+  },
+  {
+    "id": "8feed571552c2e31",
+    "threadId": "5d0c5ff93de70535",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Draft agenda for tomorrow. Let me know what works for you. Best, Calendly",
+    "historyId": "5485394",
+    "internalDate": "1764573078326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Calendly <no-reply@calendly.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Draft agenda for tomorrow"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 30 Nov 2025 23:11:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx0b63dad1d939@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQx27f347f048de@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 108,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IERyYWZ0IGFnZW5kYSBmb3IgdG9tb3Jyb3cuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkNhbGVuZGx5"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 153,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5EcmFmdCBhZ2VuZGEgZm9yIHRvbW9ycm93PC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-Q2FsZW5kbHk8L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "c9b198583d3caf58d0fea41309e6",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 10126
+  },
+  {
+    "id": "501f5efb0ee9d504",
+    "threadId": "49f62b2eedddde0a",
+    "labelIds": [
+      "INBOX",
+      "STARRED",
+      "IMPORTANT"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Calendar invite: Project sync. Let me know what works for you. Best, Calendly",
+    "historyId": "8815046",
+    "internalDate": "1766280978326",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Calendly <no-reply@calendly.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Calendar invite: Project sync"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 20 Dec 2025 17:36:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxec09851d7f40@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 112,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IENhbGVuZGFyIGludml0ZTogUHJvamVjdCBzeW5jLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApDYWxlbmRseQ"
+      }
+    },
+    "sizeEstimate": 14417,
+    "raw": "RnJvbTogQ2FsZW5kbHkgPG5vLXJlcGx5QGNhbGVuZGx5LmNvbT4KVG86IE9tYXIgSmFuZGFsaSA8b21hckBleGFtcGxlLmNvbT4KU3ViamVjdDogQ2FsZW5kYXIgaW52aXRlOiBQcm9qZWN0IHN5bmMKCkhpIE9tYXIsCgpGb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiBDYWxlbmRhciBpbnZpdGU6IFByb2plY3Qgc3luYy4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKQ2FsZW5kbHk"
+  },
+  {
+    "id": "40128837c59fec87",
+    "threadId": "649bc254c1192bc9",
+    "labelIds": [
+      "INBOX",
+      "IMPORTANT",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Security alert: New sign-in. Let me know what works for you. Best, GitHub",
+    "historyId": "7326626",
+    "internalDate": "1765842138326",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "GitHub <noreply@github.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Security alert: New sign-in"
+        },
+        {
+          "name": "Date",
+          "value": "Mon, 15 Dec 2025 15:42:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxd2e728939141@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 108,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFNlY3VyaXR5IGFsZXJ0OiBOZXcgc2lnbi1pbi4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKR2l0SHVi"
+      }
+    },
+    "sizeEstimate": 4162
+  },
+  {
+    "id": "63d0876834bc6bac",
+    "threadId": "404990c9d2fa08e7",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL",
+      "IMPORTANT"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Your AWS monthly bill is ready. Let me know what works for you.",
+    "historyId": "8798744",
+    "internalDate": "1766562618326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "AWS <no-reply@amazonaws.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your AWS monthly bill is ready"
+        },
+        {
+          "name": "Date",
+          "value": "Tue, 23 Dec 2025 23:50:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx1a74d27b5442@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 108,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFlvdXIgQVdTIG1vbnRobHkgYmlsbCBpcyByZWFkeS4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKQVdT"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 153,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5Zb3VyIEFXUyBtb250aGx5IGJpbGwgaXMgcmVhZHk8L2I-LjwvcD48cD5MZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuPC9wPjxwPkJlc3QsPGJyLz5BV1M8L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "50e672bea4ebbf1b3151102a683c",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 6586
+  },
+  {
+    "id": "a29bdc6c920ed953",
+    "threadId": "c943a822e8205841",
+    "labelIds": [
+      "UNREAD",
+      "INBOX"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Reminder: upcoming interview. Let me know what works for you. Best, Invoice Dept",
+    "historyId": "4634498",
+    "internalDate": "1766183598326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Invoice Dept <billing@vendorco.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Reminder: upcoming interview"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 19 Dec 2025 14:33:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxc5504c61b643@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 115,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlbWluZGVyOiB1cGNvbWluZyBpbnRlcnZpZXcuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkludm9pY2UgRGVwdA"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 160,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5SZW1pbmRlcjogdXBjb21pbmcgaW50ZXJ2aWV3PC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-SW52b2ljZSBEZXB0PC9wPjwvZGl2Pg"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "56a3441d77ebe6529b17aaeb06a0",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 11045,
+    "raw": "RnJvbTogSW52b2ljZSBEZXB0IDxiaWxsaW5nQHZlbmRvcmNvLmNvbT4KVG86IE9tYXIgSmFuZGFsaSA8b21hckBleGFtcGxlLmNvbT4KU3ViamVjdDogUmVtaW5kZXI6IHVwY29taW5nIGludGVydmlldwoKSGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlbWluZGVyOiB1cGNvbWluZyBpbnRlcnZpZXcuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkludm9pY2UgRGVwdA"
+  },
+  {
+    "id": "9dfb811292eafe20",
+    "threadId": "477250c0d62f49e6",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Your subscription renewal notice. Let me know what works for you. Best, Linda",
+    "historyId": "5544905",
+    "internalDate": "1764483618326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Linda Chen <linda@notion.team>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Your subscription renewal notice"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 29 Nov 2025 22:20:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx540aebef8c44@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQxbc3e53753774@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 117,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFlvdXIgc3Vic2NyaXB0aW9uIHJlbmV3YWwgbm90aWNlLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApMaW5kYSBDaGVu"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 162,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5Zb3VyIHN1YnNjcmlwdGlvbiByZW5ld2FsIG5vdGljZTwvYj4uPC9wPjxwPkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS48L3A-PHA-QmVzdCw8YnIvPkxpbmRhIENoZW48L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "65cc41e3cf89d275539864d15b5c",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 5578
+  },
+  {
+    "id": "192394c14cfab80f",
+    "threadId": "03a79662ce9c95cf",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Bug report: Login issue. Let me know what works for you. Best, Sarah",
+    "historyId": "5738961",
+    "internalDate": "1762699038326",
+    "payload": {
+      "partId": "",
+      "mimeType": "text/plain",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Bug report: Login issue"
+        },
+        {
+          "name": "Date",
+          "value": "Sun, 09 Nov 2025 06:37:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx70a4bd565345@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 107,
+        "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IEJ1ZyByZXBvcnQ6IExvZ2luIGlzc3VlLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApTYXJhaCBLaW0"
+      }
+    },
+    "sizeEstimate": 10669,
+    "raw": "RnJvbTogU2FyYWggS2ltIDxzYXJhaEBhY21lLmNvbT4KVG86IE9tYXIgSmFuZGFsaSA8b21hckBkcmFra28uYWk-ClN1YmplY3Q6IEJ1ZyByZXBvcnQ6IExvZ2luIGlzc3VlCgpIaSBPbWFyLAoKRm9sbG93aW5nIHVwIHJlZ2FyZGluZzogQnVnIHJlcG9ydDogTG9naW4gaXNzdWUuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsClNhcmFoIEtpbQ"
+  },
+  {
+    "id": "3d392fd7892a40ee",
+    "threadId": "3e4215420b9415a4",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "CATEGORY_PERSONAL",
+      "UNREAD"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Reminder: upcoming interview. Let me know what works for you. Best, Omar's Co-founder",
+    "historyId": "4150346",
+    "internalDate": "1763187018326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Omar's Co-founder <ennis@drakko.ai>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@example.com>"
+        },
+        {
+          "name": "Subject",
+          "value": "Reminder: upcoming interview"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 14 Nov 2025 22:10:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxd9e4ae369346@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "References",
+          "value": "<CAKp9pQx64e5d663df96@mail.gmail.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 120,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlbWluZGVyOiB1cGNvbWluZyBpbnRlcnZpZXcuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCk9tYXIncyBDby1mb3VuZGVy"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 165,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5SZW1pbmRlcjogdXBjb21pbmcgaW50ZXJ2aWV3PC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-T21hcidzIENvLWZvdW5kZXI8L3A-PC9kaXY-"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "be95dce1fc8f74ce9d00b1873a6e",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 17551
+  },
+  {
+    "id": "60c9926f591e5ddc",
+    "threadId": "576beac44fa2fcd7",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_PERSONAL",
+      "IMPORTANT",
+      "STARRED"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Re: Next steps. Let me know what works for you. Best, Calendly",
+    "historyId": "7943399",
+    "internalDate": "1765502478326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Calendly <no-reply@calendly.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Re: Next steps"
+        },
+        {
+          "name": "Date",
+          "value": "Thu, 11 Dec 2025 17:21:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx7a1850d77647@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        },
+        {
+          "name": "Reply-To",
+          "value": "Calendly <no-reply@calendly.com>"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 97,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IFJlOiBOZXh0IHN0ZXBzLgpMZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuCgpCZXN0LApDYWxlbmRseQ"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 142,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5SZTogTmV4dCBzdGVwczwvYj4uPC9wPjxwPkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS48L3A-PHA-QmVzdCw8YnIvPkNhbGVuZGx5PC9wPjwvZGl2Pg"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "328d651c2cf3afbace880cf921a0",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 10051
+  },
+  {
+    "id": "77211b6d747529d7",
+    "threadId": "4f8ef4b85289db56",
+    "labelIds": [
+      "INBOX",
+      "CATEGORY_UPDATES",
+      "IMPORTANT",
+      "CATEGORY_PERSONAL"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Action required: approve access request. Let me know what works for you. Best,",
+    "historyId": "4569257",
+    "internalDate": "1764382758326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/alternative",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Sarah Kim <sarah@acme.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Action required: approve access request"
+        },
+        {
+          "name": "Date",
+          "value": "Fri, 28 Nov 2025 18:19:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQxca39c6fd0d48@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 123,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IEFjdGlvbiByZXF1aXJlZDogYXBwcm92ZSBhY2Nlc3MgcmVxdWVzdC4KTGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LgoKQmVzdCwKU2FyYWggS2lt"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 168,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5BY3Rpb24gcmVxdWlyZWQ6IGFwcHJvdmUgYWNjZXNzIHJlcXVlc3Q8L2I-LjwvcD48cD5MZXQgbWUga25vdyB3aGF0IHdvcmtzIGZvciB5b3UuPC9wPjxwPkJlc3QsPGJyLz5TYXJhaCBLaW08L3A-PC9kaXY-"
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 14751
+  },
+  {
+    "id": "c63e0e93877ca9af",
+    "threadId": "22d4d710ba285350",
+    "labelIds": [
+      "UNREAD",
+      "CATEGORY_SOCIAL",
+      "INBOX"
+    ],
+    "snippet": "Hi Omar, Following up regarding: Meeting rescheduled. Let me know what works for you. Best, Apple Developer",
+    "historyId": "8231777",
+    "internalDate": "1766252298326",
+    "payload": {
+      "partId": "",
+      "mimeType": "multipart/mixed",
+      "filename": "",
+      "headers": [
+        {
+          "name": "From",
+          "value": "Apple Developer <developer@apple.com>"
+        },
+        {
+          "name": "To",
+          "value": "Omar Jandali <omar@drakko.ai>"
+        },
+        {
+          "name": "Subject",
+          "value": "Meeting rescheduled"
+        },
+        {
+          "name": "Date",
+          "value": "Sat, 20 Dec 2025 09:38:18 -0800"
+        },
+        {
+          "name": "Message-ID",
+          "value": "<CAKp9pQx11324dd35f49@mail.gmail.com>"
+        },
+        {
+          "name": "MIME-Version",
+          "value": "1.0"
+        }
+      ],
+      "body": {
+        "size": 0
+      },
+      "parts": [
+        {
+          "partId": "0",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 109,
+            "data": "SGkgT21hciwKCkZvbGxvd2luZyB1cCByZWdhcmRpbmc6IE1lZXRpbmcgcmVzY2hlZHVsZWQuCkxldCBtZSBrbm93IHdoYXQgd29ya3MgZm9yIHlvdS4KCkJlc3QsCkFwcGxlIERldmVsb3Blcg"
+          }
+        },
+        {
+          "partId": "1",
+          "mimeType": "text/html",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "text/html; charset=UTF-8"
+            }
+          ],
+          "body": {
+            "size": 154,
+            "data": "PGRpdj48cD5IaSBPbWFyLDwvcD48cD5Gb2xsb3dpbmcgdXAgcmVnYXJkaW5nOiA8Yj5NZWV0aW5nIHJlc2NoZWR1bGVkPC9iPi48L3A-PHA-TGV0IG1lIGtub3cgd2hhdCB3b3JrcyBmb3IgeW91LjwvcD48cD5CZXN0LDxici8-QXBwbGUgRGV2ZWxvcGVyPC9wPjwvZGl2Pg"
+          }
+        },
+        {
+          "partId": "2",
+          "mimeType": "application/pdf",
+          "filename": "attachment.pdf",
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/pdf"
+            },
+            {
+              "name": "Content-Disposition",
+              "value": "attachment; filename=\"attachment.pdf\""
+            }
+          ],
+          "body": {
+            "attachmentId": "c7fd8e4260ea16e4683f1f038748",
+            "size": 37
+          }
+        }
+      ]
+    },
+    "sizeEstimate": 12952
+  }
+]
