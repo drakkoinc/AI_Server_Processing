@@ -17,10 +17,7 @@ Technical behavior
 Usage examples
 --------------
 Triage (recommended):
-  python scripts/call_api.py --url http://localhost:8000/v1/gmail/triage --input scripts/example_gmail_input.json
-
-Compatibility alias:
-  python scripts/call_api.py --url http://localhost:8000/v1/gmail/classify --input scripts/example_gmail_input.json
+  python scripts/call_api.py --url http://localhost:8000/rd/api/v1/ai/triage --input scripts/example_gmail_input.json
 """
 
 from __future__ import annotations

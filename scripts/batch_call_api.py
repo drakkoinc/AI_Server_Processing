@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 """
-Batch test runner for Drakko Gmail triage API.
+Batch test runner for Drakko Gmail triage API v3
 
 Conceptually:
-- Your API endpoint (/v1/gmail/triage) accepts ONE Gmail message JSON object per request.
+- Your API endpoint (/rd/api/v1/ai/triage) accepts ONE Gmail message JSON object per request.
 - The sample file contains MANY messages (a JSON array).
 - This script iterates over the list, posts each message to the API, and:
-  1) validates the response shape against EmailTriageResponse
+  1) validates the response shape against TriageResponse
   2) writes results to a JSONL file (one response per line)
   3) writes failures to a separate JSONL file
   4) prints a category/action-key distribution summary
 
 Technically:
 - Uses httpx.AsyncClient for simple concurrency.
-- Uses app.models.EmailTriageResponse to ensure schema correctness.
+- Uses app.models.TriageResponse to ensure schema correctness.
 """
 
 from __future__ import annotations
@@ -30,7 +30,7 @@ import httpx
 
 # IMPORTANT:
 # Run this script from the repo root so `app.*` imports resolve cleanly.
-from app.models import EmailTriageResponse
+from app.models import TriageResponse
 
 
 @dataclass
@@ -87,7 +87,7 @@ async def post_one(
         data = r.json()
 
         # Schema validation: raises if fields/types don't match
-        EmailTriageResponse.model_validate(data)
+        TriageResponse.model_validate(data)
 
         return BatchResult(
             ok=True,
@@ -145,9 +145,10 @@ async def run_batch(
                 # Write the response (JSONL)
                 out_f.write(json.dumps(res.response, ensure_ascii=False) + "\n")
 
-                # Tally distributions
-                major = res.response.get("major_category", "unknown")
-                sub_key = res.response.get("sub_action_key", "unknown")
+                # Tally distributions — v3 wraps in { "output": { ... } }
+                output = res.response.get("output", {})
+                major = output.get("major_category", "unknown")
+                sub_key = output.get("sub_action_key", "unknown")
                 major_counts[str(major)] += 1
                 action_counts[str(sub_key)] += 1
             else:
@@ -186,7 +187,7 @@ async def run_batch(
 
 def main() -> None:
     p = argparse.ArgumentParser(description="Batch test Gmail triage endpoint with a JSON array fixture.")
-    p.add_argument("--url", required=True, help="API endpoint URL, e.g. http://localhost:8000/v1/gmail/triage")
+    p.add_argument("--url", required=True, help="API endpoint URL, e.g. http://localhost:8000/rd/api/v1/ai/triage")
     p.add_argument("--input", required=True, help="Path to JSON array of Gmail messages")
     p.add_argument("--out", default="outputs/triage_results.jsonl", help="Where to write successful outputs (JSONL)")
     p.add_argument("--errors", default="outputs/triage_errors.jsonl", help="Where to write errors (JSONL)")

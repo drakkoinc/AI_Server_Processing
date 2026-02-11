@@ -1,5 +1,5 @@
 /**
- * BullMQ worker (Node) — reference implementation (v2 triage schema)
+ * BullMQ worker (Node) — reference implementation (v3 triage schema)
  *
  * Conceptual role in the overall Drakko pipeline
  * ----------------------------------------------
@@ -25,7 +25,7 @@
  * What this worker does (per job)
  * -------------------------------
  * 1) Fetch raw Gmail JSON from `email_messages.raw_payload`
- * 2) POST to AI server endpoint (`/v1/gmail/triage`)
+ * 2) POST to AI server endpoint (`/rd/api/v1/ai/triage`)
  * 3) Upsert AI output into `email_insights` (JSONB + denormalized columns)
  * 4) Mark email_messages row as processed and set is_actionable
  *
@@ -56,7 +56,7 @@ const QUEUE_NAME = process.env.QUEUE_NAME || "email_insights";
 // This reference string is stored in Postgres alongside the triage output.
 // The AI server output JSON does not include `reference`, but keeping a version string
 // in the DB is useful when you evolve the contract.
-const CONTRACT_REFERENCE = process.env.CONTRACT_REFERENCE || "drakko.gmail_triage.v2";
+const CONTRACT_REFERENCE = process.env.CONTRACT_REFERENCE || "drakko.gmail_insights.v3";
 
 // ---------------------------------------------------------------------------
 // Shared connections
@@ -76,8 +76,8 @@ async function fetchEmailMessage(emailMessageId) {
 }
 
 async function callAiServer(rawPayload) {
-  // Call the v2 triage endpoint.
-  const r = await fetch(`${AI_SERVER_URL}/v1/gmail/triage`, {
+  // Call the v3 triage endpoint.
+  const r = await fetch(`${AI_SERVER_URL}/rd/api/v1/ai/triage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(rawPayload),
@@ -87,18 +87,28 @@ async function callAiServer(rawPayload) {
   if (!r.ok) {
     throw new Error(`AI server ${r.status}: ${text}`);
   }
-  return JSON.parse(text);
+
+  // v3 response is wrapped: { "output": { ... } }
+  const envelope = JSON.parse(text);
+  return envelope.output;
 }
 
-async function upsertInsights(emailMessageId, emailRow, insights) {
+async function upsertInsights(emailMessageId, emailRow, output) {
   // Persist the triage result.
   //
   // Denormalized fields let your UI query quickly:
   // - major_category
-  // - reply_required / explicit_task
+  // - explicit_task
   // - sub_action_key
   //
-  // The full JSON is stored in `full_response` for auditability.
+  // v3 no longer has reply_required / task_type / reason as top-level fields.
+  // We derive reply_required from urgency_signals and store the full output as JSONB.
+  const replyRequired = output.urgency_signals?.urgency === "critical" ||
+                         output.urgency_signals?.urgency === "high" ||
+                         (output.suggested_reply_action?.length > 0);
+  const taskType = output.task_proposal?.type ?? null;
+  const reason = output.extracted_summary?.ask ?? null;
+
   await pool.query(
     `INSERT INTO email_insights (
         email_message_id,
@@ -139,25 +149,30 @@ async function upsertInsights(emailMessageId, emailRow, insights) {
       emailRow.provider_message_id,
       emailRow.provider_thread_id,
       CONTRACT_REFERENCE,
-      new Date().toISOString(),
-      insights.major_category,
-      insights.sub_action_key,
-      insights.reply_required,
-      insights.explicit_task,
-      insights.task_type ?? null,
-      insights.confidence,
-      insights.reason ?? null,
-      JSON.stringify(insights.evidence ?? []),
-      JSON.stringify(insights.entities ?? null),
-      JSON.stringify(insights),
+      output.debug?.analysis_timestamp ?? new Date().toISOString(),
+      output.major_category,
+      output.sub_action_key,
+      replyRequired,
+      output.explicit_task,
+      taskType,
+      output.confidence,
+      reason,
+      JSON.stringify(output.evidence ?? []),
+      JSON.stringify(output.entities ?? null),
+      JSON.stringify(output),
     ]
   );
 }
 
-async function markEmailProcessed(emailMessageId, insights) {
+async function markEmailProcessed(emailMessageId, output) {
   // Derive a simple is_actionable signal.
-  // If you want richer logic, compute it from major_category/sub_action_key/etc.
-  const isActionable = Boolean(insights.reply_required || insights.explicit_task);
+  // In v3 we check explicit_task, urgency, and whether reply actions were suggested.
+  const isActionable = Boolean(
+    output.explicit_task ||
+    output.urgency_signals?.urgency === "critical" ||
+    output.urgency_signals?.urgency === "high" ||
+    (output.suggested_reply_action?.length > 0)
+  );
 
   await pool.query(
     `UPDATE email_messages
@@ -181,12 +196,13 @@ const worker = new Worker(
       throw new Error(`email_messages row not found for id=${emailMessageId}`);
     }
 
-    const insights = await callAiServer(emailRow.raw_payload);
+    // callAiServer returns the unwrapped output (not the envelope).
+    const output = await callAiServer(emailRow.raw_payload);
 
-    await upsertInsights(emailMessageId, emailRow, insights);
-    await markEmailProcessed(emailMessageId, insights);
+    await upsertInsights(emailMessageId, emailRow, output);
+    await markEmailProcessed(emailMessageId, output);
 
-    return { major_category: insights.major_category, message_id: insights.message_id };
+    return { major_category: output.major_category, sub_action_key: output.sub_action_key };
   },
   { connection: redis }
 );

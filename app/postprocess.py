@@ -1,24 +1,16 @@
 """Post-processing and consistency checks.
 
-Why post-process at all if we use Structured Outputs?
-----------------------------------------------------
-Structured Outputs guarantees the model returns JSON with the *right shape*, but it does not
-guarantee:
-  - that IDs match the request (models can hallucinate IDs)
-  - that confidence values are in a sane range (even with schema constraints, we clamp)
-  - that obvious entities (sender) are always present
-  - that natural-language time phrases are converted into ISO timestamps consistently
+Structured Outputs guarantees the model returns JSON with the right shape, but
+does not guarantee:
+  - confidence values are clamped
+  - obvious entities (sender) are present
+  - natural-language time phrases are converted to ISO
+  - urgency_signals.deadline_text is parsed into reply_by ISO
+  - task_proposal.due_at is filled from deadline detection
+  - debug metadata is present
 
-So we run a **pure, deterministic** postprocess step that:
-  1) injects `message_id` + `thread_id` from the request
-  2) clamps numeric fields
-  3) fills missing obvious entities
-  4) best-effort parses relative times ("Friday 2pm PT") into ISO datetimes
-
-IMPORTANT:
-- This module must remain deterministic and side-effect free.
-- No network calls.
-- No LLM calls.
+This module runs a pure, deterministic postprocess step.
+No network calls. No LLM calls.
 """
 
 from __future__ import annotations
@@ -30,50 +22,36 @@ from typing import Optional, Tuple
 from dateutil import parser as dateutil_parser
 from dateutil import tz as dateutil_tz
 
+from app.config import settings
 from app.gmail import ParsedEmail
 from app.models import (
-    EmailTriageResponse,
+    DebugInfo,
     GmailMessageInput,
     LLMTriageOutput,
     MeetingRef,
     PersonRef,
+    TriageOutput,
+    TriageResponse,
 )
+from app.prompt import PROMPT_VERSION
 
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
 
 _DAY_OF_WEEK = {
-    "monday": 0,
-    "tuesday": 1,
-    "wednesday": 2,
-    "thursday": 3,
-    "friday": 4,
-    "saturday": 5,
-    "sunday": 6,
+    "monday": 0, "tuesday": 1, "wednesday": 2, "thursday": 3,
+    "friday": 4, "saturday": 5, "sunday": 6,
 }
 
-# Common timezone abbreviations → IANA.
-# NOTE: abbreviations are ambiguous in general; we only handle the common ones
-# that show up in scheduling emails.
 _TZ_ABBREV_TO_IANA = {
-    "pt": "America/Los_Angeles",
-    "pst": "America/Los_Angeles",
-    "pdt": "America/Los_Angeles",
-    "mt": "America/Denver",
-    "mst": "America/Denver",
-    "mdt": "America/Denver",
-    "ct": "America/Chicago",
-    "cst": "America/Chicago",
-    "cdt": "America/Chicago",
-    "et": "America/New_York",
-    "est": "America/New_York",
-    "edt": "America/New_York",
-    "utc": "UTC",
-    "gmt": "UTC",
+    "pt": "America/Los_Angeles", "pst": "America/Los_Angeles", "pdt": "America/Los_Angeles",
+    "mt": "America/Denver", "mst": "America/Denver", "mdt": "America/Denver",
+    "ct": "America/Chicago", "cst": "America/Chicago", "cdt": "America/Chicago",
+    "et": "America/New_York", "est": "America/New_York", "edt": "America/New_York",
+    "utc": "UTC", "gmt": "UTC",
 }
 
-# Fallback mapping from UTC offsets to a "reasonable" US timezone.
-# This is heuristic (offsets are not unique), but it improves ISO rendering
-# for common US-based founders/teams when the email date header includes only
-# a numeric offset.
 _OFFSET_TO_IANA = {
     timedelta(hours=-8): "America/Los_Angeles",
     timedelta(hours=-7): "America/Los_Angeles",
@@ -82,9 +60,11 @@ _OFFSET_TO_IANA = {
     timedelta(hours=0): "UTC",
 }
 
+_TIME_RE_12H = re.compile(r"\b(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b", re.IGNORECASE)
+_TIME_RE_24H = re.compile(r"\b(\d{1,2}):(\d{2})\b")
+
 
 def _clamp01(x: float) -> float:
-    """Clamp a numeric value to [0, 1]."""
     try:
         return max(0.0, min(1.0, float(x)))
     except Exception:
@@ -92,11 +72,6 @@ def _clamp01(x: float) -> float:
 
 
 def _normalize_sub_action_key(key: str) -> str:
-    """Normalize a free-form sub_action_key into SCREAMING_SNAKE_CASE.
-
-    We keep sub_action_key as a string so you can iterate on the taxonomy quickly.
-    This normalization step improves downstream consistency.
-    """
     if not key:
         return "OTHER"
     key = key.strip()
@@ -108,15 +83,7 @@ def _normalize_sub_action_key(key: str) -> str:
 
 
 def _subject_to_topic(subject: str) -> str:
-    """Convert an email subject into a meeting topic.
-
-    Example:
-      "Re: Contract approval timeline" → "Contract approval timeline"
-
-    This is intentionally conservative; it only strips common reply/forward prefixes.
-    """
     s = (subject or "").strip()
-    # Remove repeated prefixes like "Re: Re: "
     while True:
         new = re.sub(r"^(\s*(re|fwd|fw)\s*:\s*)", "", s, flags=re.IGNORECASE)
         if new == s:
@@ -126,16 +93,7 @@ def _subject_to_topic(subject: str) -> str:
 
 
 def _extract_timezone(text: str, base_dt: datetime) -> Tuple[timezone | datetime.tzinfo, Optional[str]]:
-    """Extract timezone info from text.
-
-    Returns:
-      (tzinfo, tz_name)
-
-    tz_name is an IANA string when we can infer one, otherwise None.
-    """
     lower = (text or "").lower()
-
-    # 1) Explicit abbreviations like "PT", "PST", "ET".
     for abbr, iana in _TZ_ABBREV_TO_IANA.items():
         if re.search(rf"\b{re.escape(abbr)}\b", lower):
             if iana == "UTC":
@@ -143,7 +101,6 @@ def _extract_timezone(text: str, base_dt: datetime) -> Tuple[timezone | datetime
             tzinfo = dateutil_tz.gettz(iana)
             return (tzinfo or timezone.utc), iana
 
-    # 2) Infer from base_dt offset.
     if base_dt.tzinfo is not None:
         off = base_dt.utcoffset()
         if off in _OFFSET_TO_IANA:
@@ -153,27 +110,11 @@ def _extract_timezone(text: str, base_dt: datetime) -> Tuple[timezone | datetime
             tzinfo = dateutil_tz.gettz(iana)
             return (tzinfo or base_dt.tzinfo), iana
 
-    # 3) Fallback: keep base tz (or UTC).
     return (base_dt.tzinfo or timezone.utc), None
 
 
-_TIME_RE_12H = re.compile(r"\b(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b", re.IGNORECASE)
-_TIME_RE_24H = re.compile(r"\b(\d{1,2}):(\d{2})\b")
-
-
 def _extract_time_components(text: str) -> Tuple[Optional[int], Optional[int]]:
-    """Extract hour/minute from a time phrase.
-
-    Supports:
-      - "2pm", "2:30 pm"
-      - "14:00"
-      - "noon", "midnight"
-      - "EOD" (treated as 17:00)
-
-    Returns (hour, minute) or (None, None) if no time found.
-    """
     lower = (text or "").lower()
-
     if "noon" in lower:
         return 12, 0
     if "midnight" in lower:
@@ -203,20 +144,6 @@ def _extract_time_components(text: str) -> Tuple[Optional[int], Optional[int]]:
 
 
 def _infer_datetime(text: str, base_dt: datetime) -> Tuple[Optional[datetime], Optional[str]]:
-    """Best-effort parse of natural-language date/time into a timezone-aware datetime.
-
-    Returns:
-      (dt, tz_name)
-
-    We do conservative parsing:
-      - relative words (today/tomorrow)
-      - weekday names (Friday)
-      - time-of-day hints (2pm, 14:00, EOD)
-      - timezone abbreviations (PT, ET)
-      - fallback to dateutil for explicit dates (Dec 26 2025 2pm)
-
-    If we cannot infer anything, returns (None, None).
-    """
     if not text or not text.strip():
         return None, None
 
@@ -226,7 +153,6 @@ def _infer_datetime(text: str, base_dt: datetime) -> Tuple[Optional[datetime], O
 
     tzinfo, tz_name = _extract_timezone(text, base)
 
-    # Normalize base into the inferred tz to make weekday resolution correct.
     try:
         base_local = base.astimezone(tzinfo)
     except Exception:
@@ -234,20 +160,17 @@ def _infer_datetime(text: str, base_dt: datetime) -> Tuple[Optional[datetime], O
 
     lower = text.strip().lower()
 
-    # --- 1) Relative day words
     day_dt: Optional[datetime] = None
     if "today" in lower:
         day_dt = base_local
     elif "tomorrow" in lower:
         day_dt = base_local + timedelta(days=1)
 
-    # --- 2) Weekday resolution ("Friday")
     if day_dt is None:
         for day_name, target_wd in _DAY_OF_WEEK.items():
             if re.search(rf"\b{day_name}\b", lower):
                 base_wd = base_local.weekday()
                 delta = (target_wd - base_wd) % 7
-                # Prefer future date when ambiguous ("Friday" on Friday → next Friday).
                 if delta == 0:
                     delta = 7
                 if re.search(r"\bnext\b", lower):
@@ -255,17 +178,13 @@ def _infer_datetime(text: str, base_dt: datetime) -> Tuple[Optional[datetime], O
                 day_dt = base_local + timedelta(days=delta)
                 break
 
-    # --- 3) If we have a day, attach a time if present
     if day_dt is not None:
         hour, minute = _extract_time_components(lower)
         if hour is not None:
             day_dt = day_dt.replace(hour=hour, minute=minute or 0, second=0, microsecond=0)
         else:
-            # If the text doesn't specify time, keep date-only semantics by setting
-            # time to 00:00; downstream decides whether to show date or datetime.
             day_dt = day_dt.replace(hour=0, minute=0, second=0, microsecond=0)
 
-        # Ensure tzinfo
         if day_dt.tzinfo is None:
             try:
                 day_dt = day_dt.replace(tzinfo=tzinfo)
@@ -273,52 +192,41 @@ def _infer_datetime(text: str, base_dt: datetime) -> Tuple[Optional[datetime], O
                 day_dt = day_dt.replace(tzinfo=timezone.utc)
         return day_dt, tz_name
 
-    # --- 4) Fallback: dateutil for explicit dates
     try:
         parsed = dateutil_parser.parse(text, default=base_local, fuzzy=True)
         if parsed.tzinfo is None:
             parsed = parsed.replace(tzinfo=tzinfo)
         else:
-            # Convert into tzinfo for consistency
             parsed = parsed.astimezone(tzinfo)
         return parsed, tz_name
     except Exception:
         return None, None
 
 
-def _fill_sender(parsed_email: ParsedEmail, llm: LLMTriageOutput) -> None:
+# ---------------------------------------------------------------------------
+# Entity fillers
+# ---------------------------------------------------------------------------
+
+def _fill_sender(parsed_email: ParsedEmail, entities) -> None:
     """Ensure the sender appears in entities.people as role=sender."""
     sender_email = parsed_email.from_email
     if not sender_email:
         return
-
-    # If sender already exists (any role), don't duplicate.
-    for p in llm.entities.people:
+    for p in entities.people:
         if (p.email or "").lower() == sender_email.lower():
-            # Ensure sender role if missing/empty.
             if not p.role:
                 p.role = "sender"
             return
+    entities.people.insert(0, PersonRef(email=sender_email, role="sender"))
 
-    llm.entities.people.insert(0, PersonRef(email=sender_email, role="sender"))
 
-
-def _fill_date_isos(parsed_email: ParsedEmail, llm: LLMTriageOutput) -> Tuple[Optional[str], Optional[datetime]]:
-    """Fill missing date ISO strings when possible.
-
-    Returns:
-      (best_tz_name, best_dt)
-
-    We also return the first "best" inferred datetime to help meeting.start_at.
-    """
+def _fill_date_isos(parsed_email: ParsedEmail, entities) -> Tuple[Optional[str], Optional[datetime]]:
     base_dt = parsed_email.sent_at or parsed_email.internal_date or datetime.now(timezone.utc)
-
     best_dt: Optional[datetime] = None
     best_tz_name: Optional[str] = None
 
-    for d in llm.entities.dates:
+    for d in entities.dates:
         if d.iso and str(d.iso).strip():
-            # Try to parse tz name from existing ISO (if any)
             if best_dt is None:
                 try:
                     best_dt = dateutil_parser.isoparse(d.iso)
@@ -330,8 +238,6 @@ def _fill_date_isos(parsed_email: ParsedEmail, llm: LLMTriageOutput) -> Tuple[Op
         if not dt:
             continue
 
-        # Decide whether to output date-only or datetime ISO.
-        # If the text includes time, emit full datetime; else emit date.
         has_time = _extract_time_components(d.text)[0] is not None or bool(_TIME_RE_24H.search(d.text))
         d.iso = dt.isoformat() if has_time else dt.date().isoformat()
 
@@ -342,58 +248,32 @@ def _fill_date_isos(parsed_email: ParsedEmail, llm: LLMTriageOutput) -> Tuple[Op
     return best_tz_name, best_dt
 
 
-def _fill_meeting(parsed_email: ParsedEmail, llm: LLMTriageOutput, tz_name: Optional[str], best_dt: Optional[datetime]) -> None:
-    """Populate entities.meeting when appropriate.
-
-    We only create a meeting object when:
-      - major_category is schedule_and_time
-      - OR sub_action_key suggests meeting scheduling/confirmation
-
-    The LLM may also provide entities.meeting directly. In that case we only fill
-    missing fields.
-    """
+def _fill_meeting(parsed_email: ParsedEmail, llm_category: str, llm_sub_action: str, entities, tz_name: Optional[str], best_dt: Optional[datetime]) -> None:
     wants_meeting = (
-        llm.major_category.value == "schedule_and_time"
-        or llm.sub_action_key.upper().startswith("SCHEDULE_")
+        llm_category == "schedule_and_time"
+        or llm_sub_action.upper().startswith("SCHEDULE_")
     )
     if not wants_meeting:
         return
 
-    if llm.entities.meeting is None:
-        llm.entities.meeting = MeetingRef()
+    if entities.meeting is None:
+        entities.meeting = MeetingRef()
 
-    # Fill topic from subject if missing.
-    if not (llm.entities.meeting.topic or "").strip():
-        llm.entities.meeting.topic = _subject_to_topic(parsed_email.subject)
+    if not (entities.meeting.topic or "").strip():
+        entities.meeting.topic = _subject_to_topic(parsed_email.subject)
 
-    # Fill start_at from the best inferred datetime (if missing).
-    if not (llm.entities.meeting.start_at or "").strip() and best_dt is not None:
-        llm.entities.meeting.start_at = best_dt.isoformat()
+    if not (entities.meeting.start_at or "").strip() and best_dt is not None:
+        entities.meeting.start_at = best_dt.isoformat()
 
-    # Fill tz (IANA preferred).
-    if not (llm.entities.meeting.tz or "").strip() and tz_name:
-        llm.entities.meeting.tz = tz_name
+    if not (entities.meeting.tz or "").strip() and tz_name:
+        entities.meeting.tz = tz_name
 
 
-def postprocess_triage(
-    *,
-    msg: GmailMessageInput,
-    parsed_email: ParsedEmail,
-    llm: LLMTriageOutput,
-    predicted_at: datetime,
-) -> EmailTriageResponse:
-    """Build the final API response (snake_case keys) from the parsed LLM output."""
-
-    # --- Normalize and clamp
-    llm.confidence = _clamp01(llm.confidence)
-    llm.sub_action_key = _normalize_sub_action_key(llm.sub_action_key)
-
-    llm.reason = (llm.reason or "").strip()
-
-    # Evidence: trim, de-dupe, cap length
+def _clean_evidence(evidence_list) -> list:
+    """Trim, de-dupe, cap evidence snippets."""
     cleaned = []
     seen = set()
-    for e in (llm.evidence or []):
+    for e in (evidence_list or []):
         s = (e or "").strip()
         if not s:
             continue
@@ -405,29 +285,104 @@ def postprocess_triage(
         cleaned.append(s)
         if len(cleaned) >= 3:
             break
-    llm.evidence = cleaned
+    return cleaned
 
-    # If explicit_task is false, force task_type null.
-    if not llm.explicit_task:
-        llm.task_type = None
-    else:
-        llm.task_type = (llm.task_type or "").strip() or None
+
+# ---------------------------------------------------------------------------
+# Postprocessor
+# ---------------------------------------------------------------------------
+
+def postprocess_triage(
+    *,
+    msg: GmailMessageInput,
+    parsed_email: ParsedEmail,
+    llm: LLMTriageOutput,
+    predicted_at: datetime,
+) -> TriageResponse:
+    """Build the API response from the parsed LLM output."""
+
+    # --- Normalize and clamp
+    llm.confidence = _clamp01(llm.confidence)
+    llm.sub_action_key = _normalize_sub_action_key(llm.sub_action_key)
+
+    # --- Evidence cleanup
+    llm.evidence = _clean_evidence(llm.evidence)
+
+    # --- Urgency signals cleanup
+    llm.urgency_signals.reason = (llm.urgency_signals.reason or "").strip()
+    llm.urgency_signals.urgency = (llm.urgency_signals.urgency or "medium").strip().lower()
+    if llm.urgency_signals.urgency not in ("low", "medium", "high", "critical"):
+        llm.urgency_signals.urgency = "medium"
+
+    # If deadline_text is set, try to parse it into reply_by ISO
+    if llm.urgency_signals.deadline_text and not llm.urgency_signals.reply_by:
+        base_dt = parsed_email.sent_at or parsed_email.internal_date or datetime.now(timezone.utc)
+        dt, _ = _infer_datetime(llm.urgency_signals.deadline_text, base_dt)
+        if dt:
+            llm.urgency_signals.reply_by = dt.isoformat()
+
+    # --- Task proposal cleanup
+    if llm.task_proposal is not None:
+        llm.task_proposal.type = (llm.task_proposal.type or "").strip() or None
+        llm.task_proposal.title = (llm.task_proposal.title or "").strip()
+        llm.task_proposal.description = (llm.task_proposal.description or "").strip()
+        llm.task_proposal.priority = (llm.task_proposal.priority or "medium").strip().lower()
+        if llm.task_proposal.priority not in ("low", "medium", "high", "critical"):
+            llm.task_proposal.priority = "medium"
+        llm.task_proposal.status = "open"
+
+        # Fill due_at from urgency deadline if not already set
+        if not llm.task_proposal.due_at and llm.urgency_signals.reply_by:
+            llm.task_proposal.due_at = llm.urgency_signals.reply_by
+
+    # --- Recommended actions: normalize kinds and re-rank
+    valid_kinds = {"PRIMARY", "SECONDARY", "DANGER"}
+    for action in llm.recommended_actions:
+        action.kind = action.kind.upper() if action.kind else "SECONDARY"
+        if action.kind not in valid_kinds:
+            action.kind = "SECONDARY"
+        action.key = (action.key or "").strip()
+        action.label = (action.label or "").strip()
+    # Ensure ranks are sequential
+    for i, action in enumerate(sorted(llm.recommended_actions, key=lambda a: a.rank)):
+        action.rank = i + 1
+
+    # --- Extracted summary cleanup
+    llm.extracted_summary.ask = (llm.extracted_summary.ask or "").strip()
+    llm.extracted_summary.success_criteria = (llm.extracted_summary.success_criteria or "").strip()
+    llm.extracted_summary.missing_info = [
+        s.strip() for s in (llm.extracted_summary.missing_info or []) if (s or "").strip()
+    ][:3]
 
     # --- Fill deterministic entities
-    _fill_sender(parsed_email, llm)
-    tz_name, best_dt = _fill_date_isos(parsed_email, llm)
-    _fill_meeting(parsed_email, llm, tz_name, best_dt)
+    _fill_sender(parsed_email, llm.entities)
+    tz_name, best_dt = _fill_date_isos(parsed_email, llm.entities)
+    _fill_meeting(
+        parsed_email, llm.major_category.value, llm.sub_action_key,
+        llm.entities, tz_name, best_dt,
+    )
 
-    return EmailTriageResponse(
-        message_id=msg.id,
-        thread_id=msg.threadId,
+    # --- Build debug metadata (server-side only)
+    debug = DebugInfo(
+        analysis_timestamp=predicted_at.isoformat(),
+        model_version=settings.model_version,
+        prompt_version=PROMPT_VERSION,
+    )
+
+    # --- Assemble the output
+    output = TriageOutput(
         major_category=llm.major_category,
         sub_action_key=llm.sub_action_key,
-        reply_required=bool(llm.reply_required),
         explicit_task=bool(llm.explicit_task),
-        task_type=llm.task_type,
         confidence=llm.confidence,
-        reason=llm.reason,
-        evidence=llm.evidence,
+        suggested_reply_action=llm.suggested_reply_action or [],
+        task_proposal=llm.task_proposal,
+        recommended_actions=sorted(llm.recommended_actions, key=lambda a: a.rank),
+        urgency_signals=llm.urgency_signals,
+        extracted_summary=llm.extracted_summary,
         entities=llm.entities,
+        evidence=llm.evidence,
+        debug=debug,
     )
+
+    return TriageResponse(output=output)

@@ -1,28 +1,21 @@
-"""Prompt templates.
+"""Prompt templates for the Drakko Email AI Server.
 
-Conceptual role
----------------
-Prompts are treated as **contracts**.
+The prompt instructs the model to produce a rich triage output:
+- task_proposal: a fully-formed task object
+- recommended_actions: ranked UI buttons
+- urgency_signals: structured urgency assessment
+- extracted_summary: executive-assistant breakdown (ask / success_criteria / missing_info)
+- suggested_reply_action: quick-reply chips
 
-This project is intentionally structured like a typical production pipeline:
-  - A poller ingests raw provider messages (Gmail JSON) into a DB.
-  - A worker (queue consumer) calls this AI service.
-  - This AI service returns a small, strict JSON object used to drive UI + next actions.
-
-The user requested a new *single* response schema with these keys:
-  message_id, thread_id, major_category, sub_action_key, reply_required,
-  explicit_task, task_type, confidence, reason, evidence, entities
-
-We enforce that shape via OpenAI Structured Outputs (Pydantic → JSON Schema).
-
-Implementation note
--------------------
-The model output schema (`LLMTriageOutput`) does not include provider IDs.
-The server injects `message_id` and `thread_id` from the request to guarantee
-consistency.
+The output shape is enforced via OpenAI Structured Outputs (Pydantic -> JSON Schema).
+Provider IDs and debug metadata are injected server-side in postprocessing.
 """
 
-# NOTE: These are plain strings; the output shape is enforced by Structured Outputs.
+PROMPT_VERSION = "triage-v3-2026-02"
+
+# ---------------------------------------------------------------------------
+# Category + action guides
+# ---------------------------------------------------------------------------
 
 MAJOR_CATEGORY_GUIDE = """Choose exactly ONE major_category:
 
@@ -52,12 +45,12 @@ Use one of the recommended keys below when possible.
 If none fit, use OTHER.
 
 Schedule & Time (major_category = schedule_and_time):
-- SCHEDULE_PROPOSE_TIME      (asking for availability / proposing times)
-- SCHEDULE_CONFIRM_TIME      (confirming a proposed time: "Does Friday 2pm work?")
-- SCHEDULE_RESCHEDULE        (move an existing meeting)
-- SCHEDULE_RSVP              (accept/decline an invite)
-- SCHEDULE_ADD_CALENDAR_BLOCK (block focus time)
-- SCHEDULE_DEADLINE_CONFIRM  (confirming a deadline date/time)
+- SCHEDULE_PROPOSE_TIME
+- SCHEDULE_CONFIRM_TIME
+- SCHEDULE_RESCHEDULE
+- SCHEDULE_RSVP
+- SCHEDULE_ADD_CALENDAR_BLOCK
+- SCHEDULE_DEADLINE_CONFIRM
 
 Decisions & Approvals (major_category = decisions_and_approvals):
 - DECISION_APPROVE_REJECT
@@ -85,9 +78,33 @@ Meta & Systems (major_category = meta_and_systems):
 - SYSTEM_SECURITY
 - SYSTEM_NOTIFICATION
 
+Social & People (major_category = social_and_people):
+- SOCIAL_INTRO
+- SOCIAL_INVITE
+- SOCIAL_CONGRATS
+
+People & Process (major_category = people_and_process):
+- PROCESS_HANDOFF
+- PROCESS_OWNERSHIP_CHANGE
+- PROCESS_WORKFLOW_UPDATE
+
+Information & Org (major_category = information_and_org):
+- INFO_FYI
+- INFO_STATUS_REPORT
+- INFO_ANNOUNCEMENT
+
+Learning & Awareness (major_category = learning_and_awareness):
+- LEARN_ARTICLE
+- LEARN_WEBINAR
+- LEARN_COURSE
+
 Fallback:
 - OTHER
 """
+
+# ---------------------------------------------------------------------------
+# System prompt
+# ---------------------------------------------------------------------------
 
 TRIAGE_SYSTEM_PROMPT = f"""You are an email triage engine.
 
@@ -98,27 +115,69 @@ Your task: return a strict JSON object matching the provided schema.
 
 {SUB_ACTION_KEY_GUIDE}
 
-Field requirements:
-- major_category: pick ONE.
-- sub_action_key: pick ONE.
-- reply_required: true if the next action is to respond by email.
-- explicit_task: true if there is an action beyond replying (work to do, a task to track, etc.).
-- task_type: if explicit_task is true, provide a short snake_case type (e.g. schedule_meeting, review_document, pay_invoice).
-  If explicit_task is false, set task_type to null.
-- confidence: calibrated probability 0.0-1.0.
-- reason: 1 sentence; say *why* (based on observable text).
-- evidence: array of 1-3 short verbatim snippets from the email body that justify the classification.
-  Do NOT invent evidence.
+=== FIELD REQUIREMENTS ===
 
-Entities:
-- entities.people: include at least the sender email with role "sender" if available.
-- entities.dates: extract any dates/times mentioned. Prefer ISO datetimes with timezone offsets when time is present.
-- entities.meeting: if this is about a meeting, include topic (best-effort), start_at (ISO), tz (IANA preferred).
-- If no items exist for a list, return an empty list.
-- If meeting does not apply, set entities.meeting to null.
+1) major_category: pick ONE from the list above.
 
-Output rules:
+2) sub_action_key: pick ONE from the recommended keys above. Use SCREAMING_SNAKE_CASE.
+
+3) explicit_task: true if there is a concrete action beyond just reading/replying (work to do,
+   a task to track, a document to review, a payment to make, etc.).
+
+4) confidence: calibrated probability 0.0-1.0 for the classification.
+
+5) suggested_reply_action: an array of 0-3 short action phrases the user could take as
+   quick-reply options. Examples: ["CONFIRM", "Decline", "Ask for further detail"].
+   Return an empty array if no reply is needed (e.g., automated notifications).
+
+6) task_proposal: if the email implies any trackable work (even "review this alert"), provide:
+   - type: short snake_case task type (e.g. reply_required, review_document, pay_invoice,
+     schedule_meeting, security_review)
+   - title: 1-line human-readable task title
+   - description: 1-2 sentence description of what needs to be done
+   - priority: "low" | "medium" | "high" | "critical"
+   - status: always "open"
+   - scheduled_for: ISO date if a natural scheduling date is obvious, else null
+   - due_at: ISO datetime if a deadline is stated or strongly implied, else null
+   - waiting_on: who/what is blocking progress, else null
+   If no task is implied, set task_proposal to null.
+
+7) recommended_actions: array of 1-4 ranked UI actions:
+   - key: snake_case action identifier (e.g. generate_reply, review_activity, mark_safe)
+   - label: short human-readable button label (e.g. "Generate draft", "Check activity")
+   - kind: "PRIMARY" (the main action), "SECONDARY" (alternative), or "DANGER" (destructive/urgent)
+   - rank: integer starting at 1 (1 = most important)
+   The first action should always be the most natural next step.
+
+8) urgency_signals:
+   - urgency: "low" | "medium" | "high" | "critical"
+   - deadline_detected: true if the email contains a stated or implied deadline
+   - deadline_text: the raw text of the deadline if detected, else null
+   - reply_by: ISO datetime if a reply deadline can be inferred, else null
+   - reason: 1 sentence explaining the urgency assessment
+
+9) extracted_summary:
+   - ask: 1 sentence describing what the sender wants from the recipient
+   - success_criteria: 1 sentence defining what "done" looks like
+   - missing_info: array of 0-3 strings identifying gaps the recipient needs to fill
+
+10) entities:
+   - entities.people: include at least the sender email with role "sender" if available.
+     Other roles: "recipient", "mentioned", "account_owner"
+   - entities.dates: extract any dates/times mentioned. Include text, iso (prefer ISO with
+     timezone offset when time is present), and type (meeting_time, deadline, event_time, other)
+   - entities.money: extract monetary amounts with text, amount (float), currency
+   - entities.docs: extract document references with title, url, type
+   - entities.meeting: if about a meeting, include topic, start_at (ISO), tz (IANA preferred).
+     Set to null if not about a meeting.
+   - Empty lists for categories with no matches.
+
+11) evidence: array of 1-3 short verbatim snippets from the email body that justify the
+    classification. Do NOT invent evidence. Copy exact text from the email.
+
+=== OUTPUT RULES ===
 - Output MUST match the provided JSON schema exactly.
 - Do NOT output extra keys.
 - Do NOT include Markdown.
+- All string fields use snake_case for keys, SCREAMING_SNAKE_CASE for sub_action_key.
 """

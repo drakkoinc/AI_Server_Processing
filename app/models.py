@@ -1,36 +1,17 @@
 """Pydantic schemas (contracts) for the Drakko Email AI server.
 
-This repo treats the LLM as a **decision engine** (per your PDFs):
-  1) What is this email about?  (major category)
-  2) What should the user do?   (sub-action / verb)
-  3) How urgent/important is it? (confidence + urgency-ish signals)
-  4) What evidence/entities support that decision? (extracted, observable cues)
-
-This file contains *three* conceptual layers:
+Schema layers
 
 A) Provider input schema
-------------------------
-We accept the raw Gmail "Message" JSON payload (the structure returned by Gmail's API)
-so you can store the raw payload in your DB and re-run inference later.
+   Accepts the raw Gmail "Message" JSON payload (same as Gmail API returns).
 
 B) LLM output schema (Structured Outputs)
-----------------------------------------
-We use OpenAI Structured Outputs to force the model to return JSON matching a schema.
-The LLM output schema intentionally *does not* include provider IDs (message/thread IDs),
-so that the server remains the source of truth for:
-  - ID consistency
-  - future metadata injection (timestamps, reference versions, etc.)
+   Forces the model to return JSON matching a Pydantic schema.
+   Does NOT include provider IDs or debug metadata — those are injected server-side.
 
 C) API response schema
-----------------------
-This is what your application receives.
-
-IMPORTANT:
-- The user requested a specific response JSON shape with snake_case keys.
-  That response shape is implemented by `EmailTriageResponse`.
-- If you want to version contracts, add a `reference` field here and bump it when the
-  schema changes. (We removed it from the response because the requested structure
-  did not include it.)
+   What the FastAPI endpoint returns, wrapped in an `output` envelope:
+     { "output": { ...all triage fields... } }
 
 """
 
@@ -48,34 +29,20 @@ from pydantic import BaseModel, ConfigDict, Field
 
 class GmailHeader(BaseModel):
     """A single header entry from Gmail's message payload."""
-
     name: str
     value: str
 
 
 class GmailBody(BaseModel):
-    """Body container for a Gmail message part.
-
-    Gmail uses base64url-encoded `data` for inline part bodies.
-    For attachments, Gmail may provide `attachmentId`.
-
-    We allow extra keys because Gmail's schema is wider than what we need.
-    """
-
+    """MIME part in GMails message payload"""
     model_config = ConfigDict(extra="allow")
-
     size: int = 0
     data: Optional[str] = None
     attachmentId: Optional[str] = None
 
 
 class GmailPart(BaseModel):
-    """A MIME part in Gmail's message payload.
-
-    Parts can be nested (multipart/*). A single Gmail message payload is represented as the
-    top-level part.
-    """
-
+    """A MIME part in Gmail's message payload."""
     model_config = ConfigDict(extra="allow")
 
     partId: str = ""
@@ -88,36 +55,21 @@ class GmailPart(BaseModel):
 
 class GmailPayload(GmailPart):
     """Alias for the top-level Gmail payload (same shape as a part)."""
-
     pass
 
 
 class GmailMessageInput(BaseModel):
-    """Raw Gmail message JSON object.
-
-    This matches the structure Gmail returns (with minimal fields required).
-
-    Notes:
-    - Your input example does not include a provider field; we default to "gmail".
-    - `internalDate` is milliseconds since epoch, as a string.
-    """
-
+    """Raw Gmail message JSON object."""
     model_config = ConfigDict(extra="allow")
 
     provider: str = "gmail"
-
-    # Gmail ids
     id: str
     threadId: Optional[str] = None
-
-    # Common Gmail metadata (optional)
     labelIds: Optional[List[str]] = None
     snippet: Optional[str] = None
     historyId: Optional[str] = None
-    internalDate: Optional[str] = None  # ms since epoch
-
+    internalDate: Optional[str] = None
     payload: GmailPayload
-
     sizeEstimate: Optional[int] = None
 
 
@@ -126,8 +78,7 @@ class GmailMessageInput(BaseModel):
 # ---------------------------------------------------------------------------
 
 class MajorCategory(str, Enum):
-    """High-level semantic bucket (from your Deep Classification breakdown)."""
-
+    """High-level semantic bucket."""
     core_communication = "core_communication"
     decisions_and_approvals = "decisions_and_approvals"
     schedule_and_time = "schedule_and_time"
@@ -141,74 +92,35 @@ class MajorCategory(str, Enum):
     other = "other"
 
 
-# We intentionally keep `sub_action_key` as a STRING (not an Enum).
-# Why?
-# - In early product iterations, you will iterate on these keys rapidly.
-# - Enforcing a hard Enum inside Structured Outputs can cause avoidable failures
-#   (model produces a new key you haven't whitelisted yet).
-#
-# We instead:
-# - document recommended keys in the prompt
-# - allow arbitrary strings at runtime
-# - optionally validate/normalize them in postprocessing if you want
-
-
 # ---------------------------------------------------------------------------
-# Entities schema for the requested response object
+# Entity schemas
 # ---------------------------------------------------------------------------
 
 class PersonRef(BaseModel):
-    """A lightweight person reference.
-
-    The user-provided desired output only includes:
-      - email
-      - role
-
-    We keep it intentionally minimal to avoid UI/schema bloat.
-    """
-
     email: str
-    role: str  # e.g. "sender", "recipient", "mentioned"
-
+    role: str
 
 class DateRef(BaseModel):
-    """A lightweight date/time mention."""
-
     text: str
     iso: Optional[str] = None
-    type: str = "other"  # e.g. "meeting_time", "deadline", "event_time"
-
+    type: str = "other"
 
 class MoneyRef(BaseModel):
-    """Money mention. Optional details for downstream automation."""
-
     text: str
     amount: Optional[float] = None
     currency: Optional[str] = None
 
-
 class DocRef(BaseModel):
-    """Document/artifact mention."""
-
     title: Optional[str] = None
     url: Optional[str] = None
     type: Optional[str] = None
 
-
 class MeetingRef(BaseModel):
-    """Meeting-specific structured fields.
-
-    Present when the email is about scheduling/confirming a meeting.
-    """
-
     topic: Optional[str] = None
-    start_at: Optional[str] = None  # ISO datetime with timezone offset
-    tz: Optional[str] = None  # IANA timezone preferred (e.g., "America/Los_Angeles")
-
+    start_at: Optional[str] = None
+    tz: Optional[str] = None
 
 class Entities(BaseModel):
-    """All extracted entities used to support UI and future automations."""
-
     people: List[PersonRef] = Field(default_factory=list)
     dates: List[DateRef] = Field(default_factory=list)
     money: List[MoneyRef] = Field(default_factory=list)
@@ -217,69 +129,114 @@ class Entities(BaseModel):
 
 
 # ---------------------------------------------------------------------------
-# LLM output schema (Structured Outputs)
+# Triage output schemas
+# ---------------------------------------------------------------------------
+
+class TaskProposal(BaseModel):
+    """A fully-formed task object ready for a task manager."""
+    type: Optional[str] = None
+    title: str = ""
+    description: str = ""
+    priority: str = "medium"
+    status: str = "open"
+    scheduled_for: Optional[str] = None
+    due_at: Optional[str] = None
+    waiting_on: Optional[str] = None
+
+
+class RecommendedAction(BaseModel):
+    """A ranked UI action button."""
+    key: str
+    label: str
+    kind: str = "SECONDARY"
+    rank: int = 1
+
+
+class UrgencySignals(BaseModel):
+    """Structured urgency assessment."""
+    urgency: str = "medium"
+    deadline_detected: bool = False
+    deadline_text: Optional[str] = None
+    reply_by: Optional[str] = None
+    reason: str = ""
+
+
+class ExtractedSummary(BaseModel):
+    """Executive-assistant-style summary of what the email needs."""
+    ask: str = ""
+    success_criteria: str = ""
+    missing_info: List[str] = Field(default_factory=list)
+
+
+class DebugInfo(BaseModel):
+    """Observability metadata injected server-side."""
+    analysis_timestamp: str = ""
+    model_version: str = ""
+    prompt_version: str = ""
+
+
+# ---------------------------------------------------------------------------
+# LLM output schema (Structured Outputs) — what the model returns
 # ---------------------------------------------------------------------------
 
 class LLMTriageOutput(BaseModel):
-    """The model's decision output (provider IDs are injected server-side)."""
+    """The model's decision output.
 
-    major_category: MajorCategory
-    sub_action_key: str
-
-    reply_required: bool
-    explicit_task: bool
-    task_type: Optional[str] = None
-
-    confidence: float = Field(ge=0.0, le=1.0)
-
-    reason: str
-    evidence: List[str] = Field(default_factory=list)
-
-    entities: Entities = Field(default_factory=Entities)
-
-
-# ---------------------------------------------------------------------------
-# API response schema (what the FastAPI endpoint returns)
-# ---------------------------------------------------------------------------
-
-class EmailTriageResponse(BaseModel):
-    """Final response matching the user-requested JSON structure.
-
-    Example (shape):
-    {
-      "message_id": "...",
-      "thread_id": "...",
-      "major_category": "schedule_and_time",
-      "sub_action_key": "SCHEDULE_CONFIRM_TIME",
-      "reply_required": true,
-      "explicit_task": false,
-      "task_type": null,
-      "confidence": 0.87,
-      "reason": "Sender asks you to confirm the meeting time.",
-      "evidence": ["Can you confirm Friday at 2pm PT works?"],
-      "entities": { ... }
-    }
-
-    NOTE:
-    - We keep snake_case field names so the JSON matches exactly.
+    Does NOT include debug metadata — that is injected server-side in postprocessing.
     """
-
-    message_id: str
-    thread_id: Optional[str] = None
-
     major_category: MajorCategory
     sub_action_key: str
 
-    reply_required: bool
     explicit_task: bool
-    task_type: Optional[str] = None
-
     confidence: float = Field(ge=0.0, le=1.0)
 
-    reason: str
-    evidence: List[str] = Field(default_factory=list)
+    suggested_reply_action: List[str] = Field(default_factory=list)
+
+    task_proposal: Optional[TaskProposal] = None
+
+    recommended_actions: List[RecommendedAction] = Field(default_factory=list)
+
+    urgency_signals: UrgencySignals = Field(default_factory=UrgencySignals)
+
+    extracted_summary: ExtractedSummary = Field(default_factory=ExtractedSummary)
 
     entities: Entities = Field(default_factory=Entities)
+
+    evidence: List[str] = Field(default_factory=list)
+
+
+# ---------------------------------------------------------------------------
+# API response schema — what the endpoint returns
+# ---------------------------------------------------------------------------
+
+class TriageOutput(BaseModel):
+    """The inner output object containing all triage fields + debug."""
+    major_category: MajorCategory
+    sub_action_key: str
+
+    explicit_task: bool
+    confidence: float = Field(ge=0.0, le=1.0)
+
+    suggested_reply_action: List[str] = Field(default_factory=list)
+
+    task_proposal: Optional[TaskProposal] = None
+
+    recommended_actions: List[RecommendedAction] = Field(default_factory=list)
+
+    urgency_signals: UrgencySignals = Field(default_factory=UrgencySignals)
+
+    extracted_summary: ExtractedSummary = Field(default_factory=ExtractedSummary)
+
+    entities: Entities = Field(default_factory=Entities)
+
+    evidence: List[str] = Field(default_factory=list)
+
+    debug: DebugInfo = Field(default_factory=DebugInfo)
+
+
+class TriageResponse(BaseModel):
+    """Top-level API response envelope: { "output": { ... } }"""
+    output: TriageOutput
 
 
 # Fix forward refs for nested MIME parts.
