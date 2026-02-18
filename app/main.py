@@ -123,7 +123,7 @@ def rd_health():
             "llm_provider": {
                 "status": "ok",
                 "provider": settings.llm_provider,
-                "model": settings.openai_model,
+                "model": settings.anthropic_model,
             },
             "python_version": platform.python_version(),
         },
@@ -138,7 +138,7 @@ def rd_ai():
     """Returns AI model configuration, prompt version, and usage stats."""
     return {
         "provider": settings.llm_provider,
-        "model": settings.openai_model,
+        "model": settings.anthropic_model,
         "temperature": settings.temperature,
         "timeout_s": settings.timeout_s,
         "max_body_chars": settings.max_body_chars,

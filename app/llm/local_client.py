@@ -1,12 +1,12 @@
 """Local model client (stub).
 
 Your PDFs mention a future setup where you have:
-- one AI server backed by OpenAI/ChatGPT
+- one AI server backed by Anthropic Claude
 - one AI server backed by a personally trained model
 
 This file is the hook for that second path.
 
-IMPORTANT: Unlike OpenAI Structured Outputs, most local model stacks will NOT naturally
+IMPORTANT: Unlike Anthropic Structured Outputs, most local model stacks will NOT naturally
 adhere to a strict JSON schema. In practice you'll need one (or more) of:
 
 - constrained decoding (JSON grammar / regex / tokenizer constraints)

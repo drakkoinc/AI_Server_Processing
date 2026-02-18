@@ -12,19 +12,19 @@ from typing import Any, Dict
 
 from app.config import settings
 from app.gmail import parse_gmail_message
+from app.llm.anthropic_client import AnthropicClient
 from app.llm.local_client import LocalClient
-from app.llm.openai_client import OpenAIClient
 from app.models import GmailMessageInput, LLMTriageOutput, TriageResponse
 from app.postprocess import postprocess_triage
-from app.preprocess import extract_links, extract_money_expressions, extract_time_expressions
+from app.preprocess import extract_links, extract_money_expressions, extract_time_expressions, extract_unsubscribe_signals
 from app.prompt import TRIAGE_SYSTEM_PROMPT
 
 
 def _choose_client():
     """Select the LLM provider adapter based on env vars."""
-    if settings.llm_provider == "openai":
-        return OpenAIClient(
-            model=settings.openai_model,
+    if settings.llm_provider == "anthropic":
+        return AnthropicClient(
+            model=settings.anthropic_model,
             temperature=settings.temperature,
             timeout_s=settings.timeout_s,
         )
@@ -55,6 +55,7 @@ class GmailTriagePipeline:
         time_phrases = extract_time_expressions(body)
         links = extract_links(email.body_html or body)
         money = extract_money_expressions(body)
+        has_unsub = extract_unsubscribe_signals(body)
 
         payload = {
             "provider": email.provider,
@@ -71,6 +72,7 @@ class GmailTriagePipeline:
                 "timePhrases": time_phrases,
                 "links": links[:10],
                 "moneyStrings": money[:10],
+                "hasUnsubscribeSignal": has_unsub,
             },
         }
         return json.dumps(payload, ensure_ascii=False)

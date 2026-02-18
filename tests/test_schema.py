@@ -8,6 +8,7 @@ from app.models import (
     LLMTriageOutput,
     MajorCategory,
     RecommendedAction,
+    TaskProposal,
     UrgencySignals,
 )
 from app.postprocess import postprocess_triage
@@ -105,3 +106,76 @@ def test_postprocess_triage_fills_entities_and_debug():
 
     # Extracted summary should pass through.
     assert output.extracted_summary.ask != ""
+
+
+def test_postprocess_spam_overrides():
+    """Verify postprocessing forces low urgency, no task, and no replies for spam."""
+    msg = GmailMessageInput.model_validate_json(
+        open("scripts/example_gmail_input.json", "r", encoding="utf-8").read()
+    )
+    parsed = parse_gmail_message(msg)
+
+    llm = LLMTriageOutput(
+        major_category=MajorCategory.spam,
+        sub_action_key="SPAM_NEWSLETTER",
+        explicit_task=True,  # should be overridden to False
+        confidence=0.95,
+        suggested_reply_action=["Unsubscribe"],  # should be overridden to []
+        task_proposal=TaskProposal(
+            type="unsubscribe",
+            title="Unsubscribe from newsletter",
+            description="User may want to unsubscribe.",
+            priority="medium",
+            status="open",
+        ),  # should be overridden to None
+        recommended_actions=[
+            RecommendedAction(key="unsubscribe", label="Unsubscribe", kind="PRIMARY", rank=1),
+        ],
+        urgency_signals=UrgencySignals(
+            urgency="high",  # should be overridden to "low"
+            deadline_detected=True,  # should be overridden to False
+            deadline_text="Tomorrow",  # should be overridden to None
+            reply_by=None,
+            reason="Original reason",  # should be overridden
+        ),
+        extracted_summary=ExtractedSummary(
+            ask="Newsletter promotion",
+            success_criteria="Read or ignore",
+            missing_info=[],
+        ),
+        evidence=["Click here to unsubscribe"],
+        entities=Entities.model_validate({
+            "people": [],
+            "dates": [],
+            "money": [],
+            "docs": [],
+            "meeting": None,
+        }),
+    )
+
+    resp = postprocess_triage(
+        msg=msg,
+        parsed_email=parsed,
+        llm=llm,
+        predicted_at=datetime.now(timezone.utc),
+    )
+    output = resp.output
+
+    # Category and sub-action should pass through.
+    assert output.major_category == MajorCategory.spam
+    assert output.sub_action_key == "SPAM_NEWSLETTER"
+
+    # Spam overrides should force these values.
+    assert output.urgency_signals.urgency == "low"
+    assert output.urgency_signals.deadline_detected is False
+    assert output.urgency_signals.deadline_text is None
+    assert output.urgency_signals.reply_by is None
+    assert "no action required" in output.urgency_signals.reason.lower()
+    assert output.explicit_task is False
+    assert output.suggested_reply_action == []
+    assert output.task_proposal is None
+
+    # Debug metadata should still be injected.
+    assert output.debug.analysis_timestamp != ""
+    assert output.debug.model_version != ""
+    assert output.debug.prompt_version != ""

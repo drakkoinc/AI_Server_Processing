@@ -129,17 +129,17 @@ def _mock_llm_output() -> LLMTriageOutput:
 
 @pytest.fixture
 def client():
-    """Create a TestClient with the pipeline mocked so no OpenAI key is needed.
+    """Create a TestClient with the pipeline mocked so no Anthropic key is needed.
 
-    The trick: we mock `openai.OpenAI` (the SDK constructor) BEFORE importing
+    The trick: we mock `anthropic.Anthropic` (the SDK constructor) BEFORE importing
     `app.main`, because `app.main` creates the pipeline at module-level which
-    calls `OpenAI(timeout=...)` during import.
+    calls `Anthropic(timeout=...)` during import.
 
     Steps:
       1. Remove any cached `app.main` and `app.pipeline` from sys.modules
          so they can be re-imported cleanly under the mock.
-      2. Patch `openai.OpenAI` so the constructor returns a MagicMock.
-      3. Import `app.main` — the pipeline initializes with the fake OpenAI.
+      2. Patch `anthropic.Anthropic` so the constructor returns a MagicMock.
+      3. Import `app.main` — the pipeline initializes with the fake Anthropic.
       4. Replace `_pipeline._client.parse` to return our mock LLM output,
          routing through the real postprocessor for deterministic results.
       5. Yield a TestClient wrapping the FastAPI app.
@@ -154,17 +154,17 @@ def client():
     for key in modules_to_clear:
         saved_modules[key] = sys.modules.pop(key)
 
-    # --- Step 2: Patch openai.OpenAI before app.main loads
-    mock_openai_constructor = MagicMock()
-    mock_openai_instance = MagicMock()
-    mock_openai_constructor.return_value = mock_openai_instance
+    # --- Step 2: Patch anthropic.Anthropic before app.main loads
+    mock_anthropic_constructor = MagicMock()
+    mock_anthropic_instance = MagicMock()
+    mock_anthropic_constructor.return_value = mock_anthropic_instance
 
-    with patch("openai.OpenAI", mock_openai_constructor):
-        # Also patch it in the openai_client module (import cache)
+    with patch("anthropic.Anthropic", mock_anthropic_constructor):
+        # Also patch it in the anthropic_client module (import cache)
         with patch.dict(sys.modules, {}, {}):
             pass  # just ensure clean state
-        # Patch at the location where openai_client imports it
-        with patch("app.llm.openai_client.OpenAI", mock_openai_constructor):
+        # Patch at the location where anthropic_client imports it
+        with patch("app.llm.anthropic_client.anthropic.Anthropic", mock_anthropic_constructor):
             # --- Step 3: Import app.main fresh — pipeline initializes with our mock
             import app.main as main_module
             importlib.reload(main_module)
@@ -174,22 +174,21 @@ def client():
             mock_result = MagicMock()
             mock_result.parsed = _mock_llm_output()
             mock_result.model_info = {
-                "provider": "openai",
-                "model": "gpt-5.2",
+                "provider": "anthropic",
+                "model": "claude-opus-4-6",
                 "usage": {
-                    "prompt_tokens": 1420,
-                    "completion_tokens": 380,
-                    "total_tokens": 1800,
+                    "input_tokens": 1420,
+                    "output_tokens": 380,
                 },
-                "response_id": "resp_mock_test_12345",
+                "response_id": "msg_mock_test_12345",
             }
 
-            # The pipeline's internal client is the OpenAIClient instance;
-            # its _client attribute is our mocked openai.OpenAI instance.
-            # But we need to mock at the OpenAIClient.parse level instead,
+            # The pipeline's internal client is the AnthropicClient instance;
+            # its _client attribute is our mocked anthropic.Anthropic instance.
+            # But we need to mock at the AnthropicClient.parse level instead,
             # since that's what the pipeline calls.
-            # Access: main_module._pipeline._client is the OpenAIClient,
-            #         and OpenAIClient.parse is the method we need to mock.
+            # Access: main_module._pipeline._client is the AnthropicClient,
+            #         and AnthropicClient.parse is the method we need to mock.
             main_module._pipeline._client.parse = MagicMock(return_value=mock_result)
 
             # --- Step 5: Yield the test client
@@ -228,13 +227,14 @@ class TestApiData:
         assert "/rd/api/v1/health" in paths
         assert "/rd/api/v1/ai" in paths
 
-    def test_apidata_lists_all_11_major_categories(self, client):
+    def test_apidata_lists_all_12_major_categories(self, client):
         data = client.get("/rd/api/v1/apidata").json()
         categories = data["major_categories"]
-        assert len(categories) == 11
+        assert len(categories) == 12
         assert "core_communication" in categories
         assert "schedule_and_time" in categories
         assert "meta_and_systems" in categories
+        assert "spam" in categories
         assert "other" in categories
 
     def test_apidata_full_response_shape(self, client):
@@ -279,7 +279,7 @@ class TestHealth:
         data = client.get("/rd/api/v1/health").json()
         assert "checks" in data
         assert "llm_provider" in data["checks"]
-        assert data["checks"]["llm_provider"]["provider"] == "openai"
+        assert data["checks"]["llm_provider"]["provider"] == "anthropic"
         assert "python_version" in data["checks"]
 
     def test_health_contains_request_counts(self, client):
@@ -314,8 +314,8 @@ class TestAI:
 
     def test_ai_contains_model_config(self, client):
         data = client.get("/rd/api/v1/ai").json()
-        assert data["provider"] == "openai"
-        assert data["model"] == "gpt-5.2"
+        assert data["provider"] == "anthropic"
+        assert data["model"] == "claude-opus-4-6"
         assert data["temperature"] == 0.2
         assert data["timeout_s"] == 90.0
 

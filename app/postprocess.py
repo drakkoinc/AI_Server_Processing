@@ -289,6 +289,24 @@ def _clean_evidence(evidence_list) -> list:
 
 
 # ---------------------------------------------------------------------------
+# Spam overrides
+# ---------------------------------------------------------------------------
+
+def _override_spam_fields(llm: LLMTriageOutput) -> None:
+    """Force deterministic fields for spam/subscription emails."""
+    if llm.major_category.value != "spam":
+        return
+    llm.urgency_signals.urgency = "low"
+    llm.urgency_signals.deadline_detected = False
+    llm.urgency_signals.deadline_text = None
+    llm.urgency_signals.reply_by = None
+    llm.urgency_signals.reason = "Automated subscription email \u2014 no action required."
+    llm.explicit_task = False
+    llm.suggested_reply_action = []
+    llm.task_proposal = None
+
+
+# ---------------------------------------------------------------------------
 # Postprocessor
 # ---------------------------------------------------------------------------
 
@@ -304,6 +322,9 @@ def postprocess_triage(
     # --- Normalize and clamp
     llm.confidence = _clamp01(llm.confidence)
     llm.sub_action_key = _normalize_sub_action_key(llm.sub_action_key)
+
+    # --- Spam overrides (before other cleanup so downstream logic sees clean values)
+    _override_spam_fields(llm)
 
     # --- Evidence cleanup
     llm.evidence = _clean_evidence(llm.evidence)

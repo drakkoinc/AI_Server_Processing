@@ -167,7 +167,9 @@ async function upsertInsights(emailMessageId, emailRow, output) {
 async function markEmailProcessed(emailMessageId, output) {
   // Derive a simple is_actionable signal.
   // In v3 we check explicit_task, urgency, and whether reply actions were suggested.
-  const isActionable = Boolean(
+  // Spam emails are never actionable regardless of other fields.
+  const isSpam = output.major_category === "spam";
+  const isActionable = !isSpam && Boolean(
     output.explicit_task ||
     output.urgency_signals?.urgency === "critical" ||
     output.urgency_signals?.urgency === "high" ||

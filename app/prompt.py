@@ -7,7 +7,7 @@ The prompt instructs the model to produce a rich triage output:
 - extracted_summary: executive-assistant breakdown (ask / success_criteria / missing_info)
 - suggested_reply_action: quick-reply chips
 
-The output shape is enforced via OpenAI Structured Outputs (Pydantic -> JSON Schema).
+The output shape is enforced via Anthropic Structured Outputs (Pydantic -> JSON Schema).
 Provider IDs and debug metadata are injected server-side in postprocessing.
 """
 
@@ -29,6 +29,7 @@ MAJOR_CATEGORY_GUIDE = """Choose exactly ONE major_category:
 - learning_and_awareness: articles, reports, webinars, courses, "read later" resources.
 - social_and_people: intros, networking, invites, congrats/celebrations.
 - meta_and_systems: automated alerts/notifications/security/system messages.
+- spam: automated subscription/marketing/newsletter emails with unsubscribe or opt-out language. Not personal communication.
 - other: none of the above.
 
 Disambiguation rule:
@@ -36,6 +37,8 @@ Disambiguation rule:
 - Example: if the email asks you to confirm a meeting time, it is schedule_and_time.
 - Example: if the email asks you to approve/sign-off on a contract (even with a date mentioned),
   it is decisions_and_approvals.
+- If the email contains unsubscribe/opt-out language and is not a personal message or direct human
+  request, classify as spam.
 """
 
 SUB_ACTION_KEY_GUIDE = """Choose ONE sub_action_key.
@@ -97,6 +100,11 @@ Learning & Awareness (major_category = learning_and_awareness):
 - LEARN_ARTICLE
 - LEARN_WEBINAR
 - LEARN_COURSE
+
+Spam (major_category = spam):
+- SPAM_UNSUBSCRIBE
+- SPAM_NEWSLETTER
+- SPAM_MARKETING
 
 Fallback:
 - OTHER

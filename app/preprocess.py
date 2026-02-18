@@ -58,6 +58,24 @@ _TIME_PHRASE_RE = re.compile(
     re.IGNORECASE | re.VERBOSE,
 )
 
+# Unsubscribe / opt-out language found in automated subscription emails.
+_UNSUBSCRIBE_RE = re.compile(
+    r"""\b(
+        unsubscribe|
+        subscribe|
+        change\s+your\s+preferences|
+        change\s+preferences|
+        edit\s+preferences|
+        update\s+subscription|
+        update\s+preferences|
+        opt[\s-]?out|
+        manage\s+(?:email\s+)?preferences|
+        notification\s+settings|
+        mailing\s+list
+    )\b""",
+    re.IGNORECASE | re.VERBOSE,
+)
+
 
 def html_to_text(html: str) -> str:
     """Convert HTML email body to clean-ish plain text.
@@ -100,6 +118,11 @@ def extract_time_expressions(text: str, limit: int = 10) -> List[str]:
     return out
 
 
+def extract_unsubscribe_signals(text: str) -> bool:
+    """Return True if the text contains unsubscribe/opt-out language."""
+    return bool(_UNSUBSCRIBE_RE.search(text))
+
+
 @dataclass(frozen=True)
 class Preprocessed:
     subject: str
@@ -111,6 +134,7 @@ class Preprocessed:
     links: List[str]
     money_expressions: List[str]
     time_expressions: List[str]
+    has_unsubscribe_signal: bool = False
 
 
 def _format_party_list(parties) -> str:
@@ -155,6 +179,7 @@ def preprocess_email(email, max_body_chars: int = 12000) -> Preprocessed:
     links = extract_links(body_text)
     money = extract_money_expressions(body_text)
     times = extract_time_expressions(body_text)
+    has_unsub = extract_unsubscribe_signals(body_text)
 
     return Preprocessed(
         subject=subject,
@@ -166,6 +191,7 @@ def preprocess_email(email, max_body_chars: int = 12000) -> Preprocessed:
         links=links,
         money_expressions=money,
         time_expressions=times,
+        has_unsubscribe_signal=has_unsub,
     )
 
 
@@ -194,5 +220,7 @@ def build_prompt_input(email_id: str, thread_id: Optional[str], pre: Preprocesse
         parts += ["", "MONEY_STRINGS_DETECTED:", "\n".join(pre.money_expressions)]
     if pre.time_expressions:
         parts += ["", "TIME_PHRASES_DETECTED:", "\n".join(pre.time_expressions)]
+    if pre.has_unsubscribe_signal:
+        parts += ["", "UNSUBSCRIBE_SIGNAL_DETECTED: true"]
 
     return "\n".join(parts).strip()

@@ -17,11 +17,11 @@ from dataclasses import dataclass
 @dataclass(frozen=True)
 class Settings:
     # Which LLM backend to use.
-    #openai: calls OpenAI's Responses API - may change and experiment here
-    llm_provider: str = os.getenv("LLM_PROVIDER", "openai")
+    #anthropic: calls Anthropic's Messages API with Structured Outputs
+    llm_provider: str = os.getenv("LLM_PROVIDER", "anthropic")
 
-    # OpenAI model name - change and test for GPT4o
-    openai_model: str = os.getenv("OPENAI_MODEL", "gpt-5.2")
+    # Anthropic model name
+    anthropic_model: str = os.getenv("ANTHROPIC_MODEL", "claude-opus-4-6")
 
     # A constant value included in every response, useful for:
     # - pipeline versioning

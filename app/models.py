@@ -89,6 +89,7 @@ class MajorCategory(str, Enum):
     learning_and_awareness = "learning_and_awareness"
     social_and_people = "social_and_people"
     meta_and_systems = "meta_and_systems"
+    spam = "spam"
     other = "other"
 
 
