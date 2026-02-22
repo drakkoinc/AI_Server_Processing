@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: drakko-ai-server
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    repo: https://github.com/drakkoinc/AI_Server_Processing.git
+    branch: main
+    plan: starter
+    numInstances: 1
+    healthCheckPath: /rd/api/v1/health
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false                # Render will prompt you to set this in the dashboard
+      - key: LLM_PROVIDER
+        value: anthropic
+      - key: ANTHROPIC_MODEL
+        value: claude-opus-4-6
+      - key: LLM_TEMPERATURE
+        value: "0.2"
+      - key: LLM_TIMEOUT_S
+        value: "90"
+      - key: MAX_BODY_CHARS
+        value: "12000"
+      - key: PYTHONPATH
+        value: /app
