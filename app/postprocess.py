@@ -26,6 +26,7 @@ from app.config import settings
 from app.gmail import ParsedEmail
 from app.models import (
     DebugInfo,
+    GateDebug,
     GmailMessageInput,
     LLMTriageOutput,
     MeetingRef,
@@ -316,6 +317,7 @@ def postprocess_triage(
     parsed_email: ParsedEmail,
     llm: LLMTriageOutput,
     predicted_at: datetime,
+    gate_result=None,
 ) -> TriageResponse:
     """Build the API response from the parsed LLM output."""
 
@@ -384,10 +386,20 @@ def postprocess_triage(
     )
 
     # --- Build debug metadata (server-side only)
+    gate_debug = None
+    if gate_result is not None:
+        gate_debug = GateDebug(
+            verdict=gate_result.verdict,
+            score=gate_result.score,
+            skip_llm=gate_result.skip_llm,
+            fired_signals=[s.name for s in gate_result.fired_signals],
+        )
+
     debug = DebugInfo(
         analysis_timestamp=predicted_at.isoformat(),
         model_version=settings.model_version,
         prompt_version=PROMPT_VERSION,
+        gate=gate_debug,
     )
 
     # --- Assemble the output

@@ -169,11 +169,20 @@ class ExtractedSummary(BaseModel):
     missing_info: List[str] = Field(default_factory=list)
 
 
+class GateDebug(BaseModel):
+    """Pre-LLM gate diagnostic info — shows which signals fired and the verdict."""
+    verdict: str = ""                          # "spam" | "not_spam" | "ambiguous"
+    score: float = 0.0                         # combined weighted score (0.0-1.0)
+    skip_llm: bool = False                     # True if LLM was bypassed entirely
+    fired_signals: List[str] = Field(default_factory=list)  # names of signals that fired
+
+
 class DebugInfo(BaseModel):
     """Observability metadata injected server-side."""
     analysis_timestamp: str = ""
     model_version: str = ""
     prompt_version: str = ""
+    gate: Optional[GateDebug] = None
 
 
 # ---------------------------------------------------------------------------
