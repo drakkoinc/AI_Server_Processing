@@ -22,6 +22,7 @@ from datetime import datetime, timezone
 from typing import Any, Dict, List
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
 from app.models import GmailMessageInput, MajorCategory, TriageResponse
@@ -33,6 +34,21 @@ app = FastAPI(
     title="AI Server",
     version=settings.api_version,
     description="Email classification, extraction, other returned features on GMAIL"
+)
+
+# CORS — allow frontend origins to call the API from the browser.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://drakko-web-1.onrender.com",
+        "https://drakko.ai",
+        "https://www.drakko.ai",
+        "http://localhost:3000",   # local frontend dev
+        "http://localhost:5173",   # Vite default
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
           
 _pipeline = GmailTriagePipeline()
