@@ -8,13 +8,13 @@ Tests all four v3 endpoints and shows the complete response shape:
   POST /rd/api/v1/ai/triage
 
 The triage endpoint is tested with a mocked pipeline so we can demonstrate
-a full successful response without needing a real OpenAI API key.
+a full successful response without needing a real Anthropic API key.
 
 Strategy:
-  - We mock `openai.OpenAI` at the SDK level BEFORE `app.main` is imported.
+  - We mock `anthropic.Anthropic` at the SDK level BEFORE `app.main` is imported.
   - `app.main` creates `_pipeline = GmailTriagePipeline()` at module-load time,
-    which instantiates `OpenAIClient` → calls `OpenAI(timeout=...)`.
-  - By patching `openai.OpenAI` first, the pipeline initializes with a fake client.
+    which instantiates `AnthropicClient` → calls `Anthropic(timeout=...)`.
+  - By patching `anthropic.Anthropic` first, the pipeline initializes with a fake client.
   - Then we replace the pipeline's `_client.parse` to return our mock LLM output,
     so the full postprocess pipeline runs deterministically.
 """
