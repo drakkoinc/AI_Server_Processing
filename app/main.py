@@ -37,15 +37,18 @@ app = FastAPI(
 )
 
 # CORS — allow frontend origins to call the API from the browser.
+# allow_origin_regex covers Render preview URLs (e.g. drakko-server-pr-42.onrender.com)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://drakko-server.onrender.com",
         "https://drakko-web-1.onrender.com",
         "https://drakko.ai",
         "https://www.drakko.ai",
         "http://localhost:3000",   # local frontend dev
         "http://localhost:5173",   # Vite default
     ],
+    allow_origin_regex=r"^https://(drakko-server|drakko-web-1)(-[a-zA-Z0-9-]+)?\.onrender\.com$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
