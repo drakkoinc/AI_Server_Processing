@@ -5,7 +5,7 @@
 - A worker calls this AI server with the raw Gmail JSON message.
 - This AI server returns a strict JSON response used for UI + downstream automation.
 
-For V3, I have updated ENDPOINTS 
+For V3, I have updated ENDPOINTS
 
   GET  /rd/api/v1/apidata       -> API metadata and endpoint listing
   GET  /rd/api/v1/health        -> Health diagnostics
@@ -16,6 +16,7 @@ For V3, I have updated ENDPOINTS
 
 from __future__ import annotations
 
+import logging
 import platform
 import time
 from datetime import datetime, timezone
@@ -28,6 +29,9 @@ from app.config import settings
 from app.models import GmailMessageInput, MajorCategory, TriageResponse
 from app.pipeline import GmailTriagePipeline
 from app.prompt import PROMPT_VERSION
+
+
+logger = logging.getLogger(__name__)
 
 
 app = FastAPI(
@@ -53,7 +57,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-          
+
 _pipeline = GmailTriagePipeline()
 
 
@@ -189,12 +193,18 @@ def rd_ai_triage(payload: GmailMessageInput):
     _request_counts["triage"] += 1
     _request_counts["total"] += 1
 
+    msg_id = getattr(payload, "id", None) or "unknown"
+    logger.info("[triage] request start msg_id=%s", msg_id)
+
     try:
         out = _pipeline.triage(payload)
+        logger.info("[triage] success msg_id=%s", msg_id)
         return out.response
     except NotImplementedError as e:
+        logger.exception("[triage] NotImplementedError msg_id=%s: %s", msg_id, e)
         _record_error("/rd/api/v1/ai/triage", str(e))
         raise HTTPException(status_code=501, detail=str(e))
     except Exception as e:
+        logger.exception("[triage] error msg_id=%s: %s", msg_id, e)
         _record_error("/rd/api/v1/ai/triage", str(e))
         raise HTTPException(status_code=500, detail=f"failed_to_triage: {e}")
