@@ -1,20 +1,21 @@
 """Anthropic LLM provider client.
 
-We use the Anthropic **Messages API** + **Structured Outputs** so the model output can be parsed
-directly into a Pydantic model (no fragile "JSON repair" loops).
+Uses the Anthropic Messages API with plain JSON output.  The model is
+instructed to return raw JSON matching the Pydantic schema; the response
+text is then validated with ``output_model.model_validate_json()``.
 
-This client is intentionally generic: you pass:
-- a system prompt
-- a user content string
-- a Pydantic model that defines the required output schema
+This avoids Anthropic's constrained-grammar ``messages.parse()`` path,
+which rejects schemas that compile to a grammar above the size limit
+(our ``LLMTriageOutput`` schema triggers that limit).
 
 References:
 - Anthropic Messages API: https://docs.anthropic.com/en/api/messages
-- Structured outputs guide: https://docs.anthropic.com/en/docs/build-with-claude/structured-outputs
 """
 
 from __future__ import annotations
 
+import json
+import re
 from dataclasses import dataclass
 from typing import Any, Dict, Generic, Type, TypeVar
 
@@ -29,6 +30,16 @@ T = TypeVar("T", bound=BaseModel)
 class AnthropicResult(Generic[T]):
     parsed: T
     model_info: Dict[str, Any]
+
+
+def _extract_json(text: str) -> str:
+    """Strip markdown code fences if present, returning the raw JSON string."""
+    stripped = text.strip()
+    # Handle ```json ... ``` or ``` ... ```
+    m = re.match(r"^```(?:json)?\s*\n?(.*?)\n?\s*```$", stripped, re.DOTALL)
+    if m:
+        return m.group(1).strip()
+    return stripped
 
 
 class AnthropicClient:
@@ -46,27 +57,36 @@ class AnthropicClient:
         user_content: str,
         output_model: Type[T],
     ) -> AnthropicResult[T]:
-        """Call Anthropic and parse the result into `output_model`.
+        """Call Anthropic and parse the result into ``output_model``.
 
-        The Anthropic Python SDK supports `messages.parse`, which:
-        - sends your prompt
-        - attaches a JSON Schema derived from `output_model`
-        - returns `response.parsed_output` as an instance of `output_model`
-
-        Any schema mismatch becomes an exception (which is good: it forces determinism).
+        We use ``messages.create()`` (plain text generation) and then
+        validate the JSON output with Pydantic.  This sidesteps the
+        constrained-grammar size limit that ``messages.parse()`` hits
+        on large schemas.
         """
-        response = self._client.messages.parse(
+        response = self._client.messages.create(
             model=self._model,
             max_tokens=4096,
             system=system_prompt,
             messages=[
                 {"role": "user", "content": user_content},
             ],
-            output_format=output_model,
             temperature=self._temperature,
         )
 
-        parsed: T = response.parsed_output
+        # Extract text from the first content block
+        raw_text = ""
+        for block in response.content:
+            if block.type == "text":
+                raw_text = block.text
+                break
+
+        if not raw_text:
+            raise ValueError("Anthropic returned no text content in the response.")
+
+        # Parse the JSON into the Pydantic model
+        json_str = _extract_json(raw_text)
+        parsed: T = output_model.model_validate_json(json_str)
 
         model_info: Dict[str, Any] = {"provider": "anthropic", "model": self._model}
 
