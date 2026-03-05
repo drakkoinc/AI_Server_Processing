@@ -341,7 +341,7 @@ class TestAI:
         data = client.get("/rd/api/v1/ai").json()
         assert data["provider"] == "anthropic"
         assert data["temperature"] == 0.2
-        assert data["timeout_s"] == 90.0
+        assert data["timeout_s"] == 180.0
 
     def test_ai_contains_triage_and_reply_models(self, client):
         data = client.get("/rd/api/v1/ai").json()
