@@ -177,6 +177,26 @@ class GateDebug(BaseModel):
     fired_signals: List[str] = Field(default_factory=list)  # names of signals that fired
 
 
+# ---------------------------------------------------------------------------
+# Reply drafting schemas
+# ---------------------------------------------------------------------------
+
+class LLMReplyOutput(BaseModel):
+    """What the reply model returns — a draft email reply."""
+    subject: str = ""
+    body: str = ""
+    tone: str = "professional"       # professional, casual, formal, urgent
+    confidence: float = Field(ge=0.0, le=1.0, default=0.8)
+
+
+class DraftReply(BaseModel):
+    """Draft reply included in the API response (optional, null when no reply needed)."""
+    subject: str = ""
+    body: str = ""
+    tone: str = "professional"
+    confidence: float = 0.0
+
+
 class DebugInfo(BaseModel):
     """Observability metadata injected server-side."""
     analysis_timestamp: str = ""
@@ -240,6 +260,8 @@ class TriageOutput(BaseModel):
     entities: Entities = Field(default_factory=Entities)
 
     evidence: List[str] = Field(default_factory=list)
+
+    draft_reply: Optional[DraftReply] = None
 
     debug: DebugInfo = Field(default_factory=DebugInfo)
 

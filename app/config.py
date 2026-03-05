@@ -17,11 +17,19 @@ from dataclasses import dataclass
 @dataclass(frozen=True)
 class Settings:
     # Which LLM backend to use.
-    #anthropic: calls Anthropic's Messages API with Structured Outputs
-    llm_provider: str = os.getenv("LLM_PROVIDER", "anthropic")
+    # "ollama" (primary, local) or "anthropic" (cloud fallback)
+    llm_provider: str = os.getenv("LLM_PROVIDER", "ollama")
 
-    # Anthropic model name
+    # --- Ollama (local models) ---
+    ollama_base_url: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+    ollama_triage_model: str = os.getenv("OLLAMA_TRIAGE_MODEL", "qwen2.5:72b")
+    ollama_reply_model: str = os.getenv("OLLAMA_REPLY_MODEL", "deepseek-v3.2")
+
+    # --- Anthropic (cloud fallback) ---
     anthropic_model: str = os.getenv("ANTHROPIC_MODEL", "claude-opus-4-6")
+
+    # --- Reply drafting ---
+    reply_enabled: bool = os.getenv("REPLY_ENABLED", "true").lower() in ("true", "1", "yes")
 
     # A constant value included in every response, useful for:
     # - pipeline versioning
@@ -32,7 +40,7 @@ class Settings:
     # Safety / product knobs
     max_body_chars: int = int(os.getenv("MAX_BODY_CHARS", "12000"))  # prompt length guard
 
-    # LLM request options 
+    # LLM request options
     # Temperature at 0.2, timeout at minute and half
     temperature: float = float(os.getenv("LLM_TEMPERATURE", "0.2"))
     timeout_s: float = float(os.getenv("LLM_TIMEOUT_S", "90"))

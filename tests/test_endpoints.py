@@ -8,20 +8,22 @@ Tests all four v3 endpoints and shows the complete response shape:
   POST /rd/api/v1/ai/triage
 
 The triage endpoint is tested with a mocked pipeline so we can demonstrate
-a full successful response without needing a real Anthropic API key.
+a full successful response without needing Ollama or an Anthropic API key.
 
 Strategy:
-  - We mock `anthropic.Anthropic` at the SDK level BEFORE `app.main` is imported.
+  - We mock `anthropic.Anthropic` and `httpx.Client` at the SDK level BEFORE
+    `app.main` is imported.
   - `app.main` creates `_pipeline = GmailTriagePipeline()` at module-load time,
-    which instantiates `AnthropicClient` → calls `Anthropic(timeout=...)`.
-  - By patching `anthropic.Anthropic` first, the pipeline initializes with a fake client.
-  - Then we replace the pipeline's `_client.parse` to return our mock LLM output,
+    which instantiates `OllamaClient` + `AnthropicClient`.
+  - By patching these constructors first, the pipeline initializes with fake clients.
+  - Then we replace the pipeline's client `.parse` methods to return our mock output,
     so the full postprocess pipeline runs deterministically.
 """
 
 from __future__ import annotations
 
 import importlib
+import os
 import sys
 from datetime import datetime, timezone
 from unittest.mock import MagicMock, patch
@@ -30,8 +32,10 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.models import (
+    DraftReply,
     Entities,
     ExtractedSummary,
+    LLMReplyOutput,
     LLMTriageOutput,
     MajorCategory,
     PersonRef,
@@ -127,53 +131,65 @@ def _mock_llm_output() -> LLMTriageOutput:
     )
 
 
+def _mock_reply_output() -> LLMReplyOutput:
+    """Return a mock reply output for testing."""
+    return LLMReplyOutput(
+        subject="Re: Contract approval timeline",
+        body="Hi Sarah,\n\nYes, Friday at 2 PM PT works for me. I'll have the contract ready for review.\n\nBest,\nHani",
+        tone="professional",
+        confidence=0.85,
+    )
+
+
 @pytest.fixture
 def client():
-    """Create a TestClient with the pipeline mocked so no Anthropic key is needed.
+    """Create a TestClient with the pipeline mocked so no Ollama or Anthropic key is needed.
 
-    The trick: we mock `anthropic.Anthropic` (the SDK constructor) BEFORE importing
+    The trick: we mock `anthropic.Anthropic` and `httpx.Client` BEFORE importing
     `app.main`, because `app.main` creates the pipeline at module-level which
-    calls `Anthropic(timeout=...)` during import.
+    instantiates both OllamaClient and AnthropicClient during import.
 
     Steps:
-      1. Remove any cached `app.main` and `app.pipeline` from sys.modules
-         so they can be re-imported cleanly under the mock.
-      2. Patch `anthropic.Anthropic` so the constructor returns a MagicMock.
-      3. Import `app.main` — the pipeline initializes with the fake Anthropic.
-      4. Replace `_pipeline._client.parse` to return our mock LLM output,
-         routing through the real postprocessor for deterministic results.
-      5. Yield a TestClient wrapping the FastAPI app.
-      6. Clean up sys.modules so subsequent test sessions start fresh.
+      1. Set LLM_PROVIDER to "anthropic" for test predictability.
+      2. Remove any cached `app.main` and `app.pipeline` from sys.modules.
+      3. Patch `anthropic.Anthropic` so the constructor returns a MagicMock.
+      4. Import `app.main` — the pipeline initializes with the fake clients.
+      5. Replace pipeline's client `.parse` methods to return mock outputs.
+      6. Yield a TestClient wrapping the FastAPI app.
+      7. Clean up sys.modules.
     """
-    # --- Step 1: Remove cached modules so we get a fresh import under our mock
+    # --- Step 1: Force anthropic provider for tests (simpler mocking)
+    original_provider = os.environ.get("LLM_PROVIDER")
+    os.environ["LLM_PROVIDER"] = "anthropic"
+
+    # --- Step 2: Remove cached modules so we get a fresh import under our mock
     modules_to_clear = [
         key for key in sys.modules
-        if key == "app.main" or key == "app.pipeline"
+        if key in ("app.main", "app.pipeline", "app.config")
     ]
     saved_modules = {}
     for key in modules_to_clear:
         saved_modules[key] = sys.modules.pop(key)
 
-    # --- Step 2: Patch anthropic.Anthropic before app.main loads
+    # --- Step 3: Patch anthropic.Anthropic before app.main loads
     mock_anthropic_constructor = MagicMock()
     mock_anthropic_instance = MagicMock()
     mock_anthropic_constructor.return_value = mock_anthropic_instance
 
     with patch("anthropic.Anthropic", mock_anthropic_constructor):
-        # Also patch it in the anthropic_client module (import cache)
-        with patch.dict(sys.modules, {}, {}):
-            pass  # just ensure clean state
-        # Patch at the location where anthropic_client imports it
         with patch("app.llm.anthropic_client.anthropic.Anthropic", mock_anthropic_constructor):
-            # --- Step 3: Import app.main fresh — pipeline initializes with our mock
+            # --- Step 4: Import app.main fresh
+            # Reload config first to pick up the env var change
+            if "app.config" in sys.modules:
+                importlib.reload(sys.modules["app.config"])
             import app.main as main_module
             importlib.reload(main_module)
             test_app = main_module.app
 
-            # --- Step 4: Wire up the mock parse to return our LLM output
-            mock_result = MagicMock()
-            mock_result.parsed = _mock_llm_output()
-            mock_result.model_info = {
+            # --- Step 5: Wire up mock parse methods
+            mock_triage_result = MagicMock()
+            mock_triage_result.parsed = _mock_llm_output()
+            mock_triage_result.model_info = {
                 "provider": "anthropic",
                 "model": "claude-opus-4-6",
                 "usage": {
@@ -183,23 +199,32 @@ def client():
                 "response_id": "msg_mock_test_12345",
             }
 
-            # The pipeline's internal client is the AnthropicClient instance;
-            # its _client attribute is our mocked anthropic.Anthropic instance.
-            # But we need to mock at the AnthropicClient.parse level instead,
-            # since that's what the pipeline calls.
-            # Access: main_module._pipeline._client is the AnthropicClient,
-            #         and AnthropicClient.parse is the method we need to mock.
-            main_module._pipeline._client.parse = MagicMock(return_value=mock_result)
+            # In anthropic mode, _triage_client and _reply_client are both AnthropicClient
+            main_module._pipeline._triage_client.parse = MagicMock(return_value=mock_triage_result)
 
-            # --- Step 5: Yield the test client
+            # Mock the reply client too
+            mock_reply_result = MagicMock()
+            mock_reply_result.parsed = _mock_reply_output()
+            mock_reply_result.model_info = {
+                "provider": "anthropic",
+                "model": "claude-opus-4-6",
+            }
+            main_module._pipeline._reply_client.parse = MagicMock(return_value=mock_reply_result)
+
+            # --- Step 6: Yield the test client
             yield TestClient(test_app)
 
-    # --- Step 6: Restore modules to avoid polluting other tests
+    # --- Step 7: Restore modules and env vars
     for key in modules_to_clear:
         if key in saved_modules:
             sys.modules[key] = saved_modules[key]
         elif key in sys.modules:
             del sys.modules[key]
+
+    if original_provider is None:
+        os.environ.pop("LLM_PROVIDER", None)
+    else:
+        os.environ["LLM_PROVIDER"] = original_provider
 
 
 # ===================================================================
@@ -315,15 +340,22 @@ class TestAI:
     def test_ai_contains_model_config(self, client):
         data = client.get("/rd/api/v1/ai").json()
         assert data["provider"] == "anthropic"
-        assert data["model"] == "claude-opus-4-6"
         assert data["temperature"] == 0.2
         assert data["timeout_s"] == 90.0
+
+    def test_ai_contains_triage_and_reply_models(self, client):
+        data = client.get("/rd/api/v1/ai").json()
+        # In anthropic mode, both triage and reply use the same model
+        assert "triage_model" in data
+        assert "reply_model" in data
+        assert "reply_enabled" in data
 
     def test_ai_contains_versioning(self, client):
         data = client.get("/rd/api/v1/ai").json()
         assert data["schema_version"] == "v3"
         assert data["model_version"] == "drakko-email-v3"
         assert data["prompt_version"] == "triage-v3-2026-02"
+        assert data["reply_prompt_version"] == "reply-v1-2026-03"
         assert data["contract_reference"] == "drakko.gmail_insights.v3"
 
     def test_ai_lists_all_capabilities(self, client):
@@ -335,18 +367,21 @@ class TestAI:
         assert "task_proposal" in caps
         assert "action_recommendation" in caps
         assert "summary_extraction" in caps
+        assert "reply_drafting" in caps
 
     def test_ai_full_response_shape(self, client):
         """Show the complete response shape for /rd/api/v1/ai."""
         data = client.get("/rd/api/v1/ai").json()
         assert "provider" in data
-        assert "model" in data
+        assert "triage_model" in data
+        assert "reply_model" in data
         assert "temperature" in data
         assert "timeout_s" in data
         assert "max_body_chars" in data
         assert "schema_version" in data
         assert "model_version" in data
         assert "prompt_version" in data
+        assert "reply_prompt_version" in data
         assert "contract_reference" in data
         assert "capabilities" in data
         assert "request_counts" in data
@@ -460,6 +495,16 @@ class TestTriageSuccess:
         assert isinstance(evidence, list)
         assert len(evidence) >= 1
         assert all(isinstance(e, str) for e in evidence)
+
+    def test_triage_draft_reply_present_for_schedule(self, client):
+        """schedule_and_time with high urgency should get a draft reply."""
+        output = client.post("/rd/api/v1/ai/triage", json=SAMPLE_GMAIL_INPUT).json()["output"]
+        dr = output["draft_reply"]
+        assert dr is not None
+        assert dr["subject"] != ""
+        assert dr["body"] != ""
+        assert dr["tone"] in ("professional", "casual", "formal", "urgent")
+        assert 0.0 <= dr["confidence"] <= 1.0
 
     def test_triage_debug_metadata(self, client):
         output = client.post("/rd/api/v1/ai/triage", json=SAMPLE_GMAIL_INPUT).json()["output"]

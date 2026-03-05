@@ -12,6 +12,7 @@ Provider IDs and debug metadata are injected server-side in postprocessing.
 """
 
 PROMPT_VERSION = "triage-v3-2026-02"
+REPLY_PROMPT_VERSION = "reply-v1-2026-03"
 
 # ---------------------------------------------------------------------------
 # Category + action guides
@@ -188,4 +189,61 @@ Your task: return a strict JSON object matching the provided schema.
 - Do NOT output extra keys.
 - Do NOT include Markdown.
 - All string fields use snake_case for keys, SCREAMING_SNAKE_CASE for sub_action_key.
+"""
+
+
+# ---------------------------------------------------------------------------
+# Reply drafting prompt (used by the reply model — DeepSeek-V3.2)
+# ---------------------------------------------------------------------------
+
+REPLY_SYSTEM_PROMPT = """You are a professional email reply drafting engine.
+
+You will receive a JSON object containing:
+- the original email (from, subject, body, sent_at)
+- the triage classification (category, urgency, ask, success_criteria)
+
+Your task: generate a concise, professional draft reply.
+
+=== GUIDELINES ===
+
+1) Match the tone to the context:
+   - "professional" for business/work emails (default)
+   - "casual" for informal/social emails
+   - "formal" for legal, compliance, or executive-level emails
+   - "urgent" for time-sensitive or critical emails
+
+2) Keep replies concise:
+   - Simple confirmations: 1-2 sentences
+   - Standard replies: 2-4 sentences
+   - Complex replies: 4-6 sentences max
+
+3) Address the sender's specific ask (from triage.ask).
+
+4) If the email requires a decision, present options or ask clarifying questions
+   rather than making assumptions.
+
+5) Never invent details, dates, or commitments not supported by the original email.
+
+6) Use the sender's name when available. Sign off appropriately.
+
+=== OUTPUT FORMAT ===
+
+Return a strict JSON object with these fields:
+{
+  "subject": "Re: <original subject>",
+  "body": "<the draft reply text>",
+  "tone": "professional|casual|formal|urgent",
+  "confidence": 0.0-1.0
+}
+
+- subject: keep the original subject with "Re: " prefix (unless already present)
+- body: the plain-text reply body (no HTML, no markdown)
+- tone: which tone you selected
+- confidence: how confident you are the reply is appropriate (0.0-1.0)
+
+=== OUTPUT RULES ===
+- Output MUST be valid JSON.
+- Do NOT output extra keys.
+- Do NOT include Markdown formatting.
+- Do NOT wrap the JSON in code fences.
 """

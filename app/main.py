@@ -28,7 +28,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.models import GmailMessageInput, MajorCategory, TriageResponse
 from app.pipeline import GmailTriagePipeline
-from app.prompt import PROMPT_VERSION
+from app.prompt import PROMPT_VERSION, REPLY_PROMPT_VERSION
 
 
 logger = logging.getLogger(__name__)
@@ -146,7 +146,10 @@ def rd_health():
             "llm_provider": {
                 "status": "ok",
                 "provider": settings.llm_provider,
-                "model": settings.anthropic_model,
+                "triage_model": settings.ollama_triage_model if settings.llm_provider == "ollama" else settings.anthropic_model,
+                "reply_model": settings.ollama_reply_model if settings.llm_provider == "ollama" else settings.anthropic_model,
+                "fallback": "anthropic" if settings.llm_provider == "ollama" else "none",
+                "reply_enabled": settings.reply_enabled,
             },
             "python_version": platform.python_version(),
         },
@@ -159,15 +162,20 @@ def rd_health():
 @app.get("/rd/api/v1/ai")
 def rd_ai():
     """Returns AI model configuration, prompt version, and usage stats."""
+    is_ollama = settings.llm_provider == "ollama"
     return {
         "provider": settings.llm_provider,
-        "model": settings.anthropic_model,
+        "triage_model": settings.ollama_triage_model if is_ollama else settings.anthropic_model,
+        "reply_model": settings.ollama_reply_model if is_ollama else settings.anthropic_model,
+        "fallback_model": settings.anthropic_model if is_ollama else None,
+        "reply_enabled": settings.reply_enabled,
         "temperature": settings.temperature,
         "timeout_s": settings.timeout_s,
         "max_body_chars": settings.max_body_chars,
         "schema_version": settings.schema_version,
         "model_version": settings.model_version,
         "prompt_version": PROMPT_VERSION,
+        "reply_prompt_version": REPLY_PROMPT_VERSION,
         "contract_reference": settings.contract_reference,
         "capabilities": [
             "email_triage",
@@ -176,6 +184,7 @@ def rd_ai():
             "task_proposal",
             "action_recommendation",
             "summary_extraction",
+            "reply_drafting",
         ],
         "request_counts": dict(_request_counts),
     }
