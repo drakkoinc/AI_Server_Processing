@@ -249,6 +249,32 @@ class TriageResponse(BaseModel):
     output: TriageOutput
 
 
+# ---------------------------------------------------------------------------
+# Batch request / response schemas
+# ---------------------------------------------------------------------------
+
+class BatchTriageRequest(BaseModel):
+    """Accepts an array of raw Gmail message JSON objects for batch triage."""
+    messages: List[GmailMessageInput]
+
+
+class BatchTriageItemResponse(BaseModel):
+    """One item in the batch response — wraps the triage result with the message ID."""
+    message_id: str
+    index: int
+    status: str = "success"           # "success" | "error"
+    output: Optional[TriageOutput] = None
+    error: Optional[str] = None
+
+
+class BatchTriageResponse(BaseModel):
+    """Full batch response returned when streaming is not used."""
+    total: int
+    succeeded: int
+    failed: int
+    results: List[BatchTriageItemResponse]
+
+
 # Fix forward refs for nested MIME parts.
 GmailPart.model_rebuild()
 GmailPayload.model_rebuild()

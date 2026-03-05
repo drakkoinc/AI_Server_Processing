@@ -1,11 +1,12 @@
 """
 Full endpoint tests for the Drakko Email AI Server.
 
-Tests all four v3 endpoints and shows the complete response shape:
+Tests all five v3 endpoints and shows the complete response shape:
   GET  /rd/api/v1/apidata
   GET  /rd/api/v1/health
   GET  /rd/api/v1/ai
   POST /rd/api/v1/ai/triage
+  POST /rd/api/v1/ai/triage/batch
 
 The triage endpoint is tested with a mocked pipeline so we can demonstrate
 a full successful response without needing a real Anthropic API key.
@@ -30,6 +31,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.models import (
+    BatchTriageItemResponse,
     Entities,
     ExtractedSummary,
     LLMTriageOutput,
@@ -223,6 +225,7 @@ class TestApiData:
         data = client.get("/rd/api/v1/apidata").json()
         paths = [ep["path"] for ep in data["endpoints"]]
         assert "/rd/api/v1/ai/triage" in paths
+        assert "/rd/api/v1/ai/triage/batch" in paths
         assert "/rd/api/v1/apidata" in paths
         assert "/rd/api/v1/health" in paths
         assert "/rd/api/v1/ai" in paths
@@ -527,3 +530,140 @@ class TestTriageErrors:
             assert "loc" in error
             assert "msg" in error
             assert "input" in error
+
+
+# ===================================================================
+# 6. POST /rd/api/v1/ai/triage/batch — Batch Triage
+# ===================================================================
+
+# A second sample email to test batch with multiple distinct inputs.
+SAMPLE_GMAIL_INPUT_2 = {
+    "id": "18c8b4e2c3d1b0b2",
+    "threadId": "18c8b4e2c3d1b0b2",
+    "labelIds": ["INBOX"],
+    "snippet": "Your AWS bill for February is ready.",
+    "internalDate": "1706600000000",
+    "payload": {
+        "mimeType": "text/plain",
+        "headers": [
+            {"name": "From", "value": "billing@aws.amazon.com"},
+            {"name": "To", "value": "hani@drakko.io"},
+            {"name": "Subject", "value": "Your AWS bill for February 2024"},
+            {"name": "Date", "value": "Tue, 30 Jan 2024 08:00:00 -0800"},
+        ],
+        "body": {
+            "size": 80,
+            "data": "WW91ciBBV1MgYmlsbCBmb3IgRmVicnVhcnkgMjAyNCBpcyAkMSwyMzQuNTYuIFZpZXcgeW91ciBiaWxsIGF0IGh0dHBzOi8vY29uc29sZS5hd3MuYW1hem9uLmNvbS9iaWxsaW5n",
+        },
+    },
+}
+
+
+class TestBatchTriage:
+    """Tests for the batch triage endpoint (streaming NDJSON)."""
+
+    def test_batch_returns_200(self, client):
+        r = client.post(
+            "/rd/api/v1/ai/triage/batch",
+            json={"messages": [SAMPLE_GMAIL_INPUT]},
+        )
+        assert r.status_code == 200
+
+    def test_batch_content_type_is_ndjson(self, client):
+        r = client.post(
+            "/rd/api/v1/ai/triage/batch",
+            json={"messages": [SAMPLE_GMAIL_INPUT]},
+        )
+        assert "application/x-ndjson" in r.headers["content-type"]
+
+    def test_batch_single_email_returns_one_line(self, client):
+        r = client.post(
+            "/rd/api/v1/ai/triage/batch",
+            json={"messages": [SAMPLE_GMAIL_INPUT]},
+        )
+        lines = [l for l in r.text.strip().split("\n") if l.strip()]
+        assert len(lines) == 1
+
+    def test_batch_single_email_parses_as_valid_item(self, client):
+        r = client.post(
+            "/rd/api/v1/ai/triage/batch",
+            json={"messages": [SAMPLE_GMAIL_INPUT]},
+        )
+        import json
+        line = r.text.strip().split("\n")[0]
+        item = json.loads(line)
+        assert item["message_id"] == "18c8a3f1b2d0a9a1"
+        assert item["index"] == 0
+        assert item["status"] == "success"
+        assert item["output"] is not None
+        assert item["error"] is None
+
+    def test_batch_single_email_output_has_triage_fields(self, client):
+        import json
+        r = client.post(
+            "/rd/api/v1/ai/triage/batch",
+            json={"messages": [SAMPLE_GMAIL_INPUT]},
+        )
+        item = json.loads(r.text.strip().split("\n")[0])
+        output = item["output"]
+        assert "major_category" in output
+        assert "sub_action_key" in output
+        assert "urgency_signals" in output
+        assert "extracted_summary" in output
+        assert "debug" in output
+
+    def test_batch_multiple_emails_returns_multiple_lines(self, client):
+        r = client.post(
+            "/rd/api/v1/ai/triage/batch",
+            json={"messages": [SAMPLE_GMAIL_INPUT, SAMPLE_GMAIL_INPUT_2]},
+        )
+        lines = [l for l in r.text.strip().split("\n") if l.strip()]
+        assert len(lines) == 2
+
+    def test_batch_multiple_emails_sequential_indexes(self, client):
+        import json
+        r = client.post(
+            "/rd/api/v1/ai/triage/batch",
+            json={"messages": [SAMPLE_GMAIL_INPUT, SAMPLE_GMAIL_INPUT_2]},
+        )
+        lines = [l for l in r.text.strip().split("\n") if l.strip()]
+        items = [json.loads(l) for l in lines]
+        assert items[0]["index"] == 0
+        assert items[1]["index"] == 1
+        assert items[0]["message_id"] == "18c8a3f1b2d0a9a1"
+        assert items[1]["message_id"] == "18c8b4e2c3d1b0b2"
+
+    def test_batch_each_item_validates_against_schema(self, client):
+        import json
+        r = client.post(
+            "/rd/api/v1/ai/triage/batch",
+            json={"messages": [SAMPLE_GMAIL_INPUT, SAMPLE_GMAIL_INPUT_2]},
+        )
+        lines = [l for l in r.text.strip().split("\n") if l.strip()]
+        for line in lines:
+            item = json.loads(line)
+            validated = BatchTriageItemResponse.model_validate(item)
+            assert validated.status == "success"
+            assert validated.output is not None
+
+    def test_batch_empty_array_returns_empty(self, client):
+        r = client.post(
+            "/rd/api/v1/ai/triage/batch",
+            json={"messages": []},
+        )
+        assert r.status_code == 200
+        assert r.text.strip() == ""
+
+    def test_batch_missing_messages_returns_422(self, client):
+        r = client.post(
+            "/rd/api/v1/ai/triage/batch",
+            json={},
+        )
+        assert r.status_code == 422
+
+    def test_batch_invalid_email_in_array_returns_422(self, client):
+        r = client.post(
+            "/rd/api/v1/ai/triage/batch",
+            json={"messages": [{"bad": "data"}]},
+        )
+        assert r.status_code == 422

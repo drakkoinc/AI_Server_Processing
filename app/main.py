@@ -11,11 +11,13 @@ For V3, I have updated ENDPOINTS
   GET  /rd/api/v1/health        -> Health diagnostics
   GET  /rd/api/v1/ai            -> AI model configuration and stats
   POST /rd/api/v1/ai/triage     -> Full email triage (single large output)
+  POST /rd/api/v1/ai/triage/batch -> Batch triage (array in, streamed NDJSON out)
 
 """
 
 from __future__ import annotations
 
+import json
 import logging
 import platform
 import time
@@ -24,9 +26,17 @@ from typing import Any, Dict, List
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 
 from app.config import settings
-from app.models import GmailMessageInput, MajorCategory, TriageResponse
+from app.models import (
+    BatchTriageItemResponse,
+    BatchTriageRequest,
+    BatchTriageResponse,
+    GmailMessageInput,
+    MajorCategory,
+    TriageResponse,
+)
 from app.pipeline import GmailTriagePipeline
 from app.prompt import PROMPT_VERSION
 
@@ -102,6 +112,11 @@ def rd_apidata():
                 "method": "POST",
                 "path": "/rd/api/v1/ai/triage",
                 "description": "Full email triage — returns the complete output object from classification through debug metadata.",
+            },
+            {
+                "method": "POST",
+                "path": "/rd/api/v1/ai/triage/batch",
+                "description": "Batch email triage — accepts an array of emails, streams results back one by one as NDJSON.",
             },
             {
                 "method": "GET",
@@ -208,3 +223,52 @@ def rd_ai_triage(payload: GmailMessageInput):
         logger.exception("[triage] error msg_id=%s: %s", msg_id, e)
         _record_error("/rd/api/v1/ai/triage", str(e))
         raise HTTPException(status_code=500, detail=f"failed_to_triage: {e}")
+
+
+@app.post("/rd/api/v1/ai/triage/batch")
+def rd_ai_triage_batch(payload: BatchTriageRequest):
+    """Batch email triage endpoint — streaming NDJSON.
+
+    Accepts an array of raw Gmail message JSON objects. Processes each email
+    sequentially through the triage pipeline and streams results back one by
+    one as newline-delimited JSON (NDJSON). Each line is a complete JSON
+    object so the client can parse and display results incrementally.
+
+    Response Content-Type: application/x-ndjson
+    """
+    def _stream():
+        succeeded = 0
+        failed = 0
+
+        for idx, msg in enumerate(payload.messages):
+            msg_id = getattr(msg, "id", None) or f"unknown_{idx}"
+            _request_counts["triage"] += 1
+            _request_counts["total"] += 1
+
+            try:
+                out = _pipeline.triage(msg)
+                item = BatchTriageItemResponse(
+                    message_id=msg_id,
+                    index=idx,
+                    status="success",
+                    output=out.response.output,
+                )
+                succeeded += 1
+                logger.info("[batch-triage] success idx=%d msg_id=%s", idx, msg_id)
+            except Exception as e:
+                logger.exception("[batch-triage] error idx=%d msg_id=%s: %s", idx, msg_id, e)
+                _record_error("/rd/api/v1/ai/triage/batch", str(e))
+                item = BatchTriageItemResponse(
+                    message_id=msg_id,
+                    index=idx,
+                    status="error",
+                    error=str(e)[:500],
+                )
+                failed += 1
+
+            yield item.model_dump_json() + "\n"
+
+    return StreamingResponse(
+        _stream(),
+        media_type="application/x-ndjson",
+    )
