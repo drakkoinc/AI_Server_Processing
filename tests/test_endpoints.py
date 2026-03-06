@@ -560,26 +560,31 @@ SAMPLE_GMAIL_INPUT_2 = {
 
 
 class TestBatchTriage:
-    """Tests for the batch triage endpoint (streaming NDJSON)."""
+    """Tests for the batch triage endpoint (streaming NDJSON).
+
+    The endpoint accepts a raw JSON array of Gmail message objects:
+        [ {email1}, {email2}, {email3} ]
+    and streams back one NDJSON line per email as each finishes processing.
+    """
 
     def test_batch_returns_200(self, client):
         r = client.post(
             "/rd/api/v1/ai/triage/batch",
-            json={"messages": [SAMPLE_GMAIL_INPUT]},
+            json=[SAMPLE_GMAIL_INPUT],
         )
         assert r.status_code == 200
 
     def test_batch_content_type_is_ndjson(self, client):
         r = client.post(
             "/rd/api/v1/ai/triage/batch",
-            json={"messages": [SAMPLE_GMAIL_INPUT]},
+            json=[SAMPLE_GMAIL_INPUT],
         )
         assert "application/x-ndjson" in r.headers["content-type"]
 
     def test_batch_single_email_returns_one_line(self, client):
         r = client.post(
             "/rd/api/v1/ai/triage/batch",
-            json={"messages": [SAMPLE_GMAIL_INPUT]},
+            json=[SAMPLE_GMAIL_INPUT],
         )
         lines = [l for l in r.text.strip().split("\n") if l.strip()]
         assert len(lines) == 1
@@ -587,7 +592,7 @@ class TestBatchTriage:
     def test_batch_single_email_parses_as_valid_item(self, client):
         r = client.post(
             "/rd/api/v1/ai/triage/batch",
-            json={"messages": [SAMPLE_GMAIL_INPUT]},
+            json=[SAMPLE_GMAIL_INPUT],
         )
         import json
         line = r.text.strip().split("\n")[0]
@@ -602,7 +607,7 @@ class TestBatchTriage:
         import json
         r = client.post(
             "/rd/api/v1/ai/triage/batch",
-            json={"messages": [SAMPLE_GMAIL_INPUT]},
+            json=[SAMPLE_GMAIL_INPUT],
         )
         item = json.loads(r.text.strip().split("\n")[0])
         output = item["output"]
@@ -615,7 +620,7 @@ class TestBatchTriage:
     def test_batch_multiple_emails_returns_multiple_lines(self, client):
         r = client.post(
             "/rd/api/v1/ai/triage/batch",
-            json={"messages": [SAMPLE_GMAIL_INPUT, SAMPLE_GMAIL_INPUT_2]},
+            json=[SAMPLE_GMAIL_INPUT, SAMPLE_GMAIL_INPUT_2],
         )
         lines = [l for l in r.text.strip().split("\n") if l.strip()]
         assert len(lines) == 2
@@ -624,7 +629,7 @@ class TestBatchTriage:
         import json
         r = client.post(
             "/rd/api/v1/ai/triage/batch",
-            json={"messages": [SAMPLE_GMAIL_INPUT, SAMPLE_GMAIL_INPUT_2]},
+            json=[SAMPLE_GMAIL_INPUT, SAMPLE_GMAIL_INPUT_2],
         )
         lines = [l for l in r.text.strip().split("\n") if l.strip()]
         items = [json.loads(l) for l in lines]
@@ -637,7 +642,7 @@ class TestBatchTriage:
         import json
         r = client.post(
             "/rd/api/v1/ai/triage/batch",
-            json={"messages": [SAMPLE_GMAIL_INPUT, SAMPLE_GMAIL_INPUT_2]},
+            json=[SAMPLE_GMAIL_INPUT, SAMPLE_GMAIL_INPUT_2],
         )
         lines = [l for l in r.text.strip().split("\n") if l.strip()]
         for line in lines:
@@ -649,21 +654,14 @@ class TestBatchTriage:
     def test_batch_empty_array_returns_empty(self, client):
         r = client.post(
             "/rd/api/v1/ai/triage/batch",
-            json={"messages": []},
+            json=[],
         )
         assert r.status_code == 200
         assert r.text.strip() == ""
 
-    def test_batch_missing_messages_returns_422(self, client):
-        r = client.post(
-            "/rd/api/v1/ai/triage/batch",
-            json={},
-        )
-        assert r.status_code == 422
-
     def test_batch_invalid_email_in_array_returns_422(self, client):
         r = client.post(
             "/rd/api/v1/ai/triage/batch",
-            json={"messages": [{"bad": "data"}]},
+            json=[{"bad": "data"}],
         )
         assert r.status_code == 422

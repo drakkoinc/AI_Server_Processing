@@ -31,8 +31,6 @@ from fastapi.responses import StreamingResponse
 from app.config import settings
 from app.models import (
     BatchTriageItemResponse,
-    BatchTriageRequest,
-    BatchTriageResponse,
     GmailMessageInput,
     MajorCategory,
     TriageResponse,
@@ -226,10 +224,10 @@ def rd_ai_triage(payload: GmailMessageInput):
 
 
 @app.post("/rd/api/v1/ai/triage/batch")
-def rd_ai_triage_batch(payload: BatchTriageRequest):
+def rd_ai_triage_batch(messages: List[GmailMessageInput]):
     """Batch email triage endpoint — streaming NDJSON.
 
-    Accepts an array of raw Gmail message JSON objects. Processes each email
+    Accepts a raw JSON array of Gmail message objects. Processes each email
     sequentially through the triage pipeline and streams results back one by
     one as newline-delimited JSON (NDJSON). Each line is a complete JSON
     object so the client can parse and display results incrementally.
@@ -240,7 +238,7 @@ def rd_ai_triage_batch(payload: BatchTriageRequest):
         succeeded = 0
         failed = 0
 
-        for idx, msg in enumerate(payload.messages):
+        for idx, msg in enumerate(messages):
             msg_id = getattr(msg, "id", None) or f"unknown_{idx}"
             _request_counts["triage"] += 1
             _request_counts["total"] += 1
